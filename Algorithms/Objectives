@@ -1,0 +1,24 @@
+DATA STRUCTURES
+Linked Lists: 
+Binary Trees:
+Tries:
+Stacks: YES
+Queues: YES
+Vectors/Array Lists:
+HashTables:
+
+ALGORITHMS
+BreadthFirstSearch: YES
+DepthFirstSearch:
+BinarySearch:
+MergeSort:
+QuickSort:
+Tree Inster/Find/etc:
+
+CONCEPTS
+Bit Manipulation:
+Singleton Design Pattern:
+Factory Design Pattern:
+Memory (stack vs heap):
+Recursion:
+Big-O-Time:

@@ -1,0 +1,228 @@
+/*
+https://palettes.shecodes.io/palettes/507
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+.home {
+    background-image: url("media/ArabianDesert.jpg");
+}
+
+.bangladesh {
+    background-image: url("media/bangladesh.jpeg");
+}
+
+
+.first-page {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.geography-page {
+    margin: 0;
+    padding: 50px;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdc57b; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdc57b; /*#d77b52;*/
+    border-bottom: 5px solid #394a51; 
+}
+
+.title a {
+    font-size: 2rem;
+    padding: 10% 50%;
+    text-decoration: none;
+    color: #394a51;
+}
+
+.title a:hover {
+    background-color: #fbf2d5;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #394a51; 
+    padding: 1rem 2rem;
+}
+
+.navbar-links li:hover {
+    background-color: #fbf2d5; 
+    font-style: bold;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* BEGINNING OF TEXTBOX STYLING */
+.textBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-width: 50rem;
+    font-size: 1rem;
+}
+
+.textBox * {
+    padding: 1rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+}
+
+.textBox h1 {
+    font-size: 10rem;
+}
+
+.mainContent {
+    background-color: #fbf2d5;
+}
+
+.mainContent p{
+    color: black;
+    text-shadow: none;
+}
+
+
+.contentBoxContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.contentBox {
+    width: 35vw;
+    height: fit-content;
+    background-color: #FAF2C3;
+    margin: auto;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+.bottomBox {
+    text-align: center;
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+    border-radius: 5px;
+  }
+

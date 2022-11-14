@@ -1,0 +1,242 @@
+.first-color { 
+	background: #00204a; 
+}
+	
+.second-color { 
+	background: #005792; 
+}
+
+.third-color { 
+	background: #00bbf0; 
+}
+
+.fourth-color { 
+	background: #FAF2C3; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Palatino;
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 3px solid #005792;
+}
+
+p {
+    font-size: 2rem;
+}
+
+li {
+    list-style-type: circle;
+    padding: 2px;
+}
+
+.first-page {
+    margin: 0;
+    width: 100%;
+    height: 200vh;
+    background-image: url("media/queenslandCoast.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secondPage {
+    background-image: url("media/ocean2.jpg");
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005792;
+    color: #FAF2C3; 
+    border-bottom: 5px solid #00204a; 
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #FAF2C3; 
+    padding: 1rem 2rem;
+}
+
+.navbar-links li:hover {
+    background-color: #00bbf0; 
+    font-style: bold;
+    text-shadow: 2px 1px #00204a;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+.textBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50rem;
+    height: fit-content;
+    background-color: #FAF2C3;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    border-radius: 10px;
+}
+
+.textBox h1, h2 {
+    width: 100vw;
+    padding: 1rem;
+    text-align: center;
+    color: #005792; 
+    font-size: 4rem;
+    font-family: 'Niconne', cursive;
+    text-shadow: 1px 1px 0px #052939, 
+    -1px 2px 0px #53C7F0;
+}
+
+.textBox h1 {
+    font-size: 10rem;
+    text-shadow: 5px 5px 0px #87E0FF, 
+    10px 10px 0px #53C7F0, 
+    15px 15px 0px #1D97C1, 
+    20px 20px 0px #052939;
+}
+
+
+.arrow {
+    border: solid black;
+    border-width: 0 1rem 1rem 0;
+    display: inline-block;
+    padding: 1rem;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+.contentBoxContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.contentBox {
+    width: 35vw;
+    height: fit-content;
+    background-color: #FAF2C3;
+    margin: auto;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+.sublist {
+    font-size: 1.5rem;
+  }
+
+.bottomBox {
+    text-align: center;
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+    border-radius: 5px;
+  }
+
