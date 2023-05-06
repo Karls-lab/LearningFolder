@@ -1,0 +1,2594 @@
+<!DOCTYPE html><html><head><base href="https://help.ubuntu.com/stable/ubuntu-help/keyboard-nav.html.en"><meta charset="utf-8"><meta name="download_date" content="2022-11-16T17:47:17.480Z"/><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator, .cls-2, .global-nav__header-logo-anchor {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #181a1b;
+}
+html, body {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+
+<title>Keyboard navigation</title>
+<style>
+html { height: 100%; }
+body {
+  font-family: sans-serif;
+  margin: 0; padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  direction: ltr;
+}
+article, aside, nav, header, footer, section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-flow: row;
+}
+main > * {
+  flex: 0 0 220px;
+}
+main > div.page {
+  flex-grow: 1;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+div.page > article { flex: 1 0 auto; }
+div.page > header, div.page > footer { flex: 0 1 auto; }
+.pagewide {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+aside.sidebar {
+  width: 300px;
+  padding: 20px 10px;
+  background: rgb(244,244,244)
+}
+@media only screen and (max-width: 720px) {
+  aside.sidebar {
+    display: none;
+  }
+}
+aside.sidebar-right { order: 3; }
+aside.sidebar section { margin-top: 0; }
+aside.sidebar * { margin-bottom: 20px; }
+aside.sidebar section > div.inner > div.hgroup {
+  border-bottom: none;
+}
+aside.sidebar section h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+article {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 20em;
+  background-color: #ffffff;
+}
+section {
+  margin-top: 2.4em;
+  clear: both;
+}
+section section {
+  margin-top: 1.44em;
+}
+.yelp-hash-highlight {
+  animation-name: yelp-hash-highlight;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes yelp-hash-highlight {
+  from { transform: translateY(0px) }
+  25%  { transform: translateY(20px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(10px); }
+  to   { transform: translateY(0px); }
+}
+div.trails {
+  margin: 0 -10px 0 -10px;
+  padding: 0.2em 10px;
+  background-color: rgb(244,244,244);
+}
+div.trail {
+  margin: 0.2em 0;
+  padding: 0 1em 0 1em;
+  text-indent: -1em;
+  color: rgb(75,75,73);
+}
+a.trail { white-space: nowrap; }
+div.hgroup {
+  margin-bottom: 0.5em;
+  color: rgb(75,75,73);
+}
+section > div.inner > div.hgroup {
+  margin-top: 0;
+  border-bottom: solid 1px #c0bfbc;
+}
+section.links > div.inner > div.hgroup {
+  border-bottom: solid 2px rgb(43,107,185);
+}
+section section.links > div.inner > div.hgroup {
+  border: none;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0; padding: 0;
+  font-weight: normal;
+}
+h1 { font-size: 2.4em; }
+h2 { font-size: 1.72em; }
+h3.title, h4.title, h5.title, h6.title, h7.title { font-size: 1.44em; }
+h3, h4, h5, h6, h7 { font-size: 1em; }
+p { line-height: 1.44em; }
+div, pre, p { margin: 0; padding: 0; }
+div.contents > * + *,
+th > * + *, td > * + *,
+dt > * + *, dd > * + *,
+li > * + * { margin-top: 1em; }
+p img { vertical-align: middle; }
+p.lead { font-size: 1.2em; }
+div.clear {
+  margin: 0; padding: 0;
+  height: 0; line-height: 0;
+  clear: both;
+}
+.center { text-align: center; }
+
+footer { background: #ddd; }
+footer div.about {
+  max-width: 700px;
+  margin: 0 auto;
+}
+footer div.about > div.inner > div.hgroup {
+  margin: 0; padding: 0;
+  text-align: center;
+  border: none;
+}
+footer div.about > div.inner > div.hgroup > h2 {
+  margin: 0; padding: 0.2em;
+  font-size: inherit;
+}
+footer div.about.ui-expander > div.inner > div.hgroup span.title:before {
+  content: "";
+}
+div.copyrights { text-align: center; }
+div.copyright { margin: 0; }
+div.credits {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: 0 -10px;
+}
+div.credits > * {
+  vertical-align: top;
+  text-align: left;
+  flex: 1 0 300px;
+  padding: 10px;
+}
+div.credits > *:empty { padding: 0; height: 0; }
+ul.credits, ul.credits li {
+  margin: 0; padding: 0;
+  list-style-type: none;
+}
+ul.credits li {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+div.license {
+  padding-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border-color: #c0bfbc;
+  border-width: 1px;
+}
+td, th {
+  padding: 0.5em;
+  vertical-align: top;
+  border-color: #c0bfbc;
+  border-width: 1px;
+}
+thead td, thead th, tfoot td, tfoot th {
+  font-weight: bold;
+  color: rgb(75,75,73);
+  background-color: rgb(234,234,233);
+}
+th {
+  text-align: left;
+  font-weight: bold;
+  color: rgb(75,75,73);
+}
+
+ul, ol, dl { margin: 0; padding: 0; }
+li {
+  margin: 1em 0 0 0;
+  margin-left: 2.4em;
+  padding: 0;
+}
+li:first-child { margin-top: 0; }
+@media (max-width: 480px) {
+  li {
+    margin-left: 1.44em;
+  }
+}
+dt { margin-top: 1em; }
+dt:first-child { margin-top: 0; }
+dt + dt { margin-top: 0; }
+dd {
+  margin: 0.2em 0 0 0;
+  margin-left: 1.44em;
+}
+dd + dd { margin-top: 1em; }
+ol.compact li { margin-top: 0.2em; }
+ul.compact li { margin-top: 0.2em; }
+ol.compact li:first-child { margin-top: 0; }
+ul.compact li:first-child { margin-top: 0; }
+dl.compact dt { margin-top: 0.2em; }
+dl.compact dt:first-child { margin-top: 0; }
+dl.compact dt + dt { margin-top: 0; }
+
+div.tiles {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  vertical-align: top;
+  clear: both;
+  margin: 0 -10px;
+}
+div.tiles > * {
+  vertical-align: top;
+  margin: 0;
+  padding: 10px;
+  max-width: none;
+}
+div.tiles > *:empty { padding: 0 10px; height: 0; }
+div.tile4 { flex: 1 0 250px; }
+div.tile3 { flex: 1 0 340px; }
+div.tile2 { flex: 1 0 520px; }
+div.tile1 { flex: 1 0 1060px; }
+
+a {
+  text-decoration: none;
+  color: rgb(43,107,185);
+}
+a:visited { color: rgb(147,64,167); }
+a:hover {
+  border-bottom: dotted 1px rgb(43,107,185);
+}
+p a {
+  border-bottom: dotted 1px rgb(43,107,185);
+}
+a img { border: none; }
+
+.yelp-svg-fill {
+  fill: rgb(75,75,73);
+}
+.yelp-svg-stroke {
+  stroke: rgb(75,75,73);
+}
+div.title {
+  margin: 0 0 0.2em 0;
+  font-weight: bold;
+  color: rgb(75,75,73);
+}
+div.title h1, div.title h2, div.title h3, div.title h4, div.title h5, div.title h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+div.desc { margin: 0 0 0.2em 0; }
+div.contents + div.desc { margin: 0.2em 0 0 0; }
+pre.contents {
+  padding: 0.5em 1em 0.5em 1em;
+}
+div.links-center { text-align: center; }
+div.links .desc { color: rgb(102,102,100); }
+div.links > div.inner > div.region > div.desc { font-style: italic; }
+div.links ul { margin: 0; padding: 0; }
+div.links ul ul {
+  margin-left: 1em;
+}
+li.links {
+  margin: 0.5em 0 0.5em 0;
+  padding: 0;
+  list-style-type: none;
+}
+li.links-head {
+  margin-top: 1em;
+  color: rgb(102,102,100);
+  border-bottom: solid 1px #c0bfbc;
+}
+div.sectionlinks {
+  display: inline-block;
+  padding: 0 1em 0 1em;
+  background-color: rgb(241,246,253);
+  border: solid 1px rgb(43,107,185);
+}
+div.sectionlinks ul { margin: 0; }
+div.sectionlinks li { padding: 0; }
+div.sectionlinks div.title { margin: 0.5em 0 0.5em 0; }
+div.sectionlinks div.sectionlinks {
+  display: block;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  border: none;
+}
+div.sectionlinks div.sectionlinks li {
+  padding-left: 1.44em;
+}
+nav.prevnext { clear: both; }
+div.region > nav.prevnext, div.region + nav.prevnext { margin-top: 1em; }
+nav.prevnext > div.inner { float: right; }
+nav.prevnext > div.inner > * {
+  background-color: rgb(244,244,244);
+  display: inline-block;
+  position: relative;
+  height: 1.44em;
+  padding: 0.2em 0.83em 0 0.83em;
+  margin-bottom: 1em;
+  border: solid 1px #c0bfbc;
+}
+nav.prevnext > div.inner > span { visibility: hidden; }
+nav.prevnext > div.inner > a + a {
+  border-left: none;
+}
+nav.prevnext > div.inner > a:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+nav.prevnext > div.inner > a:last-of-type {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+div.serieslinks {
+  display: inline-block;
+  padding: 0 1em 0 1em;
+  background-color: rgb(241,246,253);
+  border: solid 1px rgb(43,107,185);
+}
+div.serieslinks ul { margin: 0; }
+div.serieslinks li { padding: 0; }
+div.serieslinks div.title { margin: 0.5em 0 0.5em 0; }
+pre.numbered {
+  margin: 0;
+  padding: 0.5em;
+  float: left;
+  margin-right: 0.5em;
+  text-align: right;
+  color: rgb(102,102,100);
+  background-color: rgb(253,251,233);
+}
+div.code {
+  border: solid 1px #c0bfbc;
+}
+div.example {
+  border-left: solid 4px #c0bfbc;
+  padding-left: 1em;
+}
+div.example > div.inner > div.region > div.desc { font-style: italic; }
+div.figure {
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 1.72em;
+}
+div.figure > div.inner {
+  padding: 4px;
+  color: rgb(75,75,73);
+  border: solid 1px #c0bfbc;
+  background-color: rgb(244,244,244);
+}
+@media (max-width: 960px) {
+  div.figure {
+    margin-left: 0;
+  }
+}
+a.figure-zoom {
+  float: right;
+}
+a.figure-zoom:hover { border-bottom: none; }
+a.figure-zoom:hover .yelp-svg-fill { fill: #3584e4; }
+a.figure-zoom:hover .yelp-svg-stroke { stroke: #3584e4; }
+a.figure-zoom .figure-zoom-out { display: none; }
+a.figure-zoom.figure-zoomed .figure-zoom-in { display: none; }
+a.figure-zoom.figure-zoomed .figure-zoom-out { display: inline-block; }
+div.figure > div.inner > div.region > div.contents {
+  margin: 0;
+  padding: 0.5em 1em 0.5em 1em;
+  clear: both;
+  text-align: center;
+  color: #000000;
+  border: solid 1px #c0bfbc;
+  background-color: #ffffff;
+}
+div.list > div.inner > div.title { margin-bottom: 0.5em; }
+div.listing > div.inner { margin: 0; padding: 0; }
+div.listing > div.inner > div.region > div.desc { font-style: italic; }
+div.note {
+  padding: 10px 0;
+  border: solid 1px rgb(234,234,233);
+  background-color: rgb(244,244,244);
+  display: flex;
+  flex-flow: row;
+}
+div.note > * { margin: 0 10px; padding: 0; min-height: 24px; min-width: 24px; }
+div.note-warning > svg .yelp-svg-fill {
+  fill: #c01c28;
+}
+div.note-danger {
+  border-color: #c01c28;
+}
+div.note-important > svg .yelp-svg-fill {
+  fill: #3584e4;
+}
+div.note-danger > svg .yelp-svg-fill {
+  fill: #c01c28;
+  animation-name: yelp-note-danger;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes yelp-note-danger {
+  from { fill: #c01c28 }
+  50%  { fill: #c0bfbc }
+  to   { fill: #c01c28 }
+}
+div.note-sidebar {
+  float: right;
+  max-width: 248px;
+  margin-left: 20px;
+}
+div.quote {
+  padding: 0;
+  min-height: 48px;
+}
+
+div.quote > div.inner > div.title {
+  margin: 0;
+  margin-left: 48px;
+}
+blockquote {
+  margin: 0; padding: 0;
+  margin-left: 48px;
+}
+blockquote > *:first-child { margin-top: 0; }
+div.quote > div.inner > div.region > div.cite {
+  margin-top: 0.5em;
+  margin-left: 48px;
+  color: rgb(102,102,100);
+}
+div.quote > div.inner > div.region > div.cite::before {
+  
+  content: '― ';
+  color: rgb(102,102,100);
+}
+div.screen {
+  background-color: rgb(244,244,244);
+  border: solid 1px #c0bfbc;
+}
+ol.steps, ul.steps {
+  padding: 0.5em 1em 0.5em 1em;
+  border: solid 1px rgb(244,244,244);
+  border-left: solid 4px #f8e45c;
+}
+ol.steps .steps {
+  padding: 0;
+  border: none;
+  background-color: unset;
+}
+li.steps { margin-left: 1.44em; }
+li.steps li.steps { margin-left: 2.4em; }
+div.synopsis > div.inner > div.region > div.contents,
+div.synopsis > div.contents, div.synopsis > pre.contents {
+  padding: 0.5em 1em 0.5em 1em;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: rgb(43,107,185);
+  background-color: rgb(244,244,244);
+}
+div.synopsis > div.inner > div.region > div.desc { font-style: italic; }
+div.synopsis div.code {
+  background: unset;
+  border: none;
+  padding: 0;
+}
+div.synopsis div.code > pre.contents { margin: 0; padding: 0; }
+div.unknown > div.inner > div.region > div.desc { font-style: italic; }
+div.table > div.desc { font-style: italic; }
+tr.shade {
+  background-color: rgb(244,244,244);
+}
+td.shade {
+  background-color: rgb(244,244,244);
+}
+tr.shade td.shade {
+  background-color: rgb(234,234,233);
+}
+
+span.app { font-style: italic; }
+span.cmd {
+  font-family: monospace,monospace; font-size: 0.83em;
+  background-color: rgb(244,244,244);
+  padding: 0 0.2em 0 0.2em;
+}
+span.cmd span.cmd { background-color: unset; padding: 0; }
+pre span.cmd { background-color: unset; padding: 0; }
+span.code {
+  font-family: monospace,monospace; font-size: 0.83em;
+  border-bottom: solid 1px rgb(234,234,233);
+}
+span.code span.code { border: none; }
+pre span.code { border: none; }
+span.em { font-style: italic; }
+span.em-bold {
+  font-style: normal; font-weight: bold;
+  color: rgb(75,75,73);
+}
+a span.em-bold {
+  color: rgb(43,107,185);
+}
+pre span.error {
+  color: rgb(173,25,36);
+}
+span.file { font-family: monospace,monospace; font-size: 0.83em; }
+span.gui, span.guiseq { color: rgb(75,75,73); }
+a span.gui, a span.guiseq { color: rgb(43,107,185); }
+span.input { font-family: monospace,monospace; font-size: 0.83em; }
+pre span.input {
+  font-weight: bold;
+  color: rgb(75,75,73);
+}
+kbd {
+  font-family: inherit;
+  font-size: inherit;
+  color: rgb(75,75,73);
+  background-color: rgb(244,244,244);
+  border: solid 1px #c0bfbc;
+  border-radius: 2px;
+  margin: 0 0.2em 0 0.2em;
+  padding: 0.2em 0.5em 0 0.5em;
+  white-space: nowrap;
+}
+kbd.key-Fn {
+  font-weight: bold;
+  color: rgb(43,107,185);
+}
+span.key a {
+  border-bottom: none;
+}
+a kbd {
+  color: rgb(43,107,185);
+  border-color: rgb(43,107,185);
+}
+span.keyseq {
+  color: rgb(75,75,73);
+  white-space: nowrap
+}
+a span.keyseq { color: rgb(43,107,185); }
+span.output { font-family: monospace,monospace; font-size: 0.83em; }
+pre span.output {
+  color: #000000;
+}
+pre span.prompt {
+  color: rgb(75,75,73);
+}
+span.sys { font-family: monospace,monospace; font-size: 0.83em; }
+span.var { font-style: italic; }
+
+.ui-tile-img .media-controls { display: none; }
+span.media-audio, span.media-video { display: inline-block; }
+audio, video { display: block; margin: 0; }
+div.media > div.inner { display: inline-block; text-align: center; }
+.media-controls {
+  height: 30px;
+  margin: 0; padding: 0;
+  border-left: solid 1px #000000;
+  border-right: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  background-color: rgb(75,75,73);
+  color: #ffffff;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.media-controls > * {
+  flex: 0 1 auto;
+}
+.media-controls > input.media-range {
+  flex: 1 0 auto;
+  background-color: rgb(75,75,73);
+  margin: 0 10px;
+  -webkit-appearance: none;
+}
+input.media-range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgb(102,102,100);
+  border-radius: 2px;
+}
+input.media-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: rgb(234,234,233);
+  border: solid 1px rgb(75,75,73);
+  margin-top: -6px;
+}
+input.media-range::-webkit-slider-thumb:hover,
+input.media-range::-webkit-slider-thumb:focus {
+  background: rgb(244,244,244);
+}
+input.media-range::-moz-range-track {
+  height: 4px;
+  background: rgb(102,102,100);
+  border-radius: 2px;
+}
+input.media-range::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background: rgb(234,234,233);
+  border: solid 1px rgb(75,75,73);
+  margin-top: -6px;
+}
+.media-controls-audio {
+  border-top: solid 1px #000000;
+  border-radius: 4px;
+}
+button.media-play {
+  height: 30px;
+  padding: 0 6px 0 6px; line-height: 0;
+  background-color: rgb(75,75,73);
+  border: none;
+  border-right: solid 1px #000000;
+}
+button.media-play:hover, button.media-play:focus {
+  background-color: rgb(43,107,185);
+}
+button.media-play .yelp-svg-fill { fill: rgb(244,244,244); }
+button.media-play .media-pause { display: none; }
+button.media-play-playing .media-play { display: none; }
+button.media-play-playing .media-pause { display: inline; }
+.media-time {
+  margin: 0;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+}
+.media-time > span {
+  padding-right: 8px;
+}
+.media-duration {
+  font-size: 12px;
+  color: rgb(234,234,233);
+  opacity: 0.8;
+}
+.media-controls-ttml {
+  min-width: 630px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+div.media-ttml {
+  margin: 0; padding: 6px 0;
+  background-color: rgb(244,244,244);
+  border: solid 1px #000000;
+  min-height: 24px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.media-ttml-pre { white-space: pre; }
+.media-ttml-nopre { white-space: normal; }
+div.media-ttml-div {
+  text-align: left;
+  display: none;
+  margin: 0; padding: 0;
+}
+div.media-ttml-p {
+  text-align: left;
+  display: none;
+  margin: 0 auto;
+  max-width: 560px;
+  line-height: 1.44em;
+}
+div.media-ttml-div > * + * { margin-top: 1em; }
+div.yelp-data { display: none; }
+.ui-expander > div.inner > div.title span.title,
+.ui-expander > div.inner > div.hgroup span.title {
+  cursor: default;
+}
+.ui-expander > div.inner > div.title span.title:before,
+.ui-expander > div.inner > div.hgroup span.title:before {
+  font-weight: bold;
+  content: "⌃";
+  display: inline-block;
+  margin: 0;
+  color: rgb(43,107,185);
+  transform: translateY(0.2em) rotate(0deg);
+  -webkit-transform: translateY(0.2em) rotate(0deg);
+  transition: transform 0.2s linear;
+  transform-origin: 50% 30%;
+  -webkit-transform-origin: 50% 30%;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  margin: 0 0.2em;
+}
+.ui-expander-c > div.inner > div.hgroup { border-bottom: none; }
+
+.ui-expander > div.inner > div.title:hover,
+.ui-expander > div.inner > div.hgroup:hover * {
+  color: rgb(43,107,185);
+}
+.ui-expander > div.inner > div.hgroup > .subtitle {
+  margin-left: 2em;
+}
+.ui-expander-c > div.inner > div.region {
+  display: none;
+}
+.ui-expander-e > div.inner > div.region {
+  animation-name: yelp-ui-expander-e;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  transform-origin: 0 0;
+}
+@keyframes yelp-ui-expander-e {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+div.ui-expander-preview > div.inner > div.region {
+  transform-origin: 0 0;
+  transition: transform 0.2s linear, background-color 0.2s linear;
+  animation-name: none;
+}
+div.ui-expander-preview.ui-expander-c > div.inner {
+  max-height: 100px;
+  overflow: hidden;
+}
+div.ui-expander-preview.ui-expander-c > div.inner > div.region {
+  display: block;
+  transform: scaleY(0.4);
+  background-color: rgb(244,244,244);
+}
+div.ui-expander-preview.ui-expander-c > div.inner > div.region:hover {
+  background-color: rgb(241,246,253);
+  cursor: zoom-in;
+}
+div.ui-expander-preview.ui-expander-c > div.inner > div.region:hover * {
+  cursor: zoom-in;
+}
+div.ui-expander-preview > div.inner > div.region > * {
+  transform-origin: 0 0;
+  transition: transform 0.2s linear;
+}
+div.ui-expander-preview.ui-expander-c > div.inner > div.region > * {
+  transform: scaleX(0.4);
+}
+section.ui-expander-preview > div.inner > div.region > div.contents{
+  transform-origin: 0 0;
+  transition: transform 0.2s linear, background-color 0.2s linear;
+}
+section.ui-expander-preview.ui-expander-c > div.inner {
+  max-height: 140px;
+  overflow: hidden;
+}
+section.ui-expander-preview.ui-expander-c > div.inner > div.region {
+  display: block;
+}
+section.ui-expander-preview.ui-expander-c > div.inner > div.region > div.contents {
+  transform: scaleY(0.6);
+  background-color: rgb(244,244,244);
+}
+section.ui-expander-preview > div.inner > div.region > div.contents > * {
+  transform-origin: 0 0;
+  transition: transform 0.2s linear;
+}
+section.ui-expander-preview.ui-expander-c > div.inner > div.region > div.contents > * {
+  transform: scaleX(0.6);
+}
+section.ui-expander-preview.ui-expander-c > div.inner > div.region > div.contents:hover {
+  background-color: rgb(241,246,253);
+  cursor: zoom-in;
+}
+@media only screen and (max-width: 480px) {
+  article > div.region > div.contents > div.example,
+  article > div.region > section > div.inner > div.region > div.contents > div.example {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  div.example {
+    padding-left: 6px;
+    padding-right: 10px;
+  }
+  article > div.region > div.contents > div.note,
+  article > div.region > section > div.inner > div.region > div.contents > div.note {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  article > div.region > div.contents > div.note,
+  article > div.region > section > div.inner > div.region > div.contents > div.note {
+    border-left: none;
+    border-right: none;
+  }
+  article > div.region > div.contents > div.steps,
+  article > div.region > section > div.inner > div.region > div.contents > div.steps {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  div.steps > div.inner > div.title {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  ol.steps, ul.steps {
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  div.note-sidebar {
+    float: none;
+    max-width: none;
+    margin-left: inherit;
+    margin-right: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+  }
+}
+div.quote > div.inner:before { float: leftcontent: '“';
+  font-family: "Century Schoolbook L";
+  font-size: {{$icons.size.quote}}px;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0; padding: 0;
+  height: {{$icons.size.quote}}px;
+  width: {{$icons.size.quote}}px;
+  text-align: center;
+  color: {{$color.bg.dark}};
+}.ui-expander-e > div.inner > div.title span.title:before, .ui-expander-e > div.inner > div.hgroup span.title:before {transform: translateY(0.2em) rotate(180deg);}
+.hljs a {
+  color: inherit;
+  border-bottom: dotted 1px rgb(43,107,185);
+}
+.hljs a:hover, .hljs a:hover * { color: rgb(43,107,185); }
+.hljs-addition {
+  color: rgb(46,121,73);
+  background-color: rgb(227,250,236);
+}
+.hljs-deletion {
+  color: rgb(173,25,36);
+  background-color: rgb(251,243,244);
+}
+.hljs-emphasis  { font-style: italic; }
+.hljs-strong    { font-weight: bold; }
+.hljs-attr      { color: rgb(43,107,185); }
+.hljs-attribute { color: rgb(107,99,41); }
+.hljs-built_in  { color: rgb(150,96,43); }
+.hljs-bullet    { color: rgb(46,121,73); }
+.hljs-class     { }
+.hljs-code      { color: rgb(75,75,73); }
+.hljs-comment   { color: rgb(102,102,100); }
+.hljs-doctag    { }
+.hljs-formula   { color: rgb(75,75,73); }
+.hljs-function  { }
+.hljs-keyword   { color: rgb(147,64,167); }
+.hljs-link      { color: rgb(150,96,43); }
+.hljs-literal   { color: rgb(150,96,43); }
+.hljs-meta      { color: rgb(150,96,43); }
+.hljs-name      { color: rgb(173,25,36); }
+.hljs-number    { color: rgb(150,96,43); }
+.hljs-params    { color: rgb(150,96,43); }
+.hljs-quote     { color: rgb(102,102,100); }
+.hljs-regexp    { color: rgb(173,25,36); }
+.hljs-rest_arg  { }
+.hljs-section   { color: rgb(43,107,185); }
+.hljs-string    { color: rgb(46,121,73); }
+.hljs-subst     { }
+.hljs-symbol    { color: rgb(46,121,73); }
+.hljs-tag       { color: rgb(173,25,36); }
+.hljs-title     { color: rgb(43,107,185); }
+.hljs-type      { }
+.hljs-variable  { }
+.hljs-selector-attr  { }
+.hljs-selector-class { color: rgb(173,25,36); }
+.hljs-selector-id    { color: rgb(173,25,36); }
+.hljs-selector-tag   { color: rgb(147,64,167); }
+.hljs-template-tag      { }
+.hljs-template-variable { }
+
+
+div.links .desc a {
+  color: inherit;
+}
+div.links .desc a:hover {
+  color: rgb(43,107,185);
+}
+a.bold { font-weight: bold; }
+
+
+div.link-button {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.link-button a {
+  display: inline-block;
+  background-color: #3584e4;
+  color: #ffffff;
+  text-shadow: rgb(43,107,185) 1px 1px 0px;
+  border: solid 1px rgb(43,107,185);
+  padding: 0.2em 0.83em 0.2em 0.83em;
+  border-radius: 4px;
+}
+.link-button a:visited {
+  color: #ffffff;
+}
+.link-button a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgb(73,144,231);
+}
+div.link-button a .desc {
+  display: block;
+  font-weight: normal;
+  font-size: 0.83em;
+  color: rgb(244,244,244);
+}
+
+
+div.floatleft {
+  float: left;
+  margin-right: 1em;
+}
+div.floatright {
+  float: right;
+  margin-left: 1em;
+}
+div.floatstart {
+  float: left;
+  margin-right: 1em;
+}
+div.floatend {
+  float: right;
+  margin-left: 1em;
+}
+
+
+div.title-heading h1, div.title-heading h2, div.title-heading h3,
+div.title-heading h4, div.title-heading h5, div.title-heading h6 {
+  font-size: 1.72em;
+  font-weight: bold;
+}
+ul.links-heading > li { margin: 2em 0 2em 0; padding: 0; }
+div.links-heading > a { font-size: 1.72em; font-weight: bold; }
+ul.links-heading > li > div.desc { margin-top: 0.5em; }
+
+div.links-uix-hover {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+ul.links-uix-hover { flex-grow: 1; }
+ul.links-uix-hover li { margin: 0; padding: 0; }
+ul.links-uix-hover a {
+  display: block;
+  padding: 8px 1.2em;
+  border-bottom: none;
+}
+ul.links-uix-hover a:hover, ul.links-uix-hover a:focus {
+  background: rgb(241,246,253);
+}
+ul.links-uix-hover img {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  visibility: hidden;
+  opacity: 0.0;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+ul.links-uix-hover a:hover img, ul.links-uix-hover a:focus img {
+  visibility: visible;
+  opacity: 1.0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+@media only screen and (max-width: 480px) {
+  div.links-uix-hover-img { display: none; }
+  ul.links-uix-hover img { display: none; }
+  ul.links-uix-hover li {
+    margin-left: -10px; margin-right: -10px;
+  }
+  ul.links-uix-hover li a {
+    padding: 10px;
+  }
+}
+
+
+div.ui-overlay-screen {
+  position: fixed;
+  margin: 0;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgb(75,75,73);
+  animation-name: yelp-overlay-screen;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes yelp-overlay-screen {
+  from { opacity: 0.0; }
+  to   { opacity: 0.6; }
+}
+div.ui-overlay {
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+div.ui-overlay-show {
+  animation-name: yelp-overlay-slide;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes yelp-overlay-slide {
+  from { transform: translateY(-400px) translateX(-50%); }
+  to   { transform: translateY(0) translateX(-50%); }
+}
+div.ui-overlay > div.inner {
+  display: inline-block;
+  padding: 8px;
+  background-color: rgb(244,244,244);
+  border-radius: 4px;
+  text-align: left;
+}
+div.ui-overlay img, div.ui-overlay video {
+  max-height: 80vh;
+  max-width: 90vw;
+}
+div.ui-overlay > div.inner > div.title { margin-top: -4px; }
+a.ui-overlay-close {
+  display: block;
+  float: right;
+  width: 30px; height: 30px;
+  font-size: 22px; line-height: 30px;
+  font-weight: bold;
+  margin-top: -28px;
+  margin-right: -26px;
+  padding: 1px 2px 3px 2px;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #3584e4;
+  color: #ffffff;
+}
+
+div.links-tiles {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  vertical-align: top;
+  clear: both;
+  margin: 0 -10px;
+}
+div.links-tile {
+  flex: 1 0 340px;
+  vertical-align: top;
+  margin: 0;
+  padding: 10px;
+}
+div.links-tiles > div.links-tile { max-width: none; }
+div.links-tile:empty { padding: 0 10px; height: 0; }
+div.links-tile > a {
+  display: block;
+  vertical-align: top;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+}
+div.links-tile > a:hover {
+  background-color: rgb(241,246,253);
+}
+div.links-tile > a > span.links-tile-img {
+  display: block;
+  text-align: center;
+}
+div.links-tile > a > span.links-tile-img > img {
+  width: 100%;
+  border-radius: 3px;
+}
+div.links-tile > a > span.links-tile-text > span.title {
+  display: block;
+  font-weight: bold;
+}
+div.links-tile > a > span.links-tile-text > * + span.title {
+  margin-top: 0.5em;
+}
+div.links-tile > a > span.links-tile-text > span.desc {
+  display: block;
+  margin: 0.2em 0 0 0;
+  color: rgb(75,75,73);
+}
+
+
+a.ex-gnome-top {
+  display: block;
+  border: solid 1px #c0bfbc;
+  border-radius: 4px;
+  transition: box-shadow 0.5s linear;
+}
+a.ex-gnome-top:hover {
+  box-shadow: 0px 2px 4px #c0bfbc;
+}
+span.ex-gnome-top-banner {
+  display: block;
+  height: 10px;
+  background: #57e389;
+  overflow: hidden;
+}
+span.ex-gnome-top-title {
+  color: #000000;
+  display: block;
+  margin: 10px 20px;
+  font-size: 1.2em;
+}
+span.ex-gnome-top-desc {
+  color: rgb(102,102,100);
+  display: block;
+  margin: 10px 20px;
+}
+
+
+a.ex-gnome-tile {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  border: solid 1px #c0bfbc;
+  border-radius: 4px;
+  transition: box-shadow 0.5s linear;
+}
+a.ex-gnome-tile:hover {
+  box-shadow: 0px 2px 4px #c0bfbc;
+}
+span.ex-gnome-tiles-banner {
+  display: block;
+  flex: 0 0 64px;
+  background: rgb(43,107,185);
+  overflow: hidden;
+}
+span.ex-gnome-tiles-banner img {
+  width: 64px; height: 64px;
+  margin: 10px 0;
+  transform: rotate(-10deg);
+}
+span.ex-gnome-tiles-text {
+  display: block;
+  margin: 10px;
+}
+span.ex-gnome-tiles-title {
+  color: #000000;
+  display: block;
+  margin: 0;
+  font-size: 1.2em;
+}
+span.ex-gnome-tiles-desc {
+  color: rgb(102,102,100);
+  display: block;
+  margin-top: 10px;
+}
+
+
+div.links-grid-container {
+  margin-left: -10px;
+  margin-right: -10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  vertical-align: top;
+  clear: both;
+}
+div.links-grid {
+  flex: 1 0 340px;
+  padding: 10px;
+}
+div.links-grid:empty { padding: 0 10px; height: 0; }
+div.links-grid-link { font-weight: bold; }
+div.links-grid > div.desc {
+  margin: 0.2em 0 0 0;
+  color: rgb(75,75,73);
+}
+
+
+
+div.links-norwich {
+  width: 900px;
+}
+div.links-norwich-primary {
+  float: left;
+  vertical-align: top;
+  margin: 0; padding: 0;
+}
+div.links-norwich-big {
+  vertical-align: top;
+  display: inline-block;
+  background: rgb(241,246,253);
+  background: radial-gradient(ellipse 800px 1200px at 100% 20px, rgb(241,246,253), #3584e4);
+  margin: 0 20px 20px 0;
+}
+div.links-norwich-big + div.links-norwich-big {
+  background: rgb(253,251,233);
+  background: radial-gradient(ellipse 800px 1200px at 100% 20px, rgb(253,251,233), #f8e45c);
+}
+div.links-norwich-big a {
+  display: block;
+  width: 230px;
+  height: 500px;
+  height: 320px;
+  padding: 9px;
+  font-size: 1.2em;
+  color:  #000000;
+  border: solid 1px #3584e4;
+  background-repeat: no-repeat;
+  background-position: right -80px bottom -80px;
+}
+div.links-norwich-big a:hover {
+  border: solid 1px #3584e4;
+  box-shadow: 2px 2px 2px #3584e4;
+}
+div.links-norwich-big a span.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+div.links-norwich-big a .desc {
+  color:  #000000;
+  font-weight: normal;
+}
+div.links-norwich-secondary {
+  vertical-align: top;
+  margin: 0; padding: 0;
+}
+div.links-norwich-small {
+  display: inline-block;
+  vertical-align: top;
+  background: rgb(244,244,244);
+  margin: 0 20px 20px 0;
+}
+div.links-norwich-small a {
+  display: block;
+  width: 140px;
+  height: 140px;
+  padding: 9px;
+  font-weight: bold;
+  color:  #000000;
+  border: solid 1px #c0bfbc;
+  background-repeat: no-repeat;
+  background-position: right 4px bottom 4px;
+}
+div.links-norwich-small a:hover {
+  border: solid 1px #c0bfbc;
+  box-shadow: 2px 2px 2px #3584e4;
+}
+@media only screen and (max-width: 900px) {
+  div.links-norwich {
+    width: 720px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  div.links-norwich {
+    width: 540px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  div.links-norwich {
+    width: 100%;
+  }
+  div.links-norwich-big {
+    width: 100%;
+    margin-right: 0;
+  }
+  div.links-norwich-big a {
+    width: auto;
+  }
+}
+
+
+div.links-divs {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+a.linkdiv {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border-bottom: none;
+}
+a.linkdiv:hover {
+  text-decoration: none;
+  background-color: rgb(241,246,253);
+}
+a.linkdiv span.title {
+  display: block;
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: inherit;
+}
+a.linkdiv span.desc {
+  display: block;
+  margin: 0.2em 0 0 0;
+  color: rgb(75,75,73);
+}
+span.linkdiv-dash { display: none; }
+div.links-twocolumn {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  vertical-align: top;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+div.links-twocolumn > div.links-divs {
+  flex: 1 0 360px;
+  vertical-align: top;
+  margin: 0;
+}
+
+
+div.comment {
+  padding: 0.5em;
+  border: solid 2px #c01c28;
+  background-color: rgb(251,243,244);
+}
+div.comment div.comment {
+  margin: 1em 1em 0 1em;
+}
+div.comment div.cite {
+  margin: 0 0 0.5em 0;
+  font-style: italic;
+}
+
+
+div.tree > div.inner > div.title { margin-bottom: 0.5em; }
+ul.tree {
+  margin: 0; padding: 0;
+  list-style-type: none;
+}
+li.tree { margin: -2px 0 0 0; padding: 0; }
+li.tree div { margin: 0; padding: 0; }
+ul.tree ul.tree {
+  margin-left: 1.44em;
+}
+div.tree-lines ul.tree { margin-left: 0; }
+
+
+span.hi {
+  background-color: rgb(253,251,233);
+}
+span.hi.hi-ins {
+  background-color: rgb(227,250,236);
+}
+span.hi.hi-del {
+  background-color: rgb(251,243,244);
+  text-decoration: line-through;
+}
+span.hi.hi-ins ins { text-decoration: none; }
+span.hi.hi-del del { text-decoration: none; }
+span.hi.hi-red { background-color: rgb(251,243,244); }
+span.hi.hi-orange { background-color: rgb(255,243,231); }
+span.hi.hi-yellow { background-color: rgb(253,251,233); }
+span.hi.hi-green { background-color: rgb(227,250,236); }
+span.hi.hi-blue { background-color: rgb(241,246,253); }
+span.hi.hi-purple { background-color: rgb(249,243,250); }
+span.hi.hi-gray { background-color: rgb(244,244,244); }
+
+
+dt.gloss-term {
+  margin-top: 1.2em;
+  font-weight: bold;
+  color: rgb(75,75,73);
+}
+dt.gloss-term:first-child, dt.gloss-term + dt.gloss-term { margin-top: 0; }
+dt.gloss-term + dd { margin-top: 0.2em; }
+dd.gloss-link {
+  margin: 0 0.2em 0 0.2em;
+  border-left: solid 4px #3584e4;
+  padding-left: 1em;
+}
+dd.gloss-def {
+  margin: 0 0.2em 1em 0.2em;
+  border-left: solid 4px #c0bfbc;
+  padding-left: 1em;
+}
+a.gloss-term {
+  position: relative;
+  border-bottom: dashed 1px #3584e4;
+}
+a.gloss-term:hover {
+  text-decoration: none;
+  border-bottom-style: solid;
+}
+span.gloss-desc {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  margin: 0;
+  left: 0;
+  top: 1.2em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  min-width: 12em;
+  max-width: 24em;
+  overflow: hidden;
+  color: rgb(75,75,73);
+  background-color: rgb(253,251,233);
+  border: solid 1px #f8e45c;
+  box-shadow: 2px 2px 4px #c0bfbc;
+}
+a.gloss-term:hover span.gloss-desc, a.gloss-term:focus span.gloss-desc {
+  display: inline-block;
+  animation-name: yelp-gloss-fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes yelp-gloss-fade {
+  from { opacity: 0.0; }
+  to   { opacity: 1.0; }
+}
+
+
+.if-if { display: none; }
+.if-choose, .if-when, .if-else { margin: 0; padding: 0; }
+.if-choose > .if-when { display: none; }
+.if-choose > .if-else { display: block; }
+.if-if.if__not-target-mobile { display: block; }
+.if-choose.if__not-target-mobile > .if-when { display: block; }
+.if-choose.if__not-target-mobile > .if-else { display: none; }
+@media only screen and (max-width: 480px) {
+  .if-if.if__target-mobile { display: block; }
+  .if-if.if__not-target-mobile { display: none; }
+  .if-choose.if__target-mobile > .if-when { display: block; }
+  .if-choose.if__target-mobile > .if-else { display: none; }
+  .if-choose.if__not-target-mobile > .if-when { display: none; }
+  .if-choose.if__not-target-mobile > .if-else { display: block; }
+}
+
+
+/* Based on light-moin-theme from https://code.launchpad.net/ubuntu-website/light-moin-theme 
+   Some tweaks and adaptation for xsl by Matthew East for Ubuntu Documentation Team
+   ubuntu-doc@lists.ubuntu.com */
+
+/* Don't forget to set a foreground and background color
+ on the 'html' or 'body' element! */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: inherit;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+/* span.key is not defined in the yelp html.xsl, but it should be. Define it here because it is required. */
+span.key {
+  font-weight: bold;
+}
+
+/* overide the yelp html.xsl here. Why? Because the definition of text_light is wrong above, but fixing it breaks a multitude of other things. */
+span.gui, span.guiseq { color: #808080; }
+
+/* overide some of the yelp html.xsl here. Why? Because the definition of gray stuff wrong above, but fixing it breaks a multitude of other things. */
+kbd {
+  background-color: #e5e5e5;
+  border: solid 1px #aaaaaa;
+  -moz-box-shadow: 1px 1px 1px #aaaaaa;
+  -webkit-box-shadow: 1px 1px 1px #aaaaaa;
+  box-shadow: 1px 1px 1px #aaaaaa;
+}
+
+/* override flex-basis value: 300px => 250px
+   links-grid to get three link groups per row, and links-tile
+   to make sense of the thumbnails at getting-started.html */
+div.links-grid, div.links-tile {
+  flex-basis: 250px;
+}
+
+/* override flex-basis value: 520px => 400px
+   to allow two columns with the experimental-gnome-tiles style */
+div.tile2 {
+  flex-basis: 400px;
+}
+
+/* override background color of tiles */
+span.ex-gnome-tiles-banner {
+  background: rgb(0,0,0);
+}
+
+/* override color of banners at index page */
+span.ex-gnome-top-banner {
+  background-color: #fc8c88;
+}
+
+/* change hover behavior for new style components */
+a.ex-gnome-top:hover, a.ex-gnome-tile:hover {
+  text-decoration: none;
+  background-color: rgb(241,246,253);
+}
+
+/* override margin - no negative right and left margins
+   (to keep the internal navigation row within the outer border) */
+div.trails {
+  margin: 0;
+}
+
+/* override link button background */
+.link-button a {
+    background-color: #dd4814;
+}
+.link-button a:hover {
+  box-shadow: 1px 1px 1px #dd4814;
+}
+
+/* override important icon background */
+div.note-important > svg .yelp-svg-fill {
+  fill: #dd4814;
+}
+
+a img, :link img, :visited img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+}
+
+/* moin specific overrides go below */
+.clear { clear: both; }
+#fullsearch { display: none; }
+
+body {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAMAAACeL25MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////zsrFFOhhzwAAAA9JREFUeNpiYGTAAAABBgAAJwAC/BnsgQAAAABJRU5ErkJggg==");
+}
+
+#main-menu a {
+    padding: 24px 8px;
+}
+
+#search-box {
+    margin-left: 660px;
+    -moz-border-radius: 0px 0px 4px 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-box-shadow: #bbb 0px 0px 2px;
+    -webkit-box-shadow: #bbb 0px 0px 2px;
+    background-color: #F2F2F2;
+    width: 290px;
+    height: 33px;
+    padding: 7px 0 0 10px;
+}
+
+#search-box #searchinput {
+    float: left;
+    width: 172px;
+    height: 20px;
+    margin: 8px 0 0 8px;
+    padding: 3px 0 1px 4px;
+    font-size: 11px;
+    border: 1px solid #ccc;
+}
+#search-box #titlesearch {
+    float: left;
+    background: url("data:image/png;base64,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") transparent;
+    width: 24px;
+    height: 24px;
+    margin: 8px 0 0 8px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+	text-indent: 50px;
+}
+
+#search-box input[name="q"] {
+    width: 172px;
+}
+
+#search-box button span {
+    position: absolute;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+#subheader ul {
+	display: inline;
+	float: left;
+}
+#title span {
+	color: #333;
+}
+
+/* fix TOC styles */
+#cwt-content table li {
+    margin-left: 1.5em;
+    line-height: 18px;
+}
+#cwt-content table ol {
+    list-style-type: decimal;
+}
+
+/* fix wiki styles */
+#cwt-content pre {
+    line-height: 16px;
+    margin-bottom: 8px;
+}
+#cwt-content h1 {
+    margin-bottom: 8px;
+}
+
+#cwt-content dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+#cwt-content dt, #cwt-content dd {
+    line-height: 18px;
+    font-size: 14px;
+}
+
+#footer {
+	margin: 0;
+	font-size: 90%;
+	color: #444;
+}
+
+/* edit form */
+#editor-textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 4px;
+}
+#cwt-content input[type=text] {
+    width: 100%;
+}
+
+/* moin's msg dialog */
+#message {
+    padding: 16px;
+    margin: 8px 0;
+    border: 20px #F1F1ED solid;
+    font-size: 14px;
+    background-color: white;
+}
+#message p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* tables need a little spacing */
+#cwt-content td, #cwt-content th {
+    margin: 1px;
+    padding: 4px;
+}
+#cwt-content td, #cwt-content th {
+    border: 1px solid #E9E9E9;
+}
+#cwt-content ol, #cwt-content dl {
+    margin-bottom: 8px;
+    list-style-type: decimal;
+}
+#cwt-content ul {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+#cwt-content li, #cwt-content dd, #cwt-content dt {
+    line-height: 14px;
+}
+#cwt-content ol li {
+    margin-left: 18px;
+}
+#cwt-content tt {
+    font-family: monospace;
+}
+
+body {
+    font-family: "Ubuntu", "Ubuntu Beta", "Bitstream Vera Sans", DejaVu Sans, Tahoma, sans-serif;
+    color: #333;
+    background: white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAMAAACeL25MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////zsrFFOhhzwAAAA9JREFUeNpiYGTAAAABBgAAJwAC/BnsgQAAAABJRU5ErkJggg==");
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+}
+#container {
+    background: #f7f6f5;
+    margin: 0px auto 20px;
+    padding: 0px;
+    width: 976px;
+}
+#container-inner {
+    background-color: #fff;
+}
+#header, #container-inner {
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-box-shadow: #bbb 0px 0px 5px;
+    -webkit-box-shadow: #bbb 0px 0px 5px;
+}
+#header {
+    background: #dd4814 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAvCAYAAAB30kORAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOpJREFUeNrs0lkKwkAQRVEX4IyiRlGccZ72v7ZIgQX3J9IQ0HrQH5LDpSNNeI2yLBuf30vFche2p9yF/dJ5HnkeeR55HnkeeR55Hnke/5jHU8VyF/Yv/UCUMOdxV7HjhhjehiuihDmPi4odZ8TwNpwQJcx5HFXsOCCGt2GPKGHOY6dixxYxvA1rxCpvEs787H84j5WKHUvE8DYsECXMecxV7JghhrdhiihhzmOS4KJGLxLOJ93BMUYMb8MIUcKcx1DFjgFieBv6iBLmPHoqdnQR6U5FTzlT592v5w1tRAlzHi0VO5qI4f0WYAAt6Rt1N4JiVwAAAABJRU5ErkJggg==") top left repeat-x;
+    height: 64px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#mothership ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 20px;
+}
+
+#mothership li {
+    float: right;
+    padding: 3px 0;
+    margin: 0 16px 0 0;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+#mothership a {
+    color: #333;
+}
+
+#menu-search {
+    height: 40px;
+    margin: 0 16px;
+}
+
+#cwt-content {
+    width: 850px;
+    padding: 16px 40px 16px 40px;
+    margin: 0 16px 16px;
+    background-color: #ffffff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+#end-content {
+    clear: both;
+}
+
+.box-944 {
+    background: #ffffff;
+    width: 944px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.box-304 {
+    background: #ffffff;
+    width: 304px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+.box-624 {
+    background: #ffffff;
+    width: 304px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.content-box {
+    width: 912px;
+    padding: 16px;
+}
+
+#ubuntu-header {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAgCAQAAADeOPkGAAAI60lEQVR42u2ce3BU1RnAzwaCBge7PMakFnShmo6tM40PainTZC0dwVqYBfqgTA0Ltk4KaQxOaatDpxemxdEUu2ECEYJmsbWp/cftOC0yaN12bJUZLEuVykCFBYwF4sh2bOUZf/1j796cc197d3MDAe45/+Te893zyPe755zv+85dgRgG+UqqGTEsehLkYZCHQyei7OJFrgqUEeThA+USYE8AZZCHFsqxzGYOYx1KxzGH2YSN60bgH+cdygoqAvUPayjtEiNpYDnr6KCKEEvZyWF+x2Sj3DnfwWnO8nmH0mn0c5bPXUAor0bjeW4L1H9RQUkNj/E++bROCH5OIfVRM2goz3HmgkIZ4X1gRqD+iwhK7uMEA6mBMOek6zZfoJx6AaG8nuNANFD/RQIlIdYZ+L3CShZSxTTk9EIAZZDPL5SP6uj9mc8Y96oVKDsuESin+fqPtG6BosSJiCCVmCxQco8O3hoqFMFuA8mTfJpxXOUzlH/nCm6giQ308CtWc5cF0ipmMZ9rLLVN4RvUEzKuRzKJGSzlETbSTRdrWEC1BcpjwEq+wlw9z6MGgWACMWYx2tLKLSzgsyVCCRC9TMFKkiLsF5S3cC/P0mkRrCJBjn52MV0INrPSZyizJJV9LLxmMkQm8g4w01Lb94HXGKlfVdLFe3yEmg5yrwnKo5hTDIHgTuA4EUsrSaDz8oGSSClImaWJAqD5AiWV3MBIR+EQo4UQgrXACa70FUqAXpK00Mj32MhR4L8skJ76BEeAuyy1NQN/M6AczZvAP+nkYZpYQjMdHAD6WWSZKZ+jnfWsZz0b6ORmBIIG4BjXW1p5EthwuUBZWs+t0kTIAbFBQ8kIVnMS+B8/JuT60EsAzPcVytOs4uOSTC1bgT5uLwrlMuCvBpRV7ALiisS1/AF4m+tMe8rpNn0LoPQBSiGIUOfDnpIfSktZk+tDS/Lmjq9QZiwz7wR2As8ZcZdSoGw0ydTSBzR7sL4DKH2B0idDhyMSlG+4PlQHwF98hrLKIrcAOGnIlT9TCgQ9QM/QQ0mUJGnSJIiYlUWEBGnSJK0qJIJGmjQpWvMWOxragO1OFI24ybLX0NAKiyRRNDQ7e586vd2EaZG11KFgltTL4lL96cLYikorvXcbu81IDHNlBGclKHOuUNbkwfUZSqvFW8NB4EFfoHwYeNWYjcuDcn0xKElazCdDBWjKfcU2NZXFrPMPGpBWMBhIGVrJSddxRVsJRTbpUEdOXm6VEr1VUsrdeBFpj2O364U8U+6UCl9yhXICAG/5CuVuGygF24AtvkC5CNhjHBEZEih19SeJEqWVrKwYXS1JYkRJkFMQa5XKYiTzKisKZQYNjaSBYwoNTW81ojyXI0GUqP7KxKU60mhoen9yJlTMc18MjShR4mQ8SHsdu00vZCgbOKMP7xS3u0L5RQBePA9QPgVs8wXKecA+JgwdlPpyHbfbaxEmB7SaNkC2ZfY7NRsoo4r7pbD05WvTjEUTGJgD0YCMTR35/rR62yUSVkdqa+h4Grt9LxSXELfyWzI8MxDJcejUAwC0D+qUkDcoNwBp/Uz64KCMDTmUGpB1UEyrpSwJpOzLSoNSCHIKIqlCzXrdKQtOdjNxyrK0u5gupGUvZBEoXcZu3wvbAxlFHEIhXgfgHhcF3cqHLqdwvgx8KMVHnKHsBrYrM+XM8wClnfO8OJQpIOGgGEXlQghBvLBztz5XMpQqIpppH5jVzZN8HuiT5/qlPheMuGwJULqM3b4XZuf5bTzLn/gXV9vieIUQQlBLP/AOo1wUNJnjwGKH0u8C70qzkROUFWwHuvWrag4AX7OF8hXjC5/BQvkF+vmAm8qAMm2OYUiKsZZFAezLfIQyjV0qA0rCZEy1eIXSZezeoKzkIABPq7MlIVo4wkfsZZ4QrAAeFO4fgr0ObHQo7QJ2SBA6QTmJXsm7OIZMfsfhA5ST+DfwJZu+3cR/gDsvISjzhpecw2VAmZQMplhJM+VgoRSCu/W48ZNyuJHl0htyN5U8T2WRDyk6gKwUQxnI13HE5PPLQ2k9JdQC5PTwn0Dw+/yOwwcox7PPISY1nr3A8jKgTMhqNSnGWmaYHCTUfZ/ydGyQUDrUXQaU6r61lD2ly9g9QikEP9Ph2y0JH1U9UXlgXVVUz2mHIwxPAKeUpTN/dM08U9bRC2yS7vwAOMaNJrmlZUA5ijSwxrbnzwCvWl6RzUWhjKmWrqKYmOqoEYJsYSdpLdMlMvJes0woHer2BGXcRdoKZdwRSpexe4cyRJsB4Ns8zicZo+wlej18o1NYpOFx5fOxcbovb5MiaYUyxFfZD+xRTI4pHAJeMM2/zWVAKXgMyPIp4/pjTNT/mskZoIMxFudUMT9l3n8XtXXcpIGMHqsJ64thWFJSRnouInkY6wYDpV3dRqtuUKYlsCPGK2I4vU0tWqRLGLs3KIUQgoW8Z0C4QggOS1Bu8whlNdsAeJM2GplLI228BcB2CY7CJ7Yn+TU/YjHfZCEr+COngf3cYfkYtx84xBM8wP008xM2sx/YIVnfGVsTay6wX2r3ZnqBvfyURSxG4w1SRtlafaX4BUu5nxZW8RuOu+yRC1BGdEd23t7NmXxwOd3lnTbHRIyyrG4fJyT/Xv6JtBwtKQlKte6s5NF0gzJuPJPRd75xPeIyYMNrztIW/6Pz2L1DKQRjWcW7+U8ixMDhMjjHNI9QCsbSZjojCSf4peXT21kcspyA/IAtTLGp81scMEme4yjtxiHfKnYDS2yh3Ke8DLOVVw1SRvR9FA/RZ2rlFIelAx1OYcawFGHJxyrqJPs1aXdfn7/kAGXCUKZsPWelxdwzlHrdOakWD1Aqwclsvq+mUGZOCRNYpdXaHcdeEpRCCEEFU2niEWqEYD476ONlpsunOTzkWpaxma28zFaeYhm1DrPqDFpYSzc99NBBk41TppCv4eusppMuOljFfdRzrXTufAT1xJhk08IcGkxurIl8h3a20MVD1JsOhExmMY+yiU20s5JvM5Xxwbczl9ovZISCf3WQL6afbQlykAMogxxAGeQgl5T/D2iEuYOPCbQ+AAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    height: 32px;
+    right: 16px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    width: 330px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+#ubuntu-header a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#footer {
+    padding-top: 16px;
+}
+
+#footer p {
+    margin: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px dotted #aea79f;
+    text-align: center;
+}
+
+#main-menu {
+    list-style: none;
+    margin: 0;
+    margin-left: 16px;
+    padding: 0;
+    height: 100%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABACAIAAABUc4oXAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYrrqycDEoWzN9PPuUab/DBD2DyCbgQFVnBPI/g5kMzICxZUgbAawuBWQfYyJEchmVzRn+nH/JIQtb8r04+FpsBp2GQOmX08ugNmsUrpMv59dBpvJKq7B9PvlDbB6FlEVpj+v70DEBeWZfr9/CFbPwifF9OfTMwibR4Tp75c3YDVMHLxM/398BrMZsGCQmf/R2MhiUAwQYABLVzqf+nfn4AAAAABJRU5ErkJggg==") no-repeat scroll left top transparent !important;
+}
+#main-menu li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 64px;
+    font-size: 14px;
+    line-height: 16px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABACAIAAABUc4oXAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYrrqycDEoWzN9PPuUab/DBD2DyCbgQFVnBPI/g5kMzICxZUgbAawuBWQfYyJEchmVzRn+nH/JIQtb8r04+FpsBp2GQOmX08ugNmsUrpMv59dBpvJKq7B9PvlDbB6FlEVpj+v70DEBeWZfr9/CFbPwifF9OfTMwibR4Tp75c3YDVMHLxM/398BrMZsGCQmf/R2MhiUAwQYABLVzqf+nfn4AAAAABJRU5ErkJggg==") no-repeat scroll right top transparent !important;
+}
+#main-menu a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 24px 8px;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: #000 0px 1px;
+}
+
+.main-menu-item.current,
+#main-menu a:hover, #main-menu a.active {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAs4AAABACAYAAAAKyfGtAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAEwSURBVHja7NahEQAwCACxHlfVHerx7L8bG6ARyQiv/ub7dQAAgFFIAAAAxhkAAIwzAAAYZwAAMM4AAGCcAQDAOAMAgHEGAACMMwAAGGcAADDOAABgnAEAwDgDAIBxBgAA4wwAABhnAAAwzgAAYJwBAMA4AwCAcQYAAOMMAADGGQAAjDMAAGCcAQDAOAMAgHEGAADjDAAAxhkAAIwzAAAYZwAAwDgDAIBxBgAA4wwAAMYZAACMMwAAGGcAADDOAACAcQYAAOMMAADGGQAAjDMAABhnAAAwzgAAYJwBAMA4AwAAxhkAAIwzAAAYZwAAMM4AAGCcAQDAOAMAgHEGAACMMwAAGGcAADDOAABgnAEAwDgDAIBxBgAA4wwAABhnAAAwzgAAYJwBAMA4AwDAJi3AAKSmAQXsra3HAAAAAElFTkSuQmCC") no-repeat right top transparent !important;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    margin-top: 1em;
+}
+h1 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 0em;
+}
+h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+h3.link-other {
+    color: #333;
+}
+h3.link-services {
+    color: #fff;
+}
+h4 {
+    font-size: 12px;
+    line-height: 14px;
+}
+h4.link-news {
+    color: #ef5a29;
+}
+h4.link-ubuntu {
+    color: #dd4814;
+}
+h4.partners {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+}
+h5 {
+    color: #333;
+    font-size: 10px;
+    line-height: 14px;
+}
+p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+pre {
+    background-color:#F3F3F3;
+    border:1px dashed #C1B496;
+    font-family:UbuntuMono,courier,monospace;
+    padding:4pt;
+    white-space:pre-wrap;
+    word-wrap:break-word;
+}
+tt {
+    font-family:UbuntuMono,courier,monospace;
+}
+
+strong {
+    font-weight: bold;
+}
+
+a {
+    color: #DD4814;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #DD4814;
+    text-decoration: none;
+}
+
+ul {
+    margin-bottom: 16px;
+}
+ul li {
+    margin-left: 2.4em;
+    margin-bottom: 8px;
+    line-height: 14px;
+}
+ul li:last-child {
+    margin-bottom: 0px;
+}
+
+p.call-to-action {
+    color: #333;
+}
+p.case-study {
+    color: #333;
+}
+p.highlight {
+    font-size: 16px;
+    line-height: 20px;
+}
+p.introduction {
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+}
+p.services {
+    color: #fff;
+}
+#pageinfo {
+    font-size: 70%;
+    padding: 0 16px 12px;
+    text-align: right;
+}
+p.small-text {
+    color: #333;
+    font-size: 10px;
+}
+
+.newsfeed {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAIAAAD9iXMrAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAG9SURBVHjaYrx9+9bDh4/4+fkV5GV5eHj////PyMjIAAbIbJZr125s2rwFwlFRVjI3M7W0tIBwkTWwMCCBO3fvAdH+g4fCQoOVlZTg6oAMxu/fvgJZb9++vXjp8pkz5x49fgzkMjMzR0aEWZibQQwDKYW4T1FBQUpKEih09uz5lavXfv/+DSgHNNXO1gbiSmYXF9c169YfOXL09JmzPNw8xsaGhgb6165f//bt2/UbN9XUVAUFBYHqmJiYoK549frNgkWL581fKCDAn5WRzsPD8+/fv1Wr1wFJkEvmzZ0DNFxZWfnJ4ydfvnx98fLl6zdvbKwt+fn4L1669PnzZxERYRkZaSagWqBWXR3tivISczMTIPfcufNAD5mYGMnJygK5Bw8eBpJMv3//3rR526LFS9+9fx8dFSEuJgb039bt24FusrQ0B6p4/OTJ+/fvmY6fOLlr9+5Tp8+s37AZ6NjQkCCge4FuffbsuZamBlAPED1+/IQJGGOQwOTn4wWaoaqqAgw8oM8ePHggKCDAzAzy5pu3b1n09XQLC3I/fviop6cLcgcTk6OD/ffv3wUEBYFsB3u7nz9/ioqKAgQYALw5xSXX9WqMAAAAAElFTkSuQmCC") no-repeat scroll right top transparent;
+    padding: 0 20px 0 0;
+}
+
+/* Clearing floats without extra markup
+Based on How To Clear Floats Without Structural Markup by PiE
+[http://www.positioniseverything.net/easyclearing.html] */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}  /* for IE/Mac */
+
+div.trail {
+  font-size: 100%;
+  text-indent: -1em;
+  color: #aea79f;
+}
+
+/* Form related styling */
+input, select {
+    /* Override mozilla's default form css inherited from the system */
+    font-size: 100%;
+}
+.wForm form label {
+    display: block;
+    padding-bottom: 3px;
+    color: black;
+}
+.wForm form input[type=text],
+.wForm form input[type=password],
+.wForm form textarea {
+    border: 1px solid #c7c7c7;
+    padding: 2px;
+    color: black;
+    background: #fff;
+}
+.wForm form input[type=text]:focus,
+.wForm form input[type=password]:focus,
+.wForm form textarea:focus {
+    border: 1px solid #dd4814;
+    outline: 1px solid #dd4814;
+}
+/* Override FormAssembly formatting */
+.wFormContainer {
+    padding: 0;
+    width: 100%;
+}
+.wForm form {
+    margin: 0;
+}
+.wForm form .actions {
+    text-align: right;
+}
+.wForm form .actions .primaryAction {
+    background-color: #dd4814;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-shadow: #333 0px 1px;
+    margin: 10px 8px 10px 8px;
+}
+.wForm form input[type=text].errFld {
+    border: 2px solid #dd4814;
+}
+.wForm form .errMsg {
+    color: #dd4814 !important;
+}
+.wForm form .oneChoice {
+    display: block;
+}
+.wForm form .oneField {
+    padding: 0 8px;
+    margin-bottom: 8px;
+}
+.wForm form span.reqMark {
+    color: #dd4814 !important;
+    font-weight: bold !important;
+}
+.wForm fieldset {
+    border: none;
+    padding: 0;
+    background: #dfdcd9;
+}
+.wForm input[type=text],
+.wForm input[type=password],
+.wForm select,
+.wForm textarea {
+    width: 290px;
+}
+.wForm legend {
+    padding: 8px;
+    font-size: 16px;
+    font-weight: normal !important;
+    background: #aea79f;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.wForm label.preField,
+.wForm .labelsLeftAligned label.preField,
+.wForm .labelsRightAligned label.preField  {
+    float: none;
+    padding-bottom: 4px;
+}
+.wForm label.postField {
+    display: inline;
+}
+/* Hack for WebKit based browsers to display the fieldset properly */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .wForm fieldset {
+        padding: 8px 8px .1px 0px;
+    }
+    .wForm legend {
+        padding: 8px 0px 8px 8px;
+    }
+}
+
+</style><style class="darkreader darkreader--sync" media="screen"></style><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: #032029 !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: #0a0a0a !important;
+}
+.tou-uknfeu {
+    background-color: #231603 !important;
+}
+.tou-6i3zyv {
+    background-color: #19576c !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }
+header[style$="image-background-paper.png);"] {
+    background-image: none !important;
+}
+.chart-key text {
+    fill: var(--darkreader-neutral-text) !important;
+}</style>
+
+<style type="text/css">@media print {
+        .TridactylStatusIndicator {
+            display: none !important;
+        }
+    }</style><base href="https://help.ubuntu.com/stable/ubuntu-help/keyboard-nav.html.en"></head><body id="home">
+
+<div id="container">
+<div id="container-inner">
+<div id="mothership"><ul>
+<li><a href="https://partners.ubuntu.com">Partners</a></li>
+<li><a href="https://www.ubuntu.com/support/community-support">Support</a></li>
+<li><a href="https://community.ubuntu.com">Community</a></li>
+<li><a href="https://www.ubuntu.com">Ubuntu.com</a></li>
+</ul></div>
+<div id="header">
+<h1 id="ubuntu-header"><a href="https://help.ubuntu.com/">Ubuntu Documentation</a></h1>
+<ul id="main-menu">
+<li><a class="main-menu-item current" href="../../">Official Documentation</a></li>
+<li><a href="https://help.ubuntu.com/community/CommunityHelpWiki">Community Help Wiki</a></li>
+<li><a href="https://community.ubuntu.com/t/contribute/26">Contribute</a></li>
+</ul>
+</div>
+<div id="menu-search"><div id="search-box">
+<noscript><form action="https://www.google.com/cse" id="cse-search-box"><div>
+<input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq"><input type="hidden" name="ie" value="UTF-8"><input type="text" name="q" size="21"><input type="submit" name="sa" value="Search">
+</div></form></noscript>
+<form action="../../search.html" id="cse-search-box">  <div>    <input type="hidden" name="cof" value="FORID:9">    <input type="hidden" name="cx" value="003883529982892832976:e2vwumte3fq">    <input type="hidden" name="ie" value="UTF-8">    <input type="text" name="q" size="21">    <input type="submit" name="sa" value="Search">  </div></form>
+</div></div>
+<div class="trails" role="navigation">
+<div class="trail">
+<span style="color: rgb(51, 51, 51); --darkreader-inline-color: #c8c3bc;" data-darkreader-inline-color="">Ubuntu 22.04</span>&nbsp;» <a class="trail" href="index.html.en" title="Ubuntu Desktop Guide"><span class="media"><span class="media media-image"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACqElEQVRYw+3Wz0tUURTAcf+GwCjSGV0EQUEJtZFAsFoULZx5Y4lokVSMkJmoOFFWUpSFP4JyUbOQqKCMFoVguSiyXERF2A9MQzQT8/2cNzPO6Bvfm2+LgbEJRGGe0WIunNWDez+ce+55JyvrryV68gpFT54hevKwOQzRk1eYtdzKADKADCADyAD+f4DgRHRlI1XtQGkQUOpKEIVclHoBrbMZpbEM0eNYPYDSUMLc+9cszExhaRLhe+0E2uswNYl4zMBURbR2n/0AqaKA8KNbxI15AKzZIKY0jVK7m9jPcf5c8x8H7AdEnj0A0yQ+H2W2rwe1xYvsLUI66CQ29SMFYAwN2ggQnKg+N6YygxVU0TvqEYXcxY3dOQT9l7DCeiIzYR29qwWtuQKpssCeDMjVO5FP7kU9XZF6eDIcqOePEfC3o17wot/wYWkSgY6z6QCcyNW7ML6+A+KJ4rpSs/xzc68n/KQbgEh/TxoAVzbRN/0pdxsbH14eIDhRG/YDsDD2OQ1AyRqM0S8pACukrajpSIe3AmBKU2kAhFwCnY1gWUnAbN/DFQCcKLV7EhmYHE2/CLWLR4m+6iXY3YpUtnEFNbCBUHcrAHODfekDpPJNhO60ER3oRb18aumDS/MTccCBMTYMlonuv2rDM3SvI/LyaSKlE99Q6lyI7g2L912+mfBjP/FICCuoErrbSaC1mtjECPLxInv6gHRoG8bwhwTi1yT69abkN+1aE3FjbrFQwzpqcxWKrwJRcNjXiuWafRgjn5JFaU6Po3edIeBvS3kp8dg8WmoDsulvKDiQjmwneP8m5sxkoi98H0Kp92BqchJgilPI3uJVHkhK81F9LoK3zyFVbkFtchN9+4Lo4HOUE8WIHuc/mIgEJ6I7J2VIEV1rlzo8MxMuCfgN3eyDKeju35cAAAAASUVORK5CYII=" class="media media-inline" alt="Help" width="16" height="16"></span></span> Ubuntu Desktop Guide</a>&nbsp;» <a class="trail" href="hardware.html.en" title="Hardware &amp; drivers">Hardware</a>&nbsp;» <a class="trail" href="keyboard.html.en" title="Keyboard">Keyboard</a>&nbsp;» </div>
+<div class="trail">
+<span style="color: rgb(51, 51, 51); --darkreader-inline-color: #c8c3bc;" data-darkreader-inline-color="">Ubuntu 22.04</span>&nbsp;» <a class="trail" href="index.html.en" title="Ubuntu Desktop Guide"><span class="media"><span class="media media-image"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACqElEQVRYw+3Wz0tUURTAcf+GwCjSGV0EQUEJtZFAsFoULZx5Y4lokVSMkJmoOFFWUpSFP4JyUbOQqKCMFoVguSiyXERF2A9MQzQT8/2cNzPO6Bvfm2+LgbEJRGGe0WIunNWDez+ce+55JyvrryV68gpFT54hevKwOQzRk1eYtdzKADKADCADyAD+f4DgRHRlI1XtQGkQUOpKEIVclHoBrbMZpbEM0eNYPYDSUMLc+9cszExhaRLhe+0E2uswNYl4zMBURbR2n/0AqaKA8KNbxI15AKzZIKY0jVK7m9jPcf5c8x8H7AdEnj0A0yQ+H2W2rwe1xYvsLUI66CQ29SMFYAwN2ggQnKg+N6YygxVU0TvqEYXcxY3dOQT9l7DCeiIzYR29qwWtuQKpssCeDMjVO5FP7kU9XZF6eDIcqOePEfC3o17wot/wYWkSgY6z6QCcyNW7ML6+A+KJ4rpSs/xzc68n/KQbgEh/TxoAVzbRN/0pdxsbH14eIDhRG/YDsDD2OQ1AyRqM0S8pACukrajpSIe3AmBKU2kAhFwCnY1gWUnAbN/DFQCcKLV7EhmYHE2/CLWLR4m+6iXY3YpUtnEFNbCBUHcrAHODfekDpPJNhO60ER3oRb18aumDS/MTccCBMTYMlonuv2rDM3SvI/LyaSKlE99Q6lyI7g2L912+mfBjP/FICCuoErrbSaC1mtjECPLxInv6gHRoG8bwhwTi1yT69abkN+1aE3FjbrFQwzpqcxWKrwJRcNjXiuWafRgjn5JFaU6Po3edIeBvS3kp8dg8WmoDsulvKDiQjmwneP8m5sxkoi98H0Kp92BqchJgilPI3uJVHkhK81F9LoK3zyFVbkFtchN9+4Lo4HOUE8WIHuc/mIgEJ6I7J2VIEV1rlzo8MxMuCfgN3eyDKeju35cAAAAASUVORK5CYII=" class="media media-inline" alt="Help" width="16" height="16"></span></span> Ubuntu Desktop Guide</a>&nbsp;» <a class="trail" href="a11y.html.en" title="Accessibility">Accessibility</a>&nbsp;› <a class="trail" href="a11y.html.en#mobility" title="Mobility impairments">Mobility impairments</a>&nbsp;» </div>
+<div class="trail">
+<span style="color: rgb(51, 51, 51); --darkreader-inline-color: #c8c3bc;" data-darkreader-inline-color="">Ubuntu 22.04</span>&nbsp;» <a class="trail" href="index.html.en" title="Ubuntu Desktop Guide"><span class="media"><span class="media media-image"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACqElEQVRYw+3Wz0tUURTAcf+GwCjSGV0EQUEJtZFAsFoULZx5Y4lokVSMkJmoOFFWUpSFP4JyUbOQqKCMFoVguSiyXERF2A9MQzQT8/2cNzPO6Bvfm2+LgbEJRGGe0WIunNWDez+ce+55JyvrryV68gpFT54hevKwOQzRk1eYtdzKADKADCADyAD+f4DgRHRlI1XtQGkQUOpKEIVclHoBrbMZpbEM0eNYPYDSUMLc+9cszExhaRLhe+0E2uswNYl4zMBURbR2n/0AqaKA8KNbxI15AKzZIKY0jVK7m9jPcf5c8x8H7AdEnj0A0yQ+H2W2rwe1xYvsLUI66CQ29SMFYAwN2ggQnKg+N6YygxVU0TvqEYXcxY3dOQT9l7DCeiIzYR29qwWtuQKpssCeDMjVO5FP7kU9XZF6eDIcqOePEfC3o17wot/wYWkSgY6z6QCcyNW7ML6+A+KJ4rpSs/xzc68n/KQbgEh/TxoAVzbRN/0pdxsbH14eIDhRG/YDsDD2OQ1AyRqM0S8pACukrajpSIe3AmBKU2kAhFwCnY1gWUnAbN/DFQCcKLV7EhmYHE2/CLWLR4m+6iXY3YpUtnEFNbCBUHcrAHODfekDpPJNhO60ER3oRb18aumDS/MTccCBMTYMlonuv2rDM3SvI/LyaSKlE99Q6lyI7g2L912+mfBjP/FICCuoErrbSaC1mtjECPLxInv6gHRoG8bwhwTi1yT69abkN+1aE3FjbrFQwzpqcxWKrwJRcNjXiuWafRgjn5JFaU6Po3edIeBvS3kp8dg8WmoDsulvKDiQjmwneP8m5sxkoi98H0Kp92BqchJgilPI3uJVHkhK81F9LoK3zyFVbkFtchN9+4Lo4HOUE8WIHuc/mIgEJ6I7J2VIEV1rlzo8MxMuCfgN3eyDKeju35cAAAAASUVORK5CYII=" class="media media-inline" alt="Help" width="16" height="16"></span></span> Ubuntu Desktop Guide</a>&nbsp;» <a class="trail" href="prefs.html.en" title="User &amp; system settings">Settings</a>&nbsp;» <a class="trail" href="keyboard.html.en" title="Keyboard">Keyboard</a>&nbsp;» </div>
+</div>
+<div id="cwt-content" class="clearfix content-area"><div id="page">
+<div id="content">
+<div class="hgroup pagewide"><h1 class="title"><span class="title">Keyboard navigation</span></h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="p">This page details keyboard navigation for people who cannot use a mouse or
+  other pointing device, or who want to use a keyboard as much as possible. For
+  keyboard shortcuts that are useful to all users, see
+  <span class="link"><a href="shell-keyboard-shortcuts.html.en" title="Useful keyboard shortcuts">Useful keyboard shortcuts</a></span> instead.</p>
+<div class="note note-tip" title="Tip">
+<svg width="24" height="24" version="1.1">
+ <path class="yelp-svg-fill" d="m12 2c-3.8541 0-7 3.1459-7 7 0 1.823 0.4945 3.139 1.1641 4.133 0.6695 0.994 1.4328 1.671 2.039 2.471 0.0882 0.116 0.1749 0.656 0.2071 1.32 0.016 0.332 0.0133 0.68 0.1894 1.119 0.0881 0.22 0.2439 0.478 0.5059 0.672 0.2619 0.194 0.6028 0.285 0.8945 0.285h4c0.583 0 1.204-0.478 1.402-0.908 0.199-0.43 0.217-0.793 0.244-1.137 0.056-0.688 0.138-1.319 0.211-1.441 0.549-0.916 1.304-2.009 1.94-3.114 0.636-1.104 1.203-2.199 1.203-3.4 0-3.8541-3.146-7-7-7zm0 2c2.773 0 5 2.2267 5 5 0 0.456-0.359 1.401-0.936 2.402-0.111 0.195-0.246 0.399-0.369 0.598h-7.8825c-0.4871-0.728-0.8125-1.519-0.8125-3 0-2.7733 2.2267-5 5-5z" style="color: rgb(0, 0, 0); image-rendering: auto; isolation: auto; mix-blend-mode: normal; shape-rendering: auto; text-decoration-color: rgb(0, 0, 0); text-decoration-line: none; text-decoration-style: solid; text-indent: 0px; text-transform: none; white-space: normal; --darkreader-inline-color: #e8e6e3;" data-darkreader-inline-color=""></path>
+ <path class="yelp-svg-fill" d="m9 20a0.5 0.5 0 0 0-0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5-0.5 0.5 0.5 0 0 0-0.5-0.5h-6zm0 2a0.5 0.5 0 0 0-0.5 0.5 0.5 0.5 0 0 0 0.5 0.5h6a0.5 0.5 0 0 0 0.5-0.5 0.5 0.5 0 0 0-0.5-0.5h-6z"></path>
+</svg><div class="inner"><div class="region"><div class="contents"><p class="p">If you cannot use a pointing device like a mouse, you can control the
+    mouse pointer using the numeric keypad on your keyboard. See
+    <span class="link"><a href="mouse-mousekeys.html.en" title="Click and move the mouse pointer using the keypad">Click and move the mouse pointer using the keypad</a></span> for details.</p></div></div></div>
+</div>
+<div class="table"><div class="inner">
+<div class="title title-table"><h2><span class="title">Navigate user interfaces</span></h2></div>
+<div class="region"><table class="table" style="border-top-style: solid;border-bottom-style: solid;">
+<tbody><tr>
+<td>
+<p class="p"><span class="key"><kbd>Tab</kbd></span> and</p>
+<p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span></p>
+</td>
+<td>
+<p class="p">Move keyboard focus between different controls. <span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span> moves between groups of controls, such as from a
+      sidebar to the main content.
+      <span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span> can also break out of a
+      control that uses <span class="key"><kbd>Tab</kbd></span> itself, such as a text area.</p>
+<p class="p">Hold down <span class="key"><kbd>Shift</kbd></span> to move focus in reverse order.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p">Arrow keys</p></td>
+<td style="border-top-style: solid;"><p class="p">Move selection between items in a single control, or among a set of
+      related controls. Use the arrow keys to focus buttons in a toolbar, select
+      items in a list or icon view, or select a radio button from a group.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+Arrow keys</span></p></td>
+<td style="border-top-style: solid;"><p class="p">In a list or icon view, move the keyboard focus to another item
+    without changing which item is selected.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+Arrow keys</span></p></td>
+<td style="border-top-style: solid;">
+<p class="p">In a list or icon view, select all items from the currently selected
+    item to the newly focused item.</p>
+<p class="p">In a tree view, items that have children can be expanded or collapsed,
+    to show or hide their children: expand by pressing
+    <span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>→</kbd></span></span>, and collapse by
+    pressing <span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>←</kbd></span></span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="key"><kbd>Space</kbd></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Activate a focused item such as a button, check box, or list
+    item.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>Space</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">In a list or icon view, select or deselect the focused item without
+    deselecting other items.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="key"><kbd>Alt</kbd></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Hold down the <span class="key"><kbd>Alt</kbd></span> key to reveal <span class="em">accelerators</span>:
+    underlined letters on menu items, buttons, and other controls. Press
+    <span class="key"><kbd>Alt</kbd></span> plus the underlined letter to activate a control, just
+    as if you had clicked on it.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="key"><kbd>Esc</kbd></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Exit a menu, popup, switcher, or dialog window.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="key"><kbd>F10</kbd></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Open the first menu on the menubar of a window. Use the arrow keys
+    to navigate the menus.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><a href="keyboard-key-super.html.en" title="What is the Super key?"><kbd>Super</kbd></a></span>+<span class="key"><kbd>F10</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Open the application menu on the top bar.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;">
+<p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>F10</kbd></span></span> or</p>
+<p class="p"><span class="key"><a href="keyboard-key-menu.html.en" title="What is the Menu key?"><kbd>Menu</kbd></a></span></p>
+</td>
+<td style="border-top-style: solid;"><p class="p">Pop up the context menu for the current selection, as if you had
+      right-clicked.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>F10</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">In the file manager, pop up the context menu for the current folder,
+    as if you had right-clicked on the background and not on any item.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;">
+<p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>PageUp</kbd></span></span></p>
+<p class="p">and</p>
+<p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>PageDown</kbd></span></span></p>
+</td>
+<td style="border-top-style: solid;"><p class="p">In a tabbed interface, switch to the tab to the left or
+    right.</p></td>
+</tr>
+</tbody></table></div>
+</div></div>
+<div class="table"><div class="inner">
+<div class="title title-table"><h2><span class="title">Navigate the desktop</span></h2></div>
+<div class="region"><table class="table" style="border-top-style: solid;border-bottom-style: solid;">
+<tbody><tr>
+<td>
+<p class="p">
+      <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F1</kbd></span></span> or the</p>
+<p class="p"><span class="key"><a href="keyboard-key-super.html.en" title="What is the Super key?"><kbd>Super</kbd></a></span> key
+    </p>
+</td>
+<td><p class="p">Switch between the <span class="gui">Activities</span> overview and desktop. In
+    the overview, start typing to instantly search your applications, contacts,
+    and documents.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p"><span class="link"><a href="shell-windows-switching.html.en" title="Switch between windows">Quickly switch between
+    windows</a></span>. Hold down <span class="key"><kbd>Shift</kbd></span> for reverse order.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>`</kbd></span></span></p></td>
+<td style="border-top-style: solid;">
+<p class="p">Switch between windows from the same application, or from the selected
+      application after <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span>.</p>
+<p class="p">This shortcut uses <span class="key"><kbd>`</kbd></span> on US keyboards, where the <span class="key"><kbd>`</kbd></span>
+      key is above <span class="key"><kbd>Tab</kbd></span>. On all other keyboards, the shortcut is
+      <span class="key"><kbd>Super</kbd></span> plus the key above <span class="key"><kbd>Tab</kbd></span>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Ctrl</kbd></span>+<span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>Tab</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Give keyboard focus to the top bar. In the <span class="gui">Activities</span>
+      overview, switch keyboard focus between the top bar, dash, windows
+      overview, applications list, and search field. Use the arrow keys to
+      navigate.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;">
+<p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Page Up</kbd></span></span></p>
+<p class="p">and</p>
+<p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Page Down</kbd></span></span></p>
+</td>
+<td style="border-top-style: solid;"><p class="p"><span class="link"><a href="shell-workspaces-switch.html.en" title="Switch between workspaces">Switch between
+     workspaces</a></span>.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F6</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Cycle through windows in the same application. Hold down the
+    <span class="key"><kbd>Alt</kbd></span> key and press <span class="key"><kbd>F6</kbd></span> until the window you want is
+    highlighted, then release <span class="key"><kbd>Alt</kbd></span>. This is similar to the
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>`</kbd></span></span> feature.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>Esc</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Cycle through all open windows on a workspace.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>V</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p"><span class="link"><a href="shell-notifications.html.en#notificationlist" title="The notification list">Open the
+    notification list.</a></span> Press <span class="key"><kbd>Esc</kbd></span> to close.</p></td>
+</tr>
+</tbody></table></div>
+</div></div>
+<div class="table"><div class="inner">
+<div class="title title-table"><h2><span class="title">Navigate windows</span></h2></div>
+<div class="region"><table class="table" style="border-top-style: solid;border-bottom-style: solid;">
+<tbody><tr>
+<td><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F4</kbd></span></span></p></td>
+<td><p class="p">Close the current window.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F5</kbd></span></span> or
+    <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>↓</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Restore a maximized window to its original size. Use
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F10</kbd></span></span> to maximize.
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F10</kbd></span></span> both maximizes and
+    restores.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F7</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Move the current window. Press
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F7</kbd></span></span>, then use the arrow keys to
+    move the window. Press <span class="key"><kbd>Enter</kbd></span> to finish moving the window, or
+    <span class="key"><kbd>Esc</kbd></span> to return it to its original place.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F8</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Resize the current window. Press
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F8</kbd></span></span>, then use the arrow keys to
+    resize the window. Press <span class="key"><kbd>Enter</kbd></span> to finish resizing the window, or
+    <span class="key"><kbd>Esc</kbd></span> to return it to its original size.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;">
+<p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Page Up</kbd></span></span></p>
+<p class="p">and</p>
+<p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>Page Down</kbd></span></span></p>
+</td>
+<td style="border-top-style: solid;"><p class="p"><span class="link"><a href="shell-workspaces-movewindow.html.en" title="Move a window to a different workspace">Move the current window to a
+     different workspace</a></span>.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>←</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Move the current window one monitor to the left.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Shift</kbd></span>+<span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>→</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Move the current window one monitor to the right.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F10</kbd></span></span> or
+    <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>↑</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p"><span class="link"><a href="shell-windows-maximize.html.en" title="Maximize and unmaximize a window">Maximize</a></span> a window. Press
+    <span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>F10</kbd></span></span> or
+    <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>↓</kbd></span></span> to
+    restore a maximized window to its original size.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>H</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Minimize a window.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>←</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Maximize a window vertically along the left side of the screen.
+    Press again to restore the window to its previous size. Press
+    <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>→</kbd></span></span> to switch
+    sides.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>→</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Maximize a window vertically along the right side of the screen.
+    Press again to restore the window to its previous size. Press
+    <span class="keyseq"><span class="key"><kbd>Super</kbd></span>+<span class="key"><kbd>←</kbd></span></span> to
+    switch sides.</p></td>
+</tr>
+<tr>
+<td style="border-top-style: solid;"><p class="p"><span class="keyseq"><span class="key"><kbd>Alt</kbd></span>+<span class="key"><kbd>Space</kbd></span></span></p></td>
+<td style="border-top-style: solid;"><p class="p">Pop up the window menu, as if you had right-clicked on the
+    titlebar.</p></td>
+</tr>
+</tbody></table></div>
+</div></div>
+</div>
+<section class="links" role="navigation"><div class="inner">
+
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul>
+<li class="links ">
+<a href="keyboard.html.en" title="Keyboard">Keyboard</a><span class="desc"> — Select international keyboard layouts and use keyboard
+    accessibility features.</span>
+</li>
+<li class="links "><a href="a11y.html.en#mobility" title="Mobility impairments">Mobility impairments</a></li>
+</ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul><li class="links ">
+<a href="shell-keyboard-shortcuts.html.en" title="Useful keyboard shortcuts">Useful keyboard shortcuts</a><span class="desc"> — Get around the desktop using the keyboard.</span>
+</li></ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+
+</div>
+
+</div></div>
+</div>
+<div id="footer">
+<p style="padding-bottom: 0.4em">You can choose the <b>displayed language</b> by adding a language suffix to the web address so it ends with e.g. <tt>.html.en</tt> or <tt>.html.de</tt>.<br>
+          If the web address has no language suffix, the preferred language specified in your web browser's settings is used. For your convenience:<br>
+
+          [ <a title="English page version" href="#">Change to English Language</a> | 
+          <a title="Language selected by browser" href="#">Change to Browser's Preferred Language</a> ]</p>
+<p>The material in this document is available under a free license, see <a href="../../legal.html">Legal</a> for details.<br>
+          For information on contributing see the <a href="https://wiki.ubuntu.com/DocumentationTeam">Ubuntu Documentation Team wiki page</a>.
+          To report errors in this documentation, <a href="https://bugs.launchpad.net/ubuntu/+source/ubuntu-docs">file a bug</a>.</p>
+</div>
+</div>
+
+
+<span class="cleanslate TridactylStatusIndicator  TridactylModenormal ">normal</span></body>

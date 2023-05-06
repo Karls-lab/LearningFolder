@@ -1,7 +1,7 @@
 DATA STRUCTURES
-Linked Lists: 
+Linked Lists: YES
 Binary Trees:
-Tries:
+Trees:
 Stacks: YES
 Queues: YES
 Vectors/Array Lists:
@@ -14,6 +14,7 @@ BinarySearch:
 MergeSort:
 QuickSort:
 Tree Inster/Find/etc:
+Bucket Sort: 
 
 CONCEPTS
 Bit Manipulation:

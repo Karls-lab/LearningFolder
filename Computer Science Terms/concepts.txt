@@ -1,0 +1,7 @@
+    A language mechanism for restricting direct access to some of the object's components.[5][6]
+    A language construct that facilitates the bundling of data with the methods (or other functions) operating on those data.[1][7]
+
+
+Abstraction:
+    The process of removing or generalizing physical, spatial, or temporal details[2] or attributes in the study of objects or systems to focus attention on details of greater importance;[3] it is similar in nature to the process of generalization;
+    the creation of abstract concept-objects by mirroring common features or attributes of various non-abstract objects or systems of study[3] – the result of the process of abstraction.

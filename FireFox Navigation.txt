@@ -1,0 +1,7 @@
+FireFox Navigation
+
+Use f to find links
+use alt forward or back
+ctrl + tab to navigate tabs
+use b to select specific tab
+use ctrl + comma as an escape characterddd

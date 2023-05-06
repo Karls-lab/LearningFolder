@@ -1,0 +1,7 @@
+Raspberry Pi General Tips
+
+PIR Sensor:
+GPIO pins sense random electrons in the air if they are connected to a wire. This wire acts like an antenna of sorts. In order to get an accurate reading on the GPIO wire, make sure to use:
+	1. A resistor
+	2. A capacitor
+
