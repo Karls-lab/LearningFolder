@@ -1,0 +1,9 @@
+In this document, I'll list all of the cool and interesting Linux Commands
+That I encounter in the wild.
+
+
+To view the current Linux version, use the following command:
+    lsb_release -a
+
+To view the current Linux Kernel version, use the following command:
+    uname -r

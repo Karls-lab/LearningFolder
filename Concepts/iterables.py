@@ -12,4 +12,4 @@ print(f"Original list: {example}")
 # Reversal
 print(f"Reversal: {example[::-1]}")
 # Peek at top (last item in list)
-print(f"Last element: {example[-1:]}")
+print(f"Last element: {example[-1]}")
