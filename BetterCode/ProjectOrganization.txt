@@ -1,0 +1,22 @@
+In this document, I'll record what I think are best practices to organize 
+a python project. 
+
+
+1. Put your entire project into a folder named after your project. 
+
+2. Here are the files/folders needed in the home folder: 
+    - src folder 
+    - docs folder 
+    - README.txt 
+
+    README.txt:
+        A short introduction, and goals of the program 
+        Guide to Installing 
+        Simple Example 
+        Links (docs, changes, github)
+
+    src FOLDER:
+        A folder that contains each program entirely. 
+
+    PROGRAM FOLDER: 
+        
