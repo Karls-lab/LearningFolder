@@ -20,9 +20,10 @@ class Solution_hash:
         hash_map = {}
         for index, element in enumerate(nums):
             if element in hash_map:
-                print(index, hash_map[element])
+                # If the difference between the target and the current element is in the hash map
                 return [index, hash_map[element]]
             else:
+                # Calculates the difference between the target and the current element
                 hash_map[target - element] = index
 
 sol = Solution_hash()

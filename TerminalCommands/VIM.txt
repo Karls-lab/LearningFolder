@@ -1,0 +1,31 @@
+VIM GUIDE 
+
+
+NORMAL MODE COMMANDS
+    u       The undo command, undos the most recent change. 
+
+    ''      The last position of the cursor.
+
+    e       Move to the end of the word.
+
+    b       Move to the beginning of the previous word.
+
+    w       Move to the beginning of the next word.
+
+    $       Move to the end of the line.
+
+
+INSERT MODE COMMANDS 
+    i       Insert before the cursor.
+
+    a       Insert (append) after the cursor.
+
+    A       Insert (append) at the end of the line.
+
+    o       Append (open) a new line below the current line.
+
+    O       Append (open) a new line above the current line.
+
+    ea      Insert (append) at the end of the word.
+
+    Esc     Exit insert mode.

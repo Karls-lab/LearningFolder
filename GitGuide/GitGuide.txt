@@ -1,0 +1,4 @@
+1. Remove an origin and assign a new one 
+    git remote remove origin
+    git remote add origin <new-repository-url>
+    git push -u origin master

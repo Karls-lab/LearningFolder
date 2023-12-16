@@ -1,0 +1,6 @@
+LINUX GUIDES AND TUTORIALS 
+
+
+VIEW WIRELESS INFORMATION: 
+    cat /etc/NetworkManager/system-connections/YOUR_NETWORK_NAME
+

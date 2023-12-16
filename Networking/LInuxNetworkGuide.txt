@@ -1,0 +1,30 @@
+First, you want to download net-tools via apt install. 
+
+1. Check network interfaces: 
+    ifconfig -a 
+
+2. Enable/disable an interface: 
+    ifconfig eth0 up/down 
+
+3. Configure IP Address: 
+    ifconfig eth0 <desired_ip_address> 
+
+4. Configure Default Gateway: 
+    route add default gw <gateway_ip_address> eth0 
+
+5. Configure DNS Servers:
+    sudo nano /etc/resolv.conf 
+    nameserver 8.8.8.8 (Google DNS)
+
+6. Restart Networking Services:
+    sudo service networking restart
+    OR 
+    sudo service NetworkManager restart
+
+7. Check your network connection:
+    ifconfig 
+    OR 
+    ip addr show 
+
+8. View IP Address:
+    hostname -I 

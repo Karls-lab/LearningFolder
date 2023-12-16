@@ -1,0 +1,305 @@
+This file will contain a collection of useful terminal commands that 
+I have found  useful and will probably use again! :)
+
+UBUNTU SHORTCUTS:
+    Maximize a window: Super + Up
+    Minimize a window: Super + Down
+
+USEFUL COMMANDS:
+    Exit the Terminal:
+        exit
+    View storage size of all files in a directory
+        du -h --max-depth=1 | sort -h
+        ls -p | grep -v / | xargs -I {} du -h {}
+    Set a Timer for 30 minutes and send a message: 
+        sleep 1800 && notify-send "Timer Finished" "30 minutes have passed."
+    To view the current Linux version, use the following command:
+        lsb_release -a
+    To view the current Linux Kernel version, use the following command:
+        uname -r
+    Open a pdf TextBook:
+        open textbook.pdf 
+    View path of shell command:
+        which [command]
+    View the path of a file:
+        realpath [file]
+    Unzip a file:
+        unzip [file]
+    zip a file:
+        zip [compressed file name] [file]
+    zip a dir: 
+        zip -r [compressed file name] [dir]
+    
+USEFUL VSCODE SHORTCUTS:
+    Ctrl + W    Close the current tab
+    Change VIM KEY BINDINGS: Ctrl + K, Ctrl + S: Modify all keyboard shortcuts
+
+
+USEFULE TRIDACTYL SHORTCUTS:
+    Select container for multiple scroll:
+        ;;
+    Search for text on the page
+        / + Ctrl + F
+
+
+MANAGING PACKAGES:
+    Remove a package:
+        sudo apt remove [package]
+    View packages by size:
+        dpkg-query -W --showformat='${Installed-Size;10}\t${Package}\n' | sort -k1,1n
+    View startup Applications:
+        gnome-session-properties
+        
+ 
+
+
+        
+SHORTHAND INDICATORS:
+    ~  Home directory 
+    .  Current directory 
+    ..  Parent directory 
+    -  Previous directory
+
+
+THE LS COMMAND
+    List of Optional commands to the ls command in this format: ls -[letters]
+    To view list of files in a directory (newest first): ls -ltr 
+    Display results in long format (get file permissions): -l 
+    Sort results by file size: -s
+    Sort by modification time: -t 
+    Reverse order (newest first): -r 
+    Get read write privlages: -l
+    Human Readable: -h
+    View Hidden files: -A
+
+
+LONG LISTING FIELDS 
+    Aquired by typing in ls -l 
+    -rw-r--r-- : [0]: type of file, - means a regular file, d means directory.
+                       [1:4] (next three characters) specifies file permissions. 
+                       [4:7] File permissions for the group
+                       [7:10] permissions for everyone else
+    1               : File's number of hard links 
+    root            : the username of the file's owner
+    root            : the name of the group which owns the file 
+    32059           : The size of the file in bytes 
+    Sep 29 2022     : The date of last modification
+    BOOKS           : Name of the file/directory 
+
+
+DETERMINING INFORMATION ABOUT A FILE 
+    Use file [filename] to view information about the file. 
+    less [filename] to view information about a txt file. Press the 'q' key to quit 
+    Press 'h' in less mode to view help. 
+    type '/' to search 
+
+
+EXPLORING LINUX
+    The '/' is where everything begins. 
+    /bin             Contains binaries (programs) that are needed for the system to boot and run 
+    /boot            Contains the Linux Kernel, intial RAM disk usage, and the boot loader. 
+    /boot/grub/grub.conf which is used to determine the boot loader. 
+    /boot/vmlinuz    the linux kernel. 
+    /dev             All the devices that the computer system understands. 
+    /etc             All system wide configuration files. Also a collection of shell scripts 
+    /etc/crontab     a file that defines when automated jobs will run 
+    /etc/fstab       a table of storage devices and their associated mount points 
+    /etc/passwd      list of user accounts 
+    /home            usually the user can only edit files in this directory
+    /lib             Contains shared library files used by core system programs 
+    /lost+found      usually empty, used when files are corrupted 
+    /media           mounted locations for external media devices 
+    /mnt             mounted manually, older linux 
+    /opt             optional software, commercial software installation location 
+    /proc            virtual hard drive of what the kernel does 
+    /root            home directory of the root account 
+    /sbin            System binaries, programs that the superuser uses 
+    /tmp             Temporary files, emptied each time pc restart 
+    /usr             All programs ans support files used by regular users (largest) 
+    /usr/bin         Contains all executable programs installed on your distro, super big 
+    /usr/lib         Shared libraries of /usr/bin 
+    /usr/sbin        More system admin programs 
+    /usr/share       files, icons, sound files from/usr /usr/bin 
+    /usr/share/doc   documentation for each package
+    /var             databases, spool, user mail, are located here. dynamic space 
+    /var/log         log files, most important is /var/log/messages 
+
+
+MAINIPULATING FILES AND DIRECTORIES 
+    cp - Copy files and dirs 
+        Optional commands:
+            -i - interactive, prompts before overwriting 
+            -r - recursive, copy directories and their contents 
+            -v - verbose, print informative messages
+            -a - archive, preserve all file attributes when copying
+            -u - update, copy only when the SOURCE file is newer 
+                 than the destination file or when the destination file is missing
+    mv - Move/rename files and dirs 
+    mkdir - Create dirs 
+    rm - Removes files and dirs 
+        Optional commands:
+            -i - interactive, prompts before removing 
+            -r - recursive, remove directories and their contents 
+            -f - force, ignore nonexistent files and do not prompt
+    ln - Create hard and symbolic links
+        Optional commands:
+            -s - symbolic, create a symbolic link 
+            -i - interactive, prompts before overwriting 
+            -v - verbose, print informative messages
+
+WILDCARDS
+    * - matches any number of characters 
+    ? - matches any single character 
+    [] - matches any character inside the brackets 
+    [!] - matches any character not inside the brackets
+    Commonly used character classes: 
+        [:alnum:] - Alphanumeric characters 
+        [:alpha:] - Alphabetic characters 
+        [:digit:] - Numeric characters 
+        [:lower:] - Lowercase alphabetic characters 
+        [:upper:] - Uppercase alphabetic characters
+
+
+NAVIGATION
+    pwd - print name of current working dir 
+    cd  - change directory 
+    ls  - List directory contents, ls -a lists hidden files 
+    The . refers to the working directory, and the .. represents 
+    the working directory's parent directory 
+
+
+WORKING WITH COMMANDS 
+    type - [type] [command], gives the file location of a command, and other things  
+    which - display executables location
+    help [command] - get help for any command, also try --help 
+    man [program] - displays the manual for the command
+    whatis [command] - a breif description of what the command does. 
+
+
+HOW TO NAVIGATE TERMIANL/MAN PAGES:
+    ?           Display command
+    space       Next page 
+    n           next node 
+    p           previous node 
+    u           up 
+    q           quit 
+
+
+CUSTOM COMMANDS 
+    It's possible to chain commands together using ';'. 
+    Example: command; command; command
+    It's also possible to save custom commands to custom keywords. 
+    type [keyword] to determine if it is taken 
+    Create an alias: 
+        alias foo='cd /usr; ls; cd -'
+        alias name='sring'
+    Remove an alias:
+        unalias foo 
+        unalias name 
+    * Alias are erased when your shell session ends!
+
+
+REDIRECTING STANDARD OUTPUT
+    Use the ">" to pipe output to another file
+    Example: ls -l /usr/bin > ls-output.txt
+    NOTE: Standard output is only output, if there's an error with the command,
+        The standard error will not be piped out. 
+    Use ">>" to append ouput to the file.
+
+
+MORE COMMANDS:
+    wc                      'Word count', displays the number of lines, words, and bytes in a file 
+    grep pattern [file]     prints out the lines of text that match the pattern 
+    head/tail               Print first/last parts of a file 
+        tail -f             Continuously prints new lines to the stdout if new lines are found 
+
+
+ECHO ECHO 
+    echo                Display a line of Text 
+    Example: echo hello there -> hello there 
+    Files that start with "." are considered hidden! Oh my! In order to display or work 
+        with hidden files, we can use this key combination: .[!.]* 
+        This command means: Any files that stars with a perioid, but not a second period,   
+        followed by any other character
+
+
+ARITHMETIC EXPANSION 
+    The shell allows users to input mathematical expressions! Yay! 
+    Form: $(( expression ))
+    +       Addition 
+    -       Subtraction 
+    *       Multiplication 
+    /       Division 
+    %       Modulo (remainder) 
+    **      Exponentiation 
+    Single () can be used to nest operations. 
+    Use echo $(( expression )) to output the result 
+
+
+BRACE EXPANSION 
+    With it, you can create multiple text strings from a pattern containing braces. 
+    echo Number_{1..5}
+        Number_1 Number_2 Number_3 Number_4 Number_5 
+    echo {Z .. A}
+        Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+    echo $USER      x1b3d3ad
+
+
+ESCAPE CHARACTERS 
+    Use \ as an escape character 
+    Use \\ for a backslash to appear 
+    Use Quotes "" if you want spaces to appear 
+
+
+MOVEMENT WITHIN THE SHELL 
+    clear           Clear the terminal of stuff 
+    history         View a history of commands 
+    Ctrl-a          Move cursor to the beginning 
+    Ctrl-e          Move to end of line 
+    Ctrl-f          move one space right 
+    Ctrl-b          move one space left 
+    Alt-f           back one word 
+    Alt-b           move back one word 
+    -----------------------------------
+    Ctrl-d          Delete the character at curso location 
+    Ctrl-t          Exchange character with preceeding 
+    Alt-t           Exhance character with after character 
+    Alt-u           Convert character to the end of word to upper
+    ----------------------------------
+    Ctrl-k          kill text from cursor to end of line 
+
+
+HISTORY 
+    history | less  View History 
+    !!              Repeat last command 
+    !number         Repeast history command with index number 
+    history         View History 
+
+
+PERMISSIONS 
+    User accounts are saved under /etc/group files and passwords are saved under /etc/passwd 
+    The ls -l command lists the file's permissions. 
+    Owner: rwx  Group: rwx  World: rwx 
+    r: read, w: write, x: allows a file to be executed. 
+    id              Display user identity 
+    chmod           Change a file's mode
+        CHMOD GUIDE:
+        chmod 600 foo.txt -> -rx------- 
+        7(rwx), 6(rw-), 5(r-x), 4(r--), 0(---)
+        ADDITIONAL CHMOD IDEAS:
+            u + x           Add execute permissions for the owner 
+            u - x           Remove execute permissions from the owner 
+            +   x           Add execute permissions to user, group and world 
+            u               Short for user 
+            g               Short for group 
+            o               Short for 'others' meaning za world 
+            a               Short for 'all', meaning u + g + o
+    umask           Set the default file permissions 
+    su              Run a shell command as another user 
+    sudo            Execute a command as another user 
+    chown           Change a file's owner 
+    chgrp           Change a file's group ownership 
+    passwd          Change a user's password 
+    
+
+

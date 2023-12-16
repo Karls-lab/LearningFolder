@@ -1,0 +1,20 @@
+
+Step 1: Tokenization (Text to words)
+    Example: "I love NLP" -> ["I", "love", "NLP"]
+
+Step 2: Count Word Frequencies 
+    Example: ["I", "love", "NLP"] -> {"I": 1, "love": 1, "NLP": 1}
+
+    b. Sort the table by word count (descending order)
+        Value Index is the word count (1, 2, 3, 4, 5)
+
+    Remove Infrequent words. 
+
+Step 3: One-Hot Encoding
+    Example: ["I", "love", "NLP"] -> [1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    If a word (e.g. typo) cannot be found, then it is not in the vocabulary.
+
+
+Now we have a vector representation of the text. 
+    
+     
