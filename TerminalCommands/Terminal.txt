@@ -29,6 +29,8 @@ USEFUL COMMANDS:
         zip [compressed file name] [file]
     zip a dir: 
         zip -r [compressed file name] [dir]
+    shutdown the computer in 30 minutes:
+        shutdown +30
     
 USEFUL VSCODE SHORTCUTS:
     Ctrl + W    Close the current tab
