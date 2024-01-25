@@ -1,0 +1,68 @@
+
+K Nearest Neighbor (kNN) classification 
+    Uses a 'vote' system. Makes predictions based on 
+    the similarity between the new and old. It memorizes the entire 
+    training set. 'Nearest' meaning the closes in Euclidean space. (distance formula)
+    Lazy Learning. Sensitive to outliers, and not very efficient. 
+    It's crucial to choose the right hyperparameter k.
+
+Here's how Decision Trees work:
+
+    Splitting:
+        The tree is built by recursively splitting the dataset based on the features 
+        that result in the best separation according to a chosen criterion.
+        The process starts at the root node, where the entire dataset is considered. 
+        At each internal node, a decision is made based on a specific feature (e.g., 
+        "Is feature X greater than 5?"). The dataset is then split into subsets based on this decision.
+
+    Criterions for Splitting:
+        Gini Impurity (for classification): Measures the probability of misclassifying a randomly 
+        chosen element in the dataset. The goal is to minimize the impurity.
+        Entropy (for classification): Measures the level of disorder or randomness in the dataset. 
+        The goal is to maximize the information gain, reducing entropy.
+        Mean Squared Error (for regression): Measures the average squared difference between the 
+        predicted values and the actual values. The goal is to minimize this error.
+
+    Stopping Criteria:
+        The tree-building process continues until a certain stopping criterion is met.
+         This could be a predefined maximum depth of the tree, a minimum number of samples 
+         in a leaf node, or other criteria.
+
+    Leaf Nodes:
+        When a stopping criterion is met, or if further splitting does not improve the 
+        model significantly, the current node becomes a leaf node, and the prediction 
+        at that node is determined (classification: majority class, regression: mean or median).
+            
+    Key Characteristics:
+
+        Interpretability: Decision Trees are easy to interpret and visualize, making
+         them useful for explaining decisions to non-experts.
+        Non-parametric: They don't make assumptions about the underlying data distribution.
+        Prone to Overfitting: Decision Trees can be prone to overfitting the 
+        training data, capturing noise in the data. Techniques like pruning 
+        can help mitigate this issue.
+
+    Pros:
+
+        Easy to understand and interpret.
+        Can handle both numerical and categorical data.
+        Requires little data preprocessing.
+
+    Cons:
+
+        Prone to overfitting.
+        Sensitive to small variations in the data.
+        Instability: Small changes in the data can result in different tree structures.
+
+    Use Cases:
+
+        Decision Trees are used in various applications, including finance 
+        for credit scoring, medicine for diagnosis, and business for decision-making.
+
+    Example:
+
+        In a classification task to predict whether a person will buy a product 
+        based on features like age, income, and previous purchase history, 
+        a Decision Tree may split the dataset at nodes based on age and income, 
+        leading to leaf nodes with predictions such as "Buy" or "Not Buy."
+

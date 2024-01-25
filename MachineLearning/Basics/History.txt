@@ -1,0 +1,31 @@
+1940 - 1960
+    Simple Linear models 
+    Weights not learned, had to be manually inputted by a human. 
+    Theories of biological learning, simple binary classification. 
+
+    Implementation of perception. Enable training of a single neuron. 
+
+    Adaptive Linear Element (ADALINE) predicts real number (regression)
+    while the weights are trained by SGD. Failed to learn nonlinear function 
+    like XOR. First wave stopped. 
+
+
+1960 - 1970
+    Decision trees and K-nearest neighbors
+
+
+1980 - 1990
+    Connectionism and neural networks. 
+    Back propagation was developed. 
+    LSTM was developed
+
+1990 - 2000
+    Search Vector Machines
+    Bagging and boosting. 2nd wave died 
+
+2000 - Present 
+    Large datasets and faster computers enabled the 3rd wave of AI 
+    Deep learning (2010) focused on many layers, started the Golden age of AI 
+    TensorFlow and Pytorch enabled rapid development. 
+
+

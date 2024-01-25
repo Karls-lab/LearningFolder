@@ -1,0 +1,107 @@
+WHERE DOES ERROR COME FORM?
+
+A more complex model does not always result in a better model. 
+
+3 Sources of Error:
+    - Noise 
+    - Bias
+    - Variance
+
+
+NOISE:
+    - Irreducible error that is introduced from the data collection process
+    - Can't be reduced by changing the model
+    - Can be reduced by collecting more data
+
+BIAS:
+    - Inherent to your model 
+    - Low complexity = high bias. 
+    - Can be reduced by using a more complex model
+    - think of liner model fitted to quadratic data
+    - goes down as complexity goes up
+    - A High bias is an model that is not capturing the 
+        complexities of the data. Low accuracy and poor generalization 
+        Under fitting 
+    
+    If you have high bias:
+        - Bigger network 
+        - Longer training 
+        - Get additional features 
+        - Use polynomial features
+
+VARIANCE:
+    - How much do specific fits vary from the expected fit? 
+    - High complexity = high variance
+    - But also High complexity = low bias
+    - Can be reduced by using a less complex model
+    - simple model is less influenced by the data used to train it.
+    - variance goes up as complexity goes up
+
+
+Bias high, variance low = underfitting
+Bias low, variance high = overfitting
+
+We want to achieve a balance between bias and variance. 
+Think of the accuracy vs precision graph.
+Look up Bias and Variance of Estimator Equation. 
+EPE(x) = noise^2 + bias^2 + variance
+Noise = unavoidable, bias = incorrect assumptions, variance = Error due to variance of training samples.  
+How do I deal with large variance? Solution = collect more data! 
+
+We can introduce Regression, which applies a penalty for model complexity. 
+This means the model doesn't fit the training data as well, but it may generalize better.
+Introduces more bias, but reduces variance.
+
+What summary # is indicative of size of regression coefficients?
+    The sum is not a good option because there's negative and positive. 
+
+Ridge Regression: Ridge Regression extends traditional linear regression by adding a
+    penalty term that discourages the coefficients from becoming too large. The cost 
+    function for Ridge Regression includes this penalty term:
+    Cost = Σ(yᵢ - ŷᵢ)² + α * Σ(wᵢ²)
+
+The Ridge Regression cost function aims to minimize the sum of squared errors while 
+also keeping the magnitudes of the coefficients small. This additional constraint 
+helps prevent overfitting and can handle cases where predictor variables are highly 
+correlated (multicollinearity).
+
+
+Total cost = measure of fit + measure of magnitude of coefficients
+    - measure of fit = sum of squared residuals
+    - measure of magnitude of coefficients = sum of squared coefficients
+
+    lambda is a tuning parameter. It's used to control the relative impact of the two terms.
+    - lambda is a tuning parameter
+    - lambda = 0, no penalty
+    - lambda = infinity, coefficients are 0
+    - lambda = 0.5, some penalty
+
+This technique is pretty effective at reducing overfilling with linear regression even if you use 
+a large number of predictor variables and a high model complexity. 
+
+We now have two hyperparmeters: lambda L2 regularization and polynomial degree. 
+    - lambda controls the strength of the penalty term
+    - polynomial degree controls the complexity of the model
+
+Should we penaltize the first intercept?
+    Option 1: NO, called Lasso Regression
+    Option 2: IF data is centered around zero, then you don't have to worry Called Ridge Regression
+
+Lasso Regression: Lasso Regression extends traditional linear regression by adding a
+    penalty term that discourages the coefficients from becoming too large. The cost 
+    function for Lasso Regression includes this penalty term:
+    Cost = Σ(yᵢ - ŷᵢ)² + α * Σ(|wᵢ|)
+
+
+
+Trying out all the different features and trying to find the most optimal solutions is impossible. 
+Use regularization for feature selection. 
+Definition: Regularization is a technique used to reduce overfitting by discouraging overly complex models in some way. 
+    - L1 regularization (Lasso Regression) penalizes the sum of the absolute values of the coefficients.
+    - L2 regularization (Ridge Regression) penalizes the sum of the squared values of the coefficients.
+
+how to choose hyperparmeters?
+    - cross validation: which is the process of splitting the training data into multiple subsets,
+                        and then training a model using each subset and evaluating using the remaining subset.
+
+                        

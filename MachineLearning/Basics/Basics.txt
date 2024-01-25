@@ -1,0 +1,87 @@
+Supervised Vs. Unsupervised Learning
+
+Supervised Learning trains on labeled data. Also known as Machine Learning 
+Has a loss function that compares true vs prediction
+It's used to train regression, classification, and image object detection
+
+Unsupervised learning doesn't have labeled data. It's also known as deep learning
+It extracts it's own features. The data is unlabeled! 
+Used for clustering, dimensionality reduction, and anomaly detection. 
+
+
+Attributes (or dimensions, features, variables): a data field, 
+representing a characteristic or feature of a data point. 
+5 types: Nominal, Binary, Ordinal 
+
+Nominal: categories, states, or 'names of things'
+Binary: Nominal attribute with only 2 states (0 or 1)
+    Asymmetric binary: outcomes not equally important 
+    Symmetric binary: both outcomes equally important 
+Numeric Types: Numbers! 
+    Interval: equal sized units (C or F) 
+    Ratio: inherent zero-point. (Kelvin)
+    Discrete: classification. 
+    Continuous: regression. 
+
+3 basics:
+    1. Explanatory - clustering, frequency pattern mining, dimensionality reduction 
+                    There are all Unsupervised
+    2. Prediction - regression
+    3. Generative - GAN, GPT models
+
+Dimensionality reduction
+algorithms include PCA, auto encoders. 
+
+Base algorithms:
+Linear regression, Logistic regression, k-nearest, decision tree, random forest, naive bayes, SVM, NN. 
+
+
+Gradient Descent.
+    Keep changing Theta0 and Theta1 in small steps to minimize the cost function
+    Please see image. 
+
+Schocastic Gradient Descent: a subset of features
+Mini-batch Gradient Descent: 16, 32, 64.
+
+
+Multivariate linear Regression
+
+
+Features Scaling and learning Curve:
+    Features should have similar scale. 
+    A solution is Z-Normalization. Using mean and standard deviation. 
+        For each feature, minus the mean divided by the std. 
+
+Logistic Regression: 
+    Equation:
+        sigmoid = 1/(1+e&-z)
+        z = T(theta) * X
+        g(T(theta)X) = 1/(1 + e^(-T(theta)X))
+    Problems:
+        Vanishing Gradient
+    Probability:
+        if h(x) > 0.5, y = 1ish
+        if h(x) < 0.5, y = 0ish
+
+    Logistic Cost Function Defined below:
+        J(θ)=−m1​∑i=1m​[y(i)log(hθ​(x(i)))+(1−y(i))log(1−hθ​(x(i)))]
+        Don't memorize it, but completely understand it. 
+
+
+Generalization:
+    Don't use an overly complicated model 
+    Divide into Train and Test
+    k-fold cross validation: data is split into k divides. 
+        Train and test use different divisions each epoch. 
+
+We learned two hyperparameter: batch size, and learning rate.
+    
+
+Classifier Evaluation Matrix: Confusion matrix.
+
+
+Class Imbalance Problem:
+Small classes are hard to learn on. 
+
+The confusion matrix can help us 
+understand which classes the model is failing.
