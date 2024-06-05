@@ -1,0 +1,24 @@
+Guide to how browsers send data across the internet.
+
+METHOD:
+    This specifies the method of communication, can be GET, POST, PUT, DELETE, etc.
+
+HEADERS:
+    Headers are little notes that the browser sends to the server to tell it more about the request.
+    They can tell the server what kind of data you can handle, or if you've visited the site before 
+    and have a cookie, or if you're logged in, etc.
+
+    1. Request Headers:
+        User-Agent: This tells the server what kind of browser you're using.
+        Accept: This tells the server what kind of data you can handle.
+        Authorization: might contain logon credentials.
+
+    2. General Headers:
+        Apply to both requests and responses. 
+        Cache-Control: This tells the server how to cache the data.
+        Host: This tells the server what domain you're trying to access.
+        Connection: This tells the server if you want to keep the connection open.
+
+For more information on headers, see:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+    

@@ -1,0 +1,6 @@
+
+View your gpu statistics in real time
+    watch -n 1 nvidia-smi
+
+install Tensorflow:
+    python3 -m pip install tensorflow[and-cuda]

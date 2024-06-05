@@ -1,0 +1,14 @@
+Use yaml file to configure the parameters of the model. The yaml file is in the `configs` folder. The following is an example of the yaml file.
+    docker compose up
+
+
+Build your docker container: 
+    docker build -t my-node-app .
+
+
+if you need npm types, 
+    npm install --save-dev @types/node
+
+
+Steps to publish a docker image:
+    docker compose up

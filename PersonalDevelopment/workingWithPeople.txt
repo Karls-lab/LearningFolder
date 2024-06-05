@@ -1,0 +1,6 @@
+Things I've learned when working with a team of developers:
+    1. Give ownership to team members. Give them certain responsibilities and 
+         let them take charge of their work.
+    2. Give lots of mini-deadlines. Lots of people don't do anything until the last minute.
+    3. Use availability scheduling and make a plan. 
+    4. Communicate properly. 

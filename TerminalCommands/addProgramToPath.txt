@@ -1,0 +1,33 @@
+Find the Path to Your Program:
+Find the full path to your Python program. Let's say your program is in /path/to/your/program.
+
+Add the Program to PATH:
+
+    On Windows:
+        Open the Start menu and search for "Environment Variables."
+        Click on "Edit the system environment variables."
+        Click the "Environment Variables" button.
+        In the "System variables" section, scroll down and select the "Path" variable.
+        Click "Edit."
+        Click "New" and add the path to your program (e.g., C:\path\to\your\program).
+        Click "OK" to close each dialog.
+
+    On macOS/Linux:
+        Open your shell profile file (e.g., ~/.bashrc, ~/.zshrc, ~/.bash_profile, ~/.profile).
+        Add the following line to the file, replacing /path/to/your/program with the actual path:
+
+        bash
+
+            export PATH="/path/to/your/program:$PATH"
+
+            Save the file.
+            Run source ~/.bashrc (or the corresponding file) to apply the changes.
+
+    Verify:
+    Open a new terminal or command prompt window and type the name of your program. It should now be recognized and executable from any location.
+
+Remember to replace "your_program" and "/path/to/your/program" with the actual name of your program and its path.
+
+
+**** If you are trying to run a python program from terminal, add this to the first line in main: 
+    #!/usr/bin/env python3

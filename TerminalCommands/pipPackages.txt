@@ -1,0 +1,11 @@
+
+View a python package version:
+    pip show [package_name]
+
+To freeze you python packages into a requirements.txt file:
+    pip freeze > requirements.txt
+
+To start a project with a python virtual environment:
+    python3 -m venv [name_of_virtual_environment]
+
+    

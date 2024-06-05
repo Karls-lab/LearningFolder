@@ -1,0 +1,10 @@
+So there are two ways to convert categorical data into numerical data. 
+1. Label Encoding:
+    This can only be used with ordinal data, where the categories have a natural order.
+
+2. One Hot Encoding:
+    This can be used with nominal data, where the categories do not have a natural order.
+    Each category is converted into a new column, and a 1 or 0 is used to indicate 
+    the presence of that category.
+
+

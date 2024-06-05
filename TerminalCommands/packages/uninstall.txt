@@ -1,0 +1,16 @@
+
+Force remove broken packages 
+sudo dpkg --remove --force-remove-reinstreq package_name
+
+Remove package and configuration files
+sudo apt-get --purge remove package_name
+
+Remove package 
+sudo apt remove package_name
+
+Clean up the packages 
+sudo apt autoremove --purge
+sudo apt autoclean
+sudo apt update
+sudo apt upgrade
+sudo apt --fix-broken install

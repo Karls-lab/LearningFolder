@@ -1,0 +1,24 @@
+
+Check your network interfaces:
+    ip link 
+
+    Network interfaces are preceded with a code, here is what they mean:
+    enp0s3: ethernet
+    wlp2s0: wireless
+    br-xxxx: bridge
+    docker0: docker 
+    lo: loopback
+
+Check if a network interface is up:
+    ip link show 
+    ip link show [interface_name]
+    sudo ip link set [interface_name] up
+
+Check the IP address of a network interface:
+    ip addr show [interface_name]
+
+Send a ping to check connection 
+    ping -c 4 google.com
+
+Check network manager status:
+    nmcli device status

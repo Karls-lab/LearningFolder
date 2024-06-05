@@ -1,0 +1,11 @@
+
+Identify the usb device: 
+    lsblk
+    Device will be listed as usub, sda
+
+Mount device: 
+    /home/x1b3d3ad/Downloads/ 
+    
+    sudo dd bs=4M if=/home/x1b3d3ad/Downloads/ubuntu-22.04.4-desktop-amd64.iso of=/dev/sda1 conv=fdatasync status=progress
+
+    

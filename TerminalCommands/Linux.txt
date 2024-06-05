@@ -1,6 +1,14 @@
 LINUX GUIDES AND TUTORIALS 
 
 
+
 VIEW WIRELESS INFORMATION: 
     cat /etc/NetworkManager/system-connections/YOUR_NETWORK_NAME
+
+How to get information on commands:
+    command --help 
+    man command
+
+View linux version: 
+    lsb_release -a
 
