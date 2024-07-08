@@ -1,3 +1,11 @@
+Generate a requirements package: 
+    Install pipreqs:
+        pip install pipreqs
+    Generate a requirements file:
+        pipreqs /path/to/project
+
+Install python requirements file: 
+    pip install -r requirements.txt
 
 View a python package version:
     pip show [package_name]

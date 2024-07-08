@@ -1,0 +1,3356 @@
+<!DOCTYPE html><html><head><base href="https://adafruit.github.io/Adafruit_SSD1306/html/class_adafruit___s_s_d1306.html"><meta charset="utf-8"><meta name="download_date" content="2024-05-22T01:37:00.974Z"/>
+
+
+
+
+<title>Adafruit SSD1306: Adafruit_SSD1306 Class Reference</title>
+<style>.sm{position:relative;z-index:9999}.sm,.sm ul,.sm li{display:block;list-style:none;margin:0;padding:0;line-height:normal;direction:ltr;text-align:left;-webkit-tap-highlight-color:rgba(0,0,0,0)}.sm-rtl,.sm-rtl ul,.sm-rtl li{direction:rtl;text-align:right}.sm>li>h1,.sm>li>h2,.sm>li>h3,.sm>li>h4,.sm>li>h5,.sm>li>h6{margin:0;padding:0}.sm ul{display:none}.sm li,.sm a{position:relative}.sm a{display:block}.sm a.disabled{cursor:not-allowed}.sm:after{content:"\00a0";display:block;height:0;font:0/0 serif;clear:both;visibility:hidden;overflow:hidden}.sm,.sm *,.sm *:before,.sm *:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}#doc-content{overflow:auto;display:block;padding:0;margin:0;-webkit-overflow-scrolling:touch}.sm-dox{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAcElEQVR4Ae3dTQ6DIBRF4ce70NS4uA51YOLAtFYw0B+gxn06dAddRMGykHO/5K6Ctv3LdaX4fJJ4+RXuvcA+/xkXMbsPJhugbcQ4B9xT2dF43EzAVfscExGa3rIQxGkORZaK5U9zhKKSGYFueODS6h/TSxpOsn4UagAAAABJRU5ErkJggg==")}.sm-dox a,.sm-dox a:focus,.sm-dox a:hover,.sm-dox a:active{padding:0 12px;padding-right:43px;font-family:"Lucida Grande","Geneva","Helvetica",Arial,sans-serif;font-size:13px;font-weight:bold;line-height:36px;text-decoration:none;text-shadow:0 1px 1px rgba(255,255,255,0.9);color:#283a5d;outline:0}.sm-dox a:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAVUlEQVR4Ae2dSwqAMBBDJ2+kKIqIW8W94CXceP8j2amt5wgJ+Z3B9vOmH1emZSMNM3QJSRkgHDMrkLz4ReN+XA9EHr0fOa/b4OiSd023v/b/fX9Z9V/qQQI0WZ7jfQAAAABJRU5ErkJggg==");background-repeat:repeat-x;color:white;text-shadow:0 1px 1px black}.sm-dox a.current{color:#d23600}.sm-dox a.disabled{color:#bbb}.sm-dox a span.sub-arrow{position:absolute;top:50%;margin-top:-14px;left:auto;right:3px;width:28px;height:28px;overflow:hidden;font:bold 12px/28px monospace!important;text-align:center;text-shadow:none;background:rgba(255,255,255,0.5);-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.sm-dox a.highlighted span.sub-arrow:before{display:block;content:'-'}.sm-dox>li:first-child>a,.sm-dox>li:first-child>:not(ul) a{-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px;border-radius:5px 5px 0 0}.sm-dox>li:last-child>a,.sm-dox>li:last-child>*:not(ul) a,.sm-dox>li:last-child>ul,.sm-dox>li:last-child>ul>li:last-child>a,.sm-dox>li:last-child>ul>li:last-child>*:not(ul) a,.sm-dox>li:last-child>ul>li:last-child>ul,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul{-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0;border-radius:0 0 5px 5px}.sm-dox>li:last-child>a.highlighted,.sm-dox>li:last-child>*:not(ul) a.highlighted,.sm-dox>li:last-child>ul>li:last-child>a.highlighted,.sm-dox>li:last-child>ul>li:last-child>*:not(ul) a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>a.highlighted,.sm-dox>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>ul>li:last-child>*:not(ul) a.highlighted{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0}.sm-dox ul{background:rgba(162,162,162,0.1)}.sm-dox ul a,.sm-dox ul a:focus,.sm-dox ul a:hover,.sm-dox ul a:active{font-size:12px;border-left:8px solid transparent;line-height:36px;text-shadow:none;background-color:white;background-image:none}.sm-dox ul a:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAVUlEQVR4Ae2dSwqAMBBDJ2+kKIqIW8W94CXceP8j2amt5wgJ+Z3B9vOmH1emZSMNM3QJSRkgHDMrkLz4ReN+XA9EHr0fOa/b4OiSd023v/b/fX9Z9V/qQQI0WZ7jfQAAAABJRU5ErkJggg==");background-repeat:repeat-x;color:white;text-shadow:0 1px 1px black}.sm-dox ul ul a,.sm-dox ul ul a:hover,.sm-dox ul ul a:focus,.sm-dox ul ul a:active{border-left:16px solid transparent}.sm-dox ul ul ul a,.sm-dox ul ul ul a:hover,.sm-dox ul ul ul a:focus,.sm-dox ul ul ul a:active{border-left:24px solid transparent}.sm-dox ul ul ul ul a,.sm-dox ul ul ul ul a:hover,.sm-dox ul ul ul ul a:focus,.sm-dox ul ul ul ul a:active{border-left:32px solid transparent}.sm-dox ul ul ul ul ul a,.sm-dox ul ul ul ul ul a:hover,.sm-dox ul ul ul ul ul a:focus,.sm-dox ul ul ul ul ul a:active{border-left:40px solid transparent}@media(min-width:768px){.sm-dox ul{position:absolute;width:12em}.sm-dox li{float:left}.sm-dox.sm-rtl li{float:right}.sm-dox ul li,.sm-dox.sm-rtl ul li,.sm-dox.sm-vertical li{float:none}.sm-dox a{white-space:nowrap}.sm-dox ul a,.sm-dox.sm-vertical a{white-space:normal}.sm-dox .sm-nowrap>li>a,.sm-dox .sm-nowrap>li>:not(ul) a{white-space:nowrap}.sm-dox{padding:0 10px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAcElEQVR4Ae3dTQ6DIBRF4ce70NS4uA51YOLAtFYw0B+gxn06dAddRMGykHO/5K6Ctv3LdaX4fJJ4+RXuvcA+/xkXMbsPJhugbcQ4B9xT2dF43EzAVfscExGa3rIQxGkORZaK5U9zhKKSGYFueODS6h/TSxpOsn4UagAAAABJRU5ErkJggg==");line-height:36px}.sm-dox a span.sub-arrow{top:50%;margin-top:-2px;right:12px;width:0;height:0;border-width:4px;border-style:solid dashed dashed dashed;border-color:#283a5d transparent transparent transparent;background:transparent;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0}.sm-dox a,.sm-dox a:focus,.sm-dox a:active,.sm-dox a:hover,.sm-dox a.highlighted{padding:0 12px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAf0lEQVR4Ae3dgQmCQABA0aM/URIUhaQimqIlpkmRl4pmljZbG7RIw+RRgzzeGuL1/pBdnmRyIM1/knM/GohPPdHx8XcnzEaHjiDt8PYtfnLDjVuc6Iqt7BqsbYMZ1qyDGt2v0L2K1UYpWbolC6dgbhfMLDkRQqCZkqkh0Yxc/QU8xSP87u6VHwAAAABJRU5ErkJggg==");background-repeat:no-repeat;background-position:right;-moz-border-radius:0!important;-webkit-border-radius:0;border-radius:0!important}.sm-dox a:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAVUlEQVR4Ae2dSwqAMBBDJ2+kKIqIW8W94CXceP8j2amt5wgJ+Z3B9vOmH1emZSMNM3QJSRkgHDMrkLz4ReN+XA9EHr0fOa/b4OiSd023v/b/fX9Z9V/qQQI0WZ7jfQAAAABJRU5ErkJggg==");background-repeat:repeat-x;color:white;text-shadow:0 1px 1px black}.sm-dox a:hover span.sub-arrow{border-color:white transparent transparent transparent}.sm-dox a.has-submenu{padding-right:24px}.sm-dox li{border-top:0}.sm-dox>li>ul:before,.sm-dox>li>ul:after{content:'';position:absolute;top:-18px;left:30px;width:0;height:0;overflow:hidden;border-width:9px;border-style:dashed dashed solid dashed;border-color:transparent transparent #bbb transparent}.sm-dox>li>ul:after{top:-16px;left:31px;border-width:8px;border-color:transparent transparent #fff transparent}.sm-dox ul{border:1px solid #bbb;padding:5px 0;background:#fff;-moz-border-radius:5px!important;-webkit-border-radius:5px;border-radius:5px!important;-moz-box-shadow:0 5px 9px rgba(0,0,0,0.2);-webkit-box-shadow:0 5px 9px rgba(0,0,0,0.2);box-shadow:0 5px 9px rgba(0,0,0,0.2)}.sm-dox ul a span.sub-arrow{right:8px;top:50%;margin-top:-5px;border-width:5px;border-color:transparent transparent transparent #555;border-style:dashed dashed dashed solid}.sm-dox ul a,.sm-dox ul a:hover,.sm-dox ul a:focus,.sm-dox ul a:active,.sm-dox ul a.highlighted{color:#555;background-image:none;border:0!important;color:#555;background-image:none}.sm-dox ul a:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAVUlEQVR4Ae2dSwqAMBBDJ2+kKIqIW8W94CXceP8j2amt5wgJ+Z3B9vOmH1emZSMNM3QJSRkgHDMrkLz4ReN+XA9EHr0fOa/b4OiSd023v/b/fX9Z9V/qQQI0WZ7jfQAAAABJRU5ErkJggg==");background-repeat:repeat-x;color:white;text-shadow:0 1px 1px black}.sm-dox ul a:hover span.sub-arrow{border-color:transparent transparent transparent white}.sm-dox span.scroll-up,.sm-dox span.scroll-down{position:absolute;display:none;visibility:hidden;overflow:hidden;background:#fff;height:36px}.sm-dox span.scroll-up:hover,.sm-dox span.scroll-down:hover{background:#eee}.sm-dox span.scroll-up:hover span.scroll-up-arrow,.sm-dox span.scroll-up:hover span.scroll-down-arrow{border-color:transparent transparent #d23600 transparent}.sm-dox span.scroll-down:hover span.scroll-down-arrow{border-color:#d23600 transparent transparent transparent}.sm-dox span.scroll-up-arrow,.sm-dox span.scroll-down-arrow{position:absolute;top:0;left:50%;margin-left:-6px;width:0;height:0;overflow:hidden;border-width:6px;border-style:dashed dashed solid dashed;border-color:transparent transparent #555 transparent}.sm-dox span.scroll-down-arrow{top:8px;border-style:solid dashed dashed dashed;border-color:#555 transparent transparent transparent}.sm-dox.sm-rtl a.has-submenu{padding-right:12px;padding-left:24px}.sm-dox.sm-rtl a span.sub-arrow{right:auto;left:12px}.sm-dox.sm-rtl.sm-vertical a.has-submenu{padding:10px 20px}.sm-dox.sm-rtl.sm-vertical a span.sub-arrow{right:auto;left:8px;border-style:dashed solid dashed dashed;border-color:transparent #555 transparent transparent}.sm-dox.sm-rtl>li>ul:before{left:auto;right:30px}.sm-dox.sm-rtl>li>ul:after{left:auto;right:31px}.sm-dox.sm-rtl ul a.has-submenu{padding:10px 20px!important}.sm-dox.sm-rtl ul a span.sub-arrow{right:auto;left:8px;border-style:dashed solid dashed dashed;border-color:transparent #555 transparent transparent}.sm-dox.sm-vertical{padding:10px 0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.sm-dox.sm-vertical a{padding:10px 20px}.sm-dox.sm-vertical a:hover,.sm-dox.sm-vertical a:focus,.sm-dox.sm-vertical a:active,.sm-dox.sm-vertical a.highlighted{background:#fff}.sm-dox.sm-vertical a.disabled{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAcElEQVR4Ae3dTQ6DIBRF4ce70NS4uA51YOLAtFYw0B+gxn06dAddRMGykHO/5K6Ctv3LdaX4fJJ4+RXuvcA+/xkXMbsPJhugbcQ4B9xT2dF43EzAVfscExGa3rIQxGkORZaK5U9zhKKSGYFueODS6h/TSxpOsn4UagAAAABJRU5ErkJggg==")}.sm-dox.sm-vertical a span.sub-arrow{right:8px;top:50%;margin-top:-5px;border-width:5px;border-style:dashed dashed dashed solid;border-color:transparent transparent transparent #555}.sm-dox.sm-vertical>li>ul:before,.sm-dox.sm-vertical>li>ul:after{display:none}.sm-dox.sm-vertical ul a{padding:10px 20px}.sm-dox.sm-vertical ul a:hover,.sm-dox.sm-vertical ul a:focus,.sm-dox.sm-vertical ul a:active,.sm-dox.sm-vertical ul a.highlighted{background:#eee}.sm-dox.sm-vertical ul a.disabled{background:#fff}}</style>
+
+
+<style>/*---------------- Search Box */
+
+#FSearchBox {
+    float: left;
+}
+
+#MSearchBox {
+    white-space : nowrap;
+    float: none;
+    margin-top: 8px;
+    right: 0px;
+    width: 170px;
+    height: 24px;
+    z-index: 102;
+}
+
+#MSearchBox .left
+{
+    display:block;
+    position:absolute;
+    left:10px;
+    width:20px;
+    height:19px;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DgAAILVAAB6BwAAyrQAADNEAAAcdoQ2Kr0AAAHiSURBVHjarFQ9q9pQGH7OyTkxTfxAMEYU7FBEFy+duhXa0aEu3TsUSqF/pnS9Q/+E/QWC2qWDHdyKiKBEg8YorR9J3i6NeG+vNGif7bxwHp6P9xxGRDhFr9djtm3nbdtuuq77brPZ3Gy32wTnHIwx/AssIux2u8zzvMxoNHrtuu6HbDZ7k8vlRDqdhqZpUBQlPmGn02Hz+fzJeDy+1XX9eaVSEaZpIpVKQdM0CCHAGItFKABgtVqlJ5PJp2Kx+LJarSKfz8MwDEgpwTlHXLsAINrtNp9Op69M03xRr9dhWRZ0XYeUEpdALBYLk4je1mo13bIsGIYBIQQuBfc8r1kul59FyjjnuAY8CIJGoVB4dK2yI6GU8mkmk+FRZvf30vf9By+em3NVVbORVcYYwjC8G/IZ1efmXEo5BnBci7jrcdYyEXX2+/3R6tWlENG39XodhGEIIrqeUFGUr47j/Nztdvgf4IlE4sdyufzuOA583z9av992bMJGo/ErCILb4XDoLBYLBEEAIrq4HP5nBb54nvd5MBiMZ7MZRSWdU0lEOBwOOC3zzm8DYCmE+Oh5ntvv99+XSqXH0VNUVRVSyr8UCyEejIedHlqtlgBQJ6I3qqo2DcMoJpNJoWmawjmPlcHvAQA15dVe0O0M/QAAAABJRU5ErkJggg==") no-repeat;
+    background-position:right;
+}
+
+#MSearchSelect {
+    display:block;
+    position:absolute;
+    width:20px;
+    height:19px;
+}
+
+.left #MSearchSelect {
+    left:4px;
+}
+
+.right #MSearchSelect {
+    right:5px;
+}
+
+#MSearchField {
+    display:block;
+    position:absolute;
+    height:19px;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAATCAIAAAA1XktNAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAwSURBVHjaYiwvL2dgYGA8fvw4iPr48SOI+v//P5BiYgADWlAsEBtYbt26BaQAAgwApQcPPH7hRacAAAAASUVORK5CYII=") repeat-x;
+    border:none;
+    width:115px;
+    margin-left:20px;
+    padding-left:4px;
+    color: #909090;
+    outline: none;
+    font: 9pt Arial, Verdana, sans-serif;
+    -webkit-border-radius: 0px;
+}
+
+#FSearchBox #MSearchField {
+    margin-left:15px;
+}
+
+#MSearchBox .right {
+    display:block;
+    position:absolute;
+    right:10px;
+    top:8px;
+    width:20px;
+    height:19px;
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DgAAILVAAB6BwAAyrQAADNEAAAcdoQ2Kr0AAAHqSURBVHjapNS/qhpBFAbwb/afsgprpVaLpJLUaXwDsVlJEVLfvEPMK6RMl2cIpBEsUlxCJGCKNClCUEEhoJfVVbO77rLO7sxJkSjCDeaqp53Dj3OY+YZ1Oh3CiRJCJPl8flosFj+WSqVetVr9Ui6X/UajIY772GAwOAllWYYkSRAEgfA8b7PZbH5YlnVbq9XeNJvNXwfI9/2TkJTygIVhiOVySePxWMZx/MG27eeO44QAwKSUJyEigpQSUkqkaYooirBYLDAcDoXruu9rtdpNq9WKNMbYKQeMMSiKAiKCruswDAO5XA6GYahSyqfz+fxnv99/peCBxRgDYwyapqFQKKBSqaBer2sAXqzX60cPho5BVVVhmiYqlQps27aCIHh2NrTH9pNVq1UmhHisHF/zuaXrOizLgq7ruwOkadrZUymKAtM0mWEYy4tWO8b+TnZ3FURE4JwLIvqqXINIKRGG4YaIvl810W63g+d5PVVVfdAFJaUkzjlNJpNFt9t9QkRQLllJCIH1ep1Mp9N3QohvAKDtD7MsO+TpX/kj+pNtzjlWq5UYDoefgiB43W6303vpJ6J7CBEhTVNwzhHHsXRd15/NZj3O+UvHce4O73A0GuF//1GSJNhut2EURZ85528ZY7eO40THfb8HAF93RowwLNidAAAAAElFTkSuQmCC") no-repeat;
+    background-position:left;
+}
+
+#MSearchClose {
+    display: none;
+    position: absolute;
+    top: 4px;
+    background : none;
+    border: none;
+    margin: 0px 4px 0px 0px;
+    padding: 0px 0px;
+    outline: none;
+}
+
+.left #MSearchClose {
+    left: 6px;
+}
+
+.right #MSearchClose {
+    right: 2px;
+}
+
+.MSearchBoxActive #MSearchField {
+    color: #000000;
+}
+
+/*---------------- Search filter selection */
+
+#MSearchSelectWindow {
+    display: none;
+    position: absolute;
+    left: 0; top: 0;
+    border: 1px solid #90A5CE;
+    background-color: #F9FAFC;
+    z-index: 10001;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.SelectItem {
+    font: 8pt Arial, Verdana, sans-serif;
+    padding-left:  2px;
+    padding-right: 12px;
+    border: 0px;
+}
+
+span.SelectionMark {
+    margin-right: 4px;
+    font-family: monospace;
+    outline-style: none;
+    text-decoration: none;
+}
+
+a.SelectItem {
+    display: block;
+    outline-style: none;
+    color: #000000; 
+    text-decoration: none;
+    padding-left:   6px;
+    padding-right: 12px;
+}
+
+a.SelectItem:focus,
+a.SelectItem:active {
+    color: #000000; 
+    outline-style: none;
+    text-decoration: none;
+}
+
+a.SelectItem:hover {
+    color: #FFFFFF;
+    background-color: #3D578C;
+    outline-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+/*---------------- Search results window */
+
+iframe#MSearchResults {
+    width: 60ex;
+    height: 15em;
+}
+
+#MSearchResultsWindow {
+    display: none;
+    position: absolute;
+    left: 0; top: 0;
+    border: 1px solid #000;
+    background-color: #EEF1F7;
+    z-index:10000;
+}
+
+/* ----------------------------------- */
+
+
+#SRIndex {
+    clear:both; 
+    padding-bottom: 15px;
+}
+
+.SREntry {
+    font-size: 10pt;
+    padding-left: 1ex;
+}
+
+.SRPage .SREntry {
+    font-size: 8pt;
+    padding: 1px 5px;
+}
+
+body.SRPage {
+    margin: 5px 2px;
+}
+
+.SRChildren {
+    padding-left: 3ex; padding-bottom: .5em 
+}
+
+.SRPage .SRChildren {
+    display: none;
+}
+
+.SRSymbol {
+    font-weight: bold; 
+    color: #425E97;
+    font-family: Arial, Verdana, sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+a.SRScope {
+    display: block;
+    color: #425E97; 
+    font-family: Arial, Verdana, sans-serif;
+    text-decoration: none;
+    outline: none;
+}
+
+a.SRSymbol:focus, a.SRSymbol:active,
+a.SRScope:focus, a.SRScope:active {
+    text-decoration: underline;
+}
+
+span.SRScope {
+    padding-left: 4px;
+}
+
+.SRPage .SRStatus {
+    padding: 2px 5px;
+    font-size: 8pt;
+    font-style: italic;
+}
+
+.SRResult {
+    display: none;
+}
+
+DIV.searchresults {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*---------------- External search page results */
+
+.searchresult {
+    background-color: #F0F3F8;
+}
+
+.pages b {
+   color: white;
+   padding: 5px 5px 3px 5px;
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAVUlEQVR4Ae2dSwqAMBBDJ2+kKIqIW8W94CXceP8j2amt5wgJ+Z3B9vOmH1emZSMNM3QJSRkgHDMrkLz4ReN+XA9EHr0fOa/b4OiSd023v/b/fX9Z9V/qQQI0WZ7jfQAAAABJRU5ErkJggg==");
+   background-repeat: repeat-x;
+   text-shadow: 0 1px 1px #000000;
+}
+
+.pages {
+    line-height: 17px;
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+.hl {
+    font-weight: bold;
+}
+
+#searchresults {
+    margin-bottom: 20px;
+}
+
+.searchpages {
+    margin-top: 10px;
+}
+
+</style>
+
+
+<style>/* The standard CSS for doxygen 1.8.13 */
+
+body, table, div, p, dl {
+	font: 400 14px/22px Roboto,sans-serif;
+}
+
+p.reference, p.definition {
+	font: 400 14px/22px Roboto,sans-serif;
+}
+
+/* @group Heading Levels */
+
+h1.groupheader {
+	font-size: 150%;
+}
+
+.title {
+	font: 400 14px/28px Roboto,sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	margin: 10px 2px;
+}
+
+h2.groupheader {
+	border-bottom: 1px solid #879ECB;
+	color: #354C7B;
+	font-size: 150%;
+	font-weight: normal;
+	margin-top: 1.75em;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	width: 100%;
+}
+
+h3.groupheader {
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-transition: text-shadow 0.5s linear;
+	-moz-transition: text-shadow 0.5s linear;
+	-ms-transition: text-shadow 0.5s linear;
+	-o-transition: text-shadow 0.5s linear;
+	transition: text-shadow 0.5s linear;
+	margin-right: 15px;
+}
+
+h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+	text-shadow: 0 0 15px cyan;
+}
+
+dt {
+	font-weight: bold;
+}
+
+div.multicol {
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+}
+
+p.startli, p.startdd {
+	margin-top: 2px;
+}
+
+p.starttd {
+	margin-top: 0px;
+}
+
+p.endli {
+	margin-bottom: 0px;
+}
+
+p.enddd {
+	margin-bottom: 4px;
+}
+
+p.endtd {
+	margin-bottom: 2px;
+}
+
+/* @end */
+
+caption {
+	font-weight: bold;
+}
+
+span.legend {
+        font-size: 70%;
+        text-align: center;
+}
+
+h3.version {
+        font-size: 90%;
+        text-align: center;
+}
+
+div.qindex, div.navtab{
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+}
+
+div.qindex, div.navpath {
+	width: 100%;
+	line-height: 140%;
+}
+
+div.navtab {
+	margin-right: 15px;
+}
+
+/* @group Link Styling */
+
+a {
+	color: #3D578C;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.contents a:visited {
+	color: #4665A2;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.qindex {
+	font-weight: bold;
+}
+
+a.qindexHL {
+	font-weight: bold;
+	background-color: #9CAFD4;
+	color: #ffffff;
+	border: 1px double #869DCA;
+}
+
+.contents a.qindexHL:visited {
+        color: #ffffff;
+}
+
+a.el {
+	font-weight: bold;
+}
+
+a.elRef {
+}
+
+a.code, a.code:visited, a.line, a.line:visited {
+	color: #4665A2; 
+}
+
+a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
+	color: #4665A2; 
+}
+
+/* @end */
+
+dl.el {
+	margin-left: -1cm;
+}
+
+pre.fragment {
+        border: 1px solid #C4CFE5;
+        background-color: #FBFCFD;
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+        overflow: auto;
+        word-wrap: break-word;
+        font-size:  9pt;
+        line-height: 125%;
+        font-family: monospace, fixed;
+        font-size: 105%;
+}
+
+div.fragment {
+        padding: 0px;
+        margin: 4px 8px 4px 2px;
+	background-color: #FBFCFD;
+	border: 1px solid #C4CFE5;
+}
+
+div.line {
+	font-family: monospace, fixed;
+        font-size: 13px;
+	min-height: 13px;
+	line-height: 1.0;
+	text-wrap: unrestricted;
+	white-space: -moz-pre-wrap; /* Moz */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: pre-wrap;      /* CSS3  */
+	word-wrap: break-word;      /* IE 5.5+ */
+	text-indent: -53px;
+	padding-left: 53px;
+	padding-bottom: 0px;
+	margin: 0px;
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+div.line:after {
+    content:"\000A";
+    white-space: pre;
+}
+
+div.line.glow {
+	background-color: cyan;
+	box-shadow: 0 0 10px cyan;
+}
+
+
+span.lineno {
+	padding-right: 4px;
+	text-align: right;
+	border-right: 2px solid #0F0;
+	background-color: #E8E8E8;
+        white-space: pre;
+}
+span.lineno a {
+	background-color: #D8D8D8;
+}
+
+span.lineno a:hover {
+	background-color: #C8C8C8;
+}
+
+.lineno {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.ah, span.ah {
+	background-color: black;
+	font-weight: bold;
+	color: #ffffff;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding: 0.2em;
+	border: solid thin #333;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	box-shadow: 2px 2px 3px #999;
+	-webkit-box-shadow: 2px 2px 3px #999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#000),color-stop(0.3, #444));
+	background-image: -moz-linear-gradient(center top, #eee 0%, #444 40%, #000 110%);
+}
+
+div.classindex ul {
+        list-style: none;
+        padding-left: 0;
+}
+
+div.classindex span.ai {
+        display: inline-block;
+}
+
+div.groupHeader {
+	margin-left: 16px;
+	margin-top: 12px;
+	font-weight: bold;
+}
+
+div.groupText {
+	margin-left: 16px;
+	font-style: italic;
+}
+
+body {
+	background-color: white;
+	color: black;
+        margin: 0;
+}
+
+div.contents {
+	margin-top: 10px;
+	margin-left: 12px;
+	margin-right: 8px;
+}
+
+td.indexkey {
+	background-color: #EBEFF6;
+	font-weight: bold;
+	border: 1px solid #C4CFE5;
+	margin: 2px 0px 2px 0;
+	padding: 2px 10px;
+        white-space: nowrap;
+        vertical-align: top;
+}
+
+td.indexvalue {
+	background-color: #EBEFF6;
+	border: 1px solid #C4CFE5;
+	padding: 2px 10px;
+	margin: 2px 0px;
+}
+
+tr.memlist {
+	background-color: #EEF1F7;
+}
+
+p.formulaDsp {
+	text-align: center;
+}
+
+img.formulaDsp {
+	
+}
+
+img.formulaInl {
+	vertical-align: middle;
+}
+
+div.center {
+	text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+}
+
+div.center img {
+	border: 0px;
+}
+
+address.footer {
+	text-align: right;
+	padding-right: 12px;
+}
+
+img.footer {
+	border: 0px;
+	vertical-align: middle;
+}
+
+/* @group Code Colorization */
+
+span.keyword {
+	color: #008000
+}
+
+span.keywordtype {
+	color: #604020
+}
+
+span.keywordflow {
+	color: #e08000
+}
+
+span.comment {
+	color: #800000
+}
+
+span.preprocessor {
+	color: #806020
+}
+
+span.stringliteral {
+	color: #002080
+}
+
+span.charliteral {
+	color: #008080
+}
+
+span.vhdldigit { 
+	color: #ff00ff 
+}
+
+span.vhdlchar { 
+	color: #000000 
+}
+
+span.vhdlkeyword { 
+	color: #700070 
+}
+
+span.vhdllogic { 
+	color: #ff0000 
+}
+
+blockquote {
+        background-color: #F7F8FB;
+        border-left: 2px solid #9CAFD4;
+        margin: 0 24px 0 4px;
+        padding: 0 12px 0 16px;
+}
+
+/* @end */
+
+/*
+.search {
+	color: #003399;
+	font-weight: bold;
+}
+
+form.search {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+input.search {
+	font-size: 75%;
+	color: #000080;
+	font-weight: normal;
+	background-color: #e8eef2;
+}
+*/
+
+td.tiny {
+	font-size: 75%;
+}
+
+.dirtab {
+	padding: 4px;
+	border-collapse: collapse;
+	border: 1px solid #A3B4D7;
+}
+
+th.dirtab {
+	background: #EBEFF6;
+	font-weight: bold;
+}
+
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid #4A6AAA;
+}
+
+hr.footer {
+	height: 1px;
+}
+
+/* @group Member Descriptions */
+
+table.memberdecls {
+	border-spacing: 0px;
+	padding: 0px;
+}
+
+.memberdecls td, .fieldtable tr {
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+.memberdecls td.glow, .fieldtable tr.glow {
+	background-color: cyan;
+	box-shadow: 0 0 15px cyan;
+}
+
+.mdescLeft, .mdescRight,
+.memItemLeft, .memItemRight,
+.memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+	background-color: #F9FAFC;
+	border: none;
+	margin: 4px;
+	padding: 1px 0 0 8px;
+}
+
+.mdescLeft, .mdescRight {
+	padding: 0px 8px 4px 8px;
+	color: #555;
+}
+
+.memSeparator {
+        border-bottom: 1px solid #DEE4F0;
+        line-height: 1px;
+        margin: 0px;
+        padding: 0px;
+}
+
+.memItemLeft, .memTemplItemLeft {
+        white-space: nowrap;
+}
+
+.memItemRight {
+	width: 100%;
+}
+
+.memTemplParams {
+	color: #4665A2;
+        white-space: nowrap;
+	font-size: 80%;
+}
+
+/* @end */
+
+/* @group Member Details */
+
+/* Styles for detailed member documentation */
+
+.memtitle {
+	padding: 8px;
+	border-top: 1px solid #A8B8D9;
+	border-left: 1px solid #A8B8D9;
+	border-right: 1px solid #A8B8D9;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	margin-bottom: -1px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA4CAIAAACzAgW7AAAAYElEQVR4Ae3dSw6AIAxF0Za3WweG+IFC0W1r4sTCSBwYl3By07wugo7zguqOpBtSNlogVkkFsRJFkII1arOEbBTzmptpSZis3urnSjCM0RHRL477m5kdEXX48fPevzZzA0gYIN0BAPV5AAAAAElFTkSuQmCC");
+	background-repeat: repeat-x;
+	background-color: #E2E8F2;
+	line-height: 1.25;
+	font-weight: 300;
+	float:left;
+}
+
+.permalink
+{
+        font-size: 65%;
+        display: inline-block;
+        vertical-align: middle;
+}
+
+.memtemplate {
+	font-size: 80%;
+	color: #4665A2;
+	font-weight: normal;
+	margin-left: 9px;
+}
+
+.memnav {
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+	margin: 2px;
+	margin-right: 15px;
+	padding: 2px;
+}
+
+.mempage {
+	width: 100%;
+}
+
+.memitem {
+	padding: 0;
+	margin-bottom: 10px;
+	margin-right: 5px;
+        -webkit-transition: box-shadow 0.5s linear;
+        -moz-transition: box-shadow 0.5s linear;
+        -ms-transition: box-shadow 0.5s linear;
+        -o-transition: box-shadow 0.5s linear;
+        transition: box-shadow 0.5s linear;
+        display: table !important;
+        width: 100%;
+}
+
+.memitem.glow {
+         box-shadow: 0 0 15px cyan;
+}
+
+.memname {
+        font-weight: 400;
+        margin-left: 6px;
+}
+
+.memname td {
+	vertical-align: bottom;
+}
+
+.memproto, dl.reflist dt {
+        border-top: 1px solid #A8B8D9;
+        border-left: 1px solid #A8B8D9;
+        border-right: 1px solid #A8B8D9;
+        padding: 6px 0px 6px 0px;
+        color: #253555;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+        background-color: #DFE5F1;
+        /* opera specific markup */
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 4px;
+        /* firefox specific markup */
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        -moz-border-radius-topright: 4px;
+        /* webkit specific markup */
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        -webkit-border-top-right-radius: 4px;
+
+}
+
+.overload {
+        font-family: "courier new",courier,monospace;
+	font-size: 65%;
+}
+
+.memdoc, dl.reflist dd {
+        border-bottom: 1px solid #A8B8D9;      
+        border-left: 1px solid #A8B8D9;      
+        border-right: 1px solid #A8B8D9; 
+        padding: 6px 10px 2px 10px;
+        background-color: #FBFCFD;
+        border-top-width: 0;
+        background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAGCAYAAAACEPQxAAAAJklEQVR4Ae3dMQ0AAAgDwU9IF2aE4V8NLT5+uOVNIGnLTejAgwcHD1MAvfyCPAUAAAAASUVORK5CYII=");
+        background-repeat:repeat-x;
+        background-color: #FFFFFF;
+        /* opera specific markup */
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        /* firefox specific markup */
+        -moz-border-radius-bottomleft: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        /* webkit specific markup */
+        -webkit-border-bottom-left-radius: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+dl.reflist dt {
+        padding: 5px;
+}
+
+dl.reflist dd {
+        margin: 0px 0px 10px 0px;
+        padding: 5px;
+}
+
+.paramkey {
+	text-align: right;
+}
+
+.paramtype {
+	white-space: nowrap;
+}
+
+.paramname {
+	color: #602020;
+	white-space: nowrap;
+}
+.paramname em {
+	font-style: normal;
+}
+.paramname code {
+        line-height: 14px;
+}
+
+.params, .retval, .exception, .tparams {
+        margin-left: 0px;
+        padding-left: 0px;
+}       
+
+.params .paramname, .retval .paramname {
+        font-weight: bold;
+        vertical-align: top;
+}
+        
+.params .paramtype {
+        font-style: italic;
+        vertical-align: top;
+}       
+        
+.params .paramdir {
+        font-family: "courier new",courier,monospace;
+        vertical-align: top;
+}
+
+table.mlabels {
+	border-spacing: 0px;
+}
+
+td.mlabels-left {
+	width: 100%;
+	padding: 0px;
+}
+
+td.mlabels-right {
+	vertical-align: bottom;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+span.mlabels {
+        margin-left: 8px;
+}
+
+span.mlabel {
+        background-color: #728DC1;
+        border-top:1px solid #5373B4;
+        border-left:1px solid #5373B4;
+        border-right:1px solid #C4CFE5;
+        border-bottom:1px solid #C4CFE5;
+	text-shadow: none;
+	color: white;
+	margin-right: 4px;
+	padding: 2px 3px;
+	border-radius: 3px;
+	font-size: 7pt;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+
+
+/* @end */
+
+/* these are for tree view inside a (index) page */
+
+div.directory {
+        margin: 10px 0px;
+        border-top: 1px solid #9CAFD4;
+        border-bottom: 1px solid #9CAFD4;
+        width: 100%;
+}
+
+.directory table {
+        border-collapse:collapse;
+}
+
+.directory td {
+        margin: 0px;
+        padding: 0px;
+	vertical-align: top;
+}
+
+.directory td.entry {
+        white-space: nowrap;
+        padding-right: 6px;
+	padding-top: 3px;
+}
+
+.directory td.entry a {
+        outline:none;
+}
+
+.directory td.entry a img {
+        border: none;
+}
+
+.directory td.desc {
+        width: 100%;
+        padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.directory tr.even {
+	padding-left: 6px;
+	background-color: #F7F8FB;
+}
+
+.directory img {
+	vertical-align: -30%;
+}
+
+.directory .levels {
+        white-space: nowrap;
+        width: 100%;
+        text-align: right;
+        font-size: 9pt;
+}
+
+.directory .levels span {
+        cursor: pointer;
+        padding-left: 2px;
+        padding-right: 2px;
+	color: #3D578C;
+}
+
+.arrow {
+    color: #9CAFD4;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 80%;
+    display: inline-block;
+    width: 16px;
+    height: 22px;
+}
+
+.icon {
+    font-family: Arial, Helvetica;
+    font-weight: bold;
+    font-size: 12px;
+    height: 14px;
+    width: 16px;
+    display: inline-block;
+    background-color: #728DC1;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.icona {
+    width: 24px;
+    height: 22px;
+    display: inline-block;
+}
+
+.iconfopen {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAACHElEQVR4Ae1dP2/TUBD/OWmaNGmwHTuNEGlpk7aJWooAiZGBiQ/AwDdgYujU2ayd2PkOLEjsVSf0JBaQKoFUtV2CVKFEHlDaxDZ3z32JHTuhQzsgYb/Tnd+f+93v7p68akEQAMCtSQYAblP+fYA5AEiT044bfD/twfcDDD1fysaKga2GpQHAdWUqADuvWUXkc1nk5kKin7/+xJejc9kVAb0avdmMhgzJqxebqcBZx3EAICFHx78cdsyHudHYrpoLsIyC1Ea5AH1xHqViDl33Ag837bcAMCnaZJu+//At6Lp9UGbko9ZZezSZ0cJAffrm9PEy2/zUlxbx+uVOjEmCwceDY+fBuiWjrFWKsEmzbRtjsfQFmOW81Mad/Mg+6bh4/nQ5xiS1Bv0LT+ZWRSr1VbTMgucUI57XiJXv+3IdQGwkAPhQ/3JIAGFhGccbpQmym2RarnLokeNxAEmEBABvvBz4VFyOLHSqahAyCB1GQXgfB3YtBkyfGXDXjB1wClTESS8KXKVzZhftvTsMalZpVIPo+qRvXmNwxfy8+xv7u89iXZTCgKKkPA+GYf7VnLKT39MDmHmTow6nOY86jO75K8CPsx6A8eAsRQueZrM26U4AiI3ERaNLVX3cXhI7G7bYblqidd8UrVVTNJcN0azrYu2eTrYu2mum2GpUxPa6JR61quIJnWmvVsTK3fKnmQzI+RsAuCn5/0cDgJnyB7pKCEBUoHiUAAAAAElFTkSuQmCC");
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.iconfclosed {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAACL0lEQVR4Ae1dTU/UQBh+2vp12JBscF32A78jm8VdUFmQRUOIXDn5A7x50d9g1sT/4IH/wMl48+IBokMgJhA9cdDEEI0HowGXdlrnnXa2M22BkNiDh3aeTPtO533e933enb1aQRAAQG6wASBP5E5wCgCSePP+S7Dx8RuAeNxqlLA4c9ECgJMgk4Ccj18bHrxbwu3mp+9EAAAngpUUeXllK/i8+ws3IwJyTp9s7/wIayoMvjDQrF9kq18o4PHDlrHg9Ho9APF49Xan92ipiXq5gJrYUC0V5PPkjZLMqnX9vCQfu1xE40oRY5dCNK8O493WLhY6o8+PLdHP330ZtYpMRe26/iAjl/vhuh/AE89nTjsAkEKKgDbv/fHkrJyF9kCS0OXxcCYbmWg+cDkApJCZAUVFzqyozsqRIqB1pZ1uB4AkUiI/e7kWPJgeheuFJVBOdOIkiRTftrH64StePOkaIqcyoI2qRHGUcbRcrKvSmQRhlgCMkalB/4APItS1oJnqn+hQo30BGCNF4Hoce/suOGkg7nCz6ihBRHdEpgdFBDzqrGNFphYkDUhkysQWDJSNLjrZDEeOLQMAYIxMgv2+J6KJxDykQxxJqr072cdUWmSxaX07Puj034J61ztL16c4dBYADKSOCnEclBY6dXb/dpXdm6yy2XZF4m57hE23RlhnvMxmWhXWnaiwuYkqmxPfzN+psfmpOptqlllx6NzrIzMQ589TAPhX+P//0XIn+AvU+Rz5ggypoQAAAABJRU5ErkJggg==");
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+.icondoc {
+    width: 24px;
+    height: 18px;
+    margin-bottom: 4px;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAACsUlEQVR4Ae2dTU9TWxiFn55z+mE/LVhaKFAVRBI0gh8gQQZXYnVgYgwJNzd35EhGxhlDy9SBf8L/4C9gdm+EARGIQVAD8nGLUKBAC6373QUT6Dk4MAzu4KQru6fdedde71rvOVNXuVwGODMYAGeJMyewAE7iw6dsubhfYq9woO/l+8ZWgdzWHqGAB5/XIqzWhliAZF3QBeAEM5PJABzDxMx/mXiNn6DfTeCcWxc851NQa3Zjl2jIJ4WZmF7FbRmZaNg3CmAH2xaZpgvDqMDlcuFxmwQVkZy+IRZkYWVLn/7G1Zg6zCqzX9cdk+LogWkaP0kElmUQUCpCATefv+X0HiG53RFncjbLcjZvS2Lrgf7j8PRySZTLVIj8qoyoePP2PZv5oiaJKGUr3/PEa/0Ax2DrwdxiLpO4ENAFV9d3MKWwatF6TpmsfKlXReO1AaJhrzZb9liGQWvT+SovnBWoFomAyY9ZraD/VpJ/p5Z1smrCPjFXCioVBb1/t7APUAVHD456/6gvRWd7DJ/H4mFvisGBVvo6G+i/maQxESQS9FKnElcslgCq4KhAiss1Nr7A1NwaLY0Rvixt6rjOL+bouZYgEvJyNRWlVCpTKFZmBjj2OXWSDdWjB3eb+fNhGwM9zTx70qFVjA73cq8ryeVkRM9GJOgBsIWjAum/YHr+u8769k6RtdyuHjBRM6N+X17L8+KvTj2IAHZwVOCxTJ2eVH2I7mtxhtJtPB+8ztM/Wmi/WKPvX/7dpVspgwlgB2fqw2EbG1/UKuTUMmAnPZD1tEb/MkXiwVD6Cve7m2w9kDiLVwB2sCWQVEhxyb88IqTvRw++xnhIeyPG1qth1ErV3gOHF5dti4Sg5/EIS3P/4PFWigDYobC3TeLSHV6NDANUwZYg3Ztypd+9Bvht/P9fmT8AqlfEsPcjdQ8AAAAASUVORK5CYII=");
+    background-position: 0px -4px;
+    background-repeat: repeat-y;
+    vertical-align:top;
+    display: inline-block;
+}
+
+table.directory {
+    font: 400 14px Roboto,sans-serif;
+}
+
+/* @end */
+
+div.dynheader {
+        margin-top: 8px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+address {
+	font-style: normal;
+	color: #2A3D61;
+}
+
+table.doxtable caption {
+	caption-side: top;
+}
+
+table.doxtable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
+
+table.doxtable td, table.doxtable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.doxtable th {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+table.fieldtable {
+        /*width: 100%;*/
+        margin-bottom: 10px;
+        border: 1px solid #A8B8D9;
+        border-spacing: 0px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+        -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.fieldtable td, .fieldtable th {
+        padding: 3px 7px 2px;
+}
+
+.fieldtable td.fieldtype, .fieldtable td.fieldname {
+        white-space: nowrap;
+        border-right: 1px solid #A8B8D9;
+        border-bottom: 1px solid #A8B8D9;
+        vertical-align: top;
+}
+
+.fieldtable td.fieldname {
+        padding-top: 3px;
+}
+
+.fieldtable td.fielddoc {
+        border-bottom: 1px solid #A8B8D9;
+        /*width: 100%;*/
+}
+
+.fieldtable td.fielddoc p:first-child {
+        margin-top: 0px;
+}       
+        
+.fieldtable td.fielddoc p:last-child {
+        margin-bottom: 2px;
+}
+
+.fieldtable tr:last-child td {
+        border-bottom: none;
+}
+
+.fieldtable th {
+        background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA4CAIAAACzAgW7AAAAYElEQVR4Ae3dSw6AIAxF0Za3WweG+IFC0W1r4sTCSBwYl3By07wugo7zguqOpBtSNlogVkkFsRJFkII1arOEbBTzmptpSZis3urnSjCM0RHRL477m5kdEXX48fPevzZzA0gYIN0BAPV5AAAAAElFTkSuQmCC");
+        background-repeat:repeat-x;
+        background-color: #E2E8F2;
+        font-size: 90%;
+        color: #253555;
+        padding-bottom: 4px;
+        padding-top: 5px;
+        text-align:left;
+        font-weight: 400;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid #A8B8D9;
+}
+
+
+.tabsearch {
+	top: 0px;
+	left: 10px;
+	height: 36px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAcElEQVR4Ae3dTQ6DIBRF4ce70NS4uA51YOLAtFYw0B+gxn06dAddRMGykHO/5K6Ctv3LdaX4fJJ4+RXuvcA+/xkXMbsPJhugbcQ4B9xT2dF43EzAVfscExGa3rIQxGkORZaK5U9zhKKSGYFueODS6h/TSxpOsn4UagAAAABJRU5ErkJggg==");
+	z-index: 101;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.navpath ul
+{
+	font-size: 11px;
+	background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAIAAADHFsdbAAAAcElEQVR4Ae3dTQ6DIBRF4ce70NS4uA51YOLAtFYw0B+gxn06dAddRMGykHO/5K6Ctv3LdaX4fJJ4+RXuvcA+/xkXMbsPJhugbcQ4B9xT2dF43EzAVfscExGa3rIQxGkORZaK5U9zhKKSGYFueODS6h/TSxpOsn4UagAAAABJRU5ErkJggg==");
+	background-repeat:repeat-x;
+	background-position: 0 -5px;
+	height:30px;
+	line-height:30px;
+	color:#8AA0CC;
+	border:solid 1px #C2CDE4;
+	overflow:hidden;
+	margin:0px;
+	padding:0px;
+}
+
+.navpath li
+{
+	list-style-type:none;
+	float:left;
+	padding-left:10px;
+	padding-right:15px;
+	background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAeCAYAAAARgF8NAAACa0lEQVR4Ae2dy2sTURTGz525ycykSSaTpg9tmiYxNTYqbsSFlAbcuJBSLDQLK0i1KFUbrWKUqhQxgoqIj0oXLrooRbdtEd+P+mjrSm1LUydDmyiC6OTRhaQIEu8MJuTW/guH73LO5fzuvZwzZ/Yoevf90iZfORDzfZLVnwBAiW3adSBgEgzYaGDx99SvCQCghPoGJrfxHB7x19l+k72X3PKHAs7d0Q9NNLgliTOypz/K6mgpgP/5gR+ZXMRZaT5KYgpAZ/vfad6IEPqy0WtnGQYFp+PqXBHova0DmkWdVeaddis/RYDuInDm1ttCXINZJhbw2PMkdk0r6pIORG68KX3y/jqnWG/iDYMzitqvAyevvy4FgmbBMOx1ijnyTP1qgGYfNrglqwEzR2aU1CPUc20cACgdLBf5w2sqypKzSqoFha+8AgBKAsuib+QWhpS8FXVffgkAsHJdJSUHbRZuHHVdeg4AsHI1W83GsKva8pUBAFhltZKGSfk8yOjQxWcAQEnU2t7gteszgjovPAUASsccktBRKQnxuYV0G9rf9wQAKE37XDYz6UNnbCH9Au07/7g02Wji8T33WusyOa13kt3StLcUiFY7ykwYM4NqJjept7q992EhSYYBKevrJC32xxbT+gCzmxuLN3RJVr5W4PHU/GJmqDgPociDQjzvq7VpbW7/nMgUh4QNbN+j+R0Ch9tEC5cjyQg1k60nxjQ/7Kyy+E0CHpITmZsUsLtnrIJ8NcXnErW9R05k0xTQcnz0lMMmhOwiNysnsx0AQAk1h0finhqRxxiF4smsXjv145CWLjMI0nIi/V9Ss7/CQLJvSb7lJAAAAABJRU5ErkJggg==");
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#364D7C;
+}
+
+.navpath li.navelem a
+{
+	height:32px;
+	display:block;
+	text-decoration: none;
+	outline: none;
+	color: #283A5D;
+	font-family: 'Lucida Grande',Geneva,Helvetica,Arial,sans-serif;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+	text-decoration: none;        
+}
+
+.navpath li.navelem a:hover
+{
+	color:#6884BD;
+}
+
+.navpath li.footer
+{
+        list-style-type:none;
+        float:right;
+        padding-left:10px;
+        padding-right:15px;
+        background-image:none;
+        background-repeat:no-repeat;
+        background-position:right;
+        color:#364D7C;
+        font-size: 8pt;
+}
+
+
+div.summary
+{
+	float: right;
+	font-size: 8pt;
+	padding-right: 5px;
+	width: 50%;
+	text-align: right;
+}       
+
+div.summary a
+{
+	white-space: nowrap;
+}
+
+table.classindex
+{
+        margin: 10px;
+        white-space: nowrap;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 94%;
+        border: 0;
+        border-spacing: 0; 
+        padding: 0;
+}
+
+div.ingroups
+{
+	font-size: 8pt;
+	width: 50%;
+	text-align: left;
+}
+
+div.ingroups a
+{
+	white-space: nowrap;
+}
+
+div.header
+{
+        background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAIAAAAs6UAAAAAAKUlEQVR4Ae3dQQoAQAhCUa0DB7Oa25vQoo7hf+ApICnr/SDpYcXo3L8Bxm8Eh1Js0N8AAAAASUVORK5CYII=");
+        background-repeat:repeat-x;
+	background-color: #F9FAFC;
+	margin:  0px;
+	border-bottom: 1px solid #C4CFE5;
+}
+
+div.headertitle
+{
+	padding: 5px 5px 5px 10px;
+}
+
+dl
+{
+        padding: 0 0 0 10px;
+}
+
+/* dl.note, dl.warning, dl.attention, dl.pre, dl.post, dl.invariant, dl.deprecated, dl.todo, dl.test, dl.bug */
+dl.section
+{
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+dl.note
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #D0C000;
+}
+
+dl.warning, dl.attention
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #FF0000;
+}
+
+dl.pre, dl.post, dl.invariant
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #00D000;
+}
+
+dl.deprecated
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #505050;
+}
+
+dl.todo
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #00C0E0;
+}
+
+dl.test
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #3030E0;
+}
+
+dl.bug
+{
+        margin-left:-7px;
+        padding-left: 3px;
+        border-left:4px solid;
+        border-color: #C08050;
+}
+
+dl.section dd {
+	margin-bottom: 6px;
+}
+
+
+#projectlogo
+{
+	text-align: center;
+	vertical-align: bottom;
+	border-collapse: separate;
+}
+ 
+#projectlogo img
+{ 
+	border: 0px none;
+}
+ 
+#projectalign
+{
+        vertical-align: middle;
+}
+
+#projectname
+{
+	font: 300% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 2px 0px;
+}
+    
+#projectbrief
+{
+	font: 120% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#projectnumber
+{
+	font: 50% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+#titlearea
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border-bottom: 1px solid #5373B4;
+}
+
+.image
+{
+        text-align: center;
+}
+
+.dotgraph
+{
+        text-align: center;
+}
+
+.mscgraph
+{
+        text-align: center;
+}
+
+.plantumlgraph
+{
+        text-align: center;
+}
+
+.diagraph
+{
+        text-align: center;
+}
+
+.caption
+{
+	font-weight: bold;
+}
+
+div.zoom
+{
+	border: 1px solid #90A5CE;
+}
+
+dl.citelist {
+        margin-bottom:50px;
+}
+
+dl.citelist dt {
+        color:#334975;
+        float:left;
+        font-weight:bold;
+        margin-right:10px;
+        padding:5px;
+}
+
+dl.citelist dd {
+        margin:2px 0;
+        padding:5px 0;
+}
+
+div.toc {
+        padding: 14px 25px;
+        background-color: #F4F6FA;
+        border: 1px solid #D8DFEE;
+        border-radius: 7px 7px 7px 7px;
+        float: right;
+        height: auto;
+        margin: 0 8px 10px 10px;
+        width: 200px;
+}
+
+div.toc li {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAAWklEQVR4Ae2dyw2AIBBEn1CWMfFsG55twAtysQFqsi5lDOiGRFvYyb7Zz9QAvLWm47TeAXzpf5mjNoBWmusztAfFBz9Mcycofaw+KwqeS/Mc96W/YxFoYBeCC17XGwSD3o1uAAAAAElFTkSuQmCC") no-repeat scroll 0 5px transparent;
+        font: 10px/1.2 Verdana,DejaVu Sans,Geneva,sans-serif;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-top: 2px;
+}
+
+div.toc h3 {
+        font: bold 12px/1.2 Arial,FreeSans,sans-serif;
+	color: #4665A2;
+        border-bottom: 0 none;
+        margin: 0;
+}
+
+div.toc ul {
+        list-style: none outside none;
+        border: medium none;
+        padding: 0px;
+}       
+
+div.toc li.level1 {
+        margin-left: 0px;
+}
+
+div.toc li.level2 {
+        margin-left: 15px;
+}
+
+div.toc li.level3 {
+        margin-left: 30px;
+}
+
+div.toc li.level4 {
+        margin-left: 45px;
+}
+
+.inherit_header {
+        font-weight: bold;
+        color: gray;
+        cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.inherit_header td {
+        padding: 6px 0px 2px 5px;
+}
+
+.inherit {
+        display: none;
+}
+
+tr.heading h2 {
+        margin-top: 12px;
+        margin-bottom: 4px;
+}
+
+/* tooltip related style info */
+
+.ttc {
+        position: absolute;
+        display: none;
+}
+
+#powerTip {
+	cursor: default;
+	white-space: nowrap;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 1px 1px 7px gray;
+	display: none;
+	font-size: smaller;
+	max-width: 80%;
+	opacity: 0.9;
+	padding: 1ex 1em 1em;
+	position: absolute;
+	z-index: 2147483647;
+}
+
+#powerTip div.ttdoc {
+        color: grey;
+	font-style: italic;
+}
+
+#powerTip div.ttname a {
+        font-weight: bold;
+}
+
+#powerTip div.ttname {
+        font-weight: bold;
+}
+
+#powerTip div.ttdeci {
+        color: #006318;
+}
+
+#powerTip div {
+        margin: 0px;
+        padding: 0px;
+        font: 12px/16px Roboto,sans-serif;
+}
+
+#powerTip:before, #powerTip:after {
+	content: "";
+	position: absolute;
+	margin: 0px;
+}
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.w:after,  #powerTip.w:before,
+#powerTip.e:after,  #powerTip.e:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.nw:after, #powerTip.nw:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+
+#powerTip.n:after,  #powerTip.s:after,
+#powerTip.w:after,  #powerTip.e:after,
+#powerTip.nw:after, #powerTip.ne:after,
+#powerTip.sw:after, #powerTip.se:after {
+	border-color: rgba(255, 255, 255, 0);
+}
+
+#powerTip.n:before,  #powerTip.s:before,
+#powerTip.w:before,  #powerTip.e:before,
+#powerTip.nw:before, #powerTip.ne:before,
+#powerTip.sw:before, #powerTip.se:before {
+	border-color: rgba(128, 128, 128, 0);
+}
+
+#powerTip.n:after,  #powerTip.n:before,
+#powerTip.ne:after, #powerTip.ne:before,
+#powerTip.nw:after, #powerTip.nw:before {
+	top: 100%;
+}
+
+#powerTip.n:after, #powerTip.ne:after, #powerTip.nw:after {
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin: 0px -10px;
+}
+#powerTip.n:before {
+	border-top-color: #808080;
+	border-width: 11px;
+	margin: 0px -11px;
+}
+#powerTip.n:after, #powerTip.n:before {
+	left: 50%;
+}
+
+#powerTip.nw:after, #powerTip.nw:before {
+	right: 14px;
+}
+
+#powerTip.ne:after, #powerTip.ne:before {
+	left: 14px;
+}
+
+#powerTip.s:after,  #powerTip.s:before,
+#powerTip.se:after, #powerTip.se:before,
+#powerTip.sw:after, #powerTip.sw:before {
+	bottom: 100%;
+}
+
+#powerTip.s:after, #powerTip.se:after, #powerTip.sw:after {
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	margin: 0px -10px;
+}
+
+#powerTip.s:before, #powerTip.se:before, #powerTip.sw:before {
+	border-bottom-color: #808080;
+	border-width: 11px;
+	margin: 0px -11px;
+}
+
+#powerTip.s:after, #powerTip.s:before {
+	left: 50%;
+}
+
+#powerTip.sw:after, #powerTip.sw:before {
+	right: 14px;
+}
+
+#powerTip.se:after, #powerTip.se:before {
+	left: 14px;
+}
+
+#powerTip.e:after, #powerTip.e:before {
+	left: 100%;
+}
+#powerTip.e:after {
+	border-left-color: #ffffff;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+}
+#powerTip.e:before {
+	border-left-color: #808080;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+#powerTip.w:after, #powerTip.w:before {
+	right: 100%;
+}
+#powerTip.w:after {
+	border-right-color: #ffffff;
+	border-width: 10px;
+	top: 50%;
+	margin-top: -10px;
+}
+#powerTip.w:before {
+	border-right-color: #808080;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+@media print
+{
+  #top { display: none; }
+  #side-nav { display: none; }
+  #nav-path { display: none; }
+  body { overflow:visible; }
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+  .summary { display: none; }
+  .memitem { page-break-inside: avoid; }
+  #doc-content
+  {
+    margin-left:0 !important;
+    height:auto !important;
+    width:auto !important;
+    overflow:inherit;
+    display:inline;
+  }
+}
+
+/* @group Markdown */
+
+/*
+table.markdownTable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
+
+table.markdownTable td, table.markdownTable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.markdownTableHead tr {
+}
+
+table.markdownTableBodyLeft td, table.markdownTable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+th.markdownTableHeadLeft th.markdownTableHeadRight th.markdownTableHeadCenter th.markdownTableHeadNone {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+th.markdownTableHeadLeft {
+	text-align: left
+}
+
+th.markdownTableHeadRight {
+	text-align: right
+}
+
+th.markdownTableHeadCenter {
+	text-align: center
+}
+*/
+
+table.markdownTable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
+
+table.markdownTable td, table.markdownTable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.markdownTable tr {
+}
+
+th.markdownTableHeadLeft, th.markdownTableHeadRight, th.markdownTableHeadCenter, th.markdownTableHeadNone {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+th.markdownTableHeadLeft, td.markdownTableBodyLeft {
+	text-align: left
+}
+
+th.markdownTableHeadRight, td.markdownTableBodyRight {
+	text-align: right
+}
+
+th.markdownTableHeadCenter, td.markdownTableBodyCenter {
+	text-align: center
+}
+
+
+/* @end */
+</style>
+<style type="text/css">@media print {
+        .TridactylStatusIndicator {
+            display: none !important;
+        }
+    }</style><base href="https://adafruit.github.io/Adafruit_SSD1306/html/class_adafruit___s_s_d1306.html"></head><body>
+
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Adafruit SSD1306
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+
+
+
+
+
+
+<div id="main-nav"><ul class="sm sm-dox" id="main-menu" data-smartmenus-id="1716316915829196"><li><a href="index.html">Main Page</a></li><li><a href="annotated.html" class="has-submenu" id="sm-1716316915829196-1" aria-haspopup="true" aria-controls="sm-1716316915829196-2" aria-expanded="false"><span class="sub-arrow">+</span>Classes</a><ul id="sm-1716316915829196-2" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-1" aria-expanded="false"><li><a href="annotated.html">Class List</a></li><li><a href="classes.html">Class Index</a></li><li><a href="hierarchy.html">Class Hierarchy</a></li><li><a href="functions.html" class="has-submenu" id="sm-1716316915829196-3" aria-haspopup="true" aria-controls="sm-1716316915829196-4" aria-expanded="false"><span class="sub-arrow">+</span>Class Members</a><ul id="sm-1716316915829196-4" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-3" aria-expanded="false"><li><a href="functions.html" class="has-submenu" id="sm-1716316915829196-5" aria-haspopup="true" aria-controls="sm-1716316915829196-6" aria-expanded="false"><span class="sub-arrow">+</span>All</a><ul id="sm-1716316915829196-6" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-5" aria-expanded="false"><li><a href="functions.html#index_a">a</a></li><li><a href="functions.html#index_b">b</a></li><li><a href="functions.html#index_c">c</a></li><li><a href="functions.html#index_d">d</a></li><li><a href="functions.html#index_g">g</a></li><li><a href="functions.html#index_i">i</a></li><li><a href="functions.html#index_m">m</a></li><li><a href="functions.html#index_p">p</a></li><li><a href="functions.html#index_r">r</a></li><li><a href="functions.html#index_s">s</a></li><li><a href="functions.html#index_v">v</a></li><li><a href="functions.html#index_w">w</a></li><li><a href="functions.html#index_0x7e">~</a></li></ul></li><li><a href="functions_func.html">Functions</a></li><li><a href="functions_vars.html">Variables</a></li></ul></li></ul></li><li><a href="files.html" class="has-submenu" id="sm-1716316915829196-7" aria-haspopup="true" aria-controls="sm-1716316915829196-8" aria-expanded="false"><span class="sub-arrow">+</span>Files</a><ul id="sm-1716316915829196-8" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-7" aria-expanded="false"><li><a href="files.html">File List</a></li><li><a href="globals.html" class="has-submenu" id="sm-1716316915829196-9" aria-haspopup="true" aria-controls="sm-1716316915829196-10" aria-expanded="false"><span class="sub-arrow">+</span>File Members</a><ul id="sm-1716316915829196-10" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-9" aria-expanded="false"><li><a href="globals.html" class="has-submenu" id="sm-1716316915829196-11" aria-haspopup="true" aria-controls="sm-1716316915829196-12" aria-expanded="false"><span class="sub-arrow">+</span>All</a><ul id="sm-1716316915829196-12" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-11" aria-expanded="false"><li><a href="globals.html#index_b">b</a></li><li><a href="globals.html#index_i">i</a></li><li><a href="globals.html#index_p">p</a></li><li><a href="globals.html#index_r">r</a></li><li><a href="globals.html#index_s">s</a></li><li><a href="globals.html#index_t">t</a></li><li><a href="globals.html#index_w">w</a></li></ul></li><li><a href="globals_defs.html" class="has-submenu" id="sm-1716316915829196-13" aria-haspopup="true" aria-controls="sm-1716316915829196-14" aria-expanded="false"><span class="sub-arrow">+</span>Macros</a><ul id="sm-1716316915829196-14" role="group" aria-hidden="true" aria-labelledby="sm-1716316915829196-13" aria-expanded="false"><li><a href="globals_defs.html#index_b">b</a></li><li><a href="globals_defs.html#index_i">i</a></li><li><a href="globals_defs.html#index_p">p</a></li><li><a href="globals_defs.html#index_r">r</a></li><li><a href="globals_defs.html#index_s">s</a></li><li><a href="globals_defs.html#index_t">t</a></li><li><a href="globals_defs.html#index_w">w</a></li></ul></li></ul></li></ul></li><li style="float:right"><div id="MSearchBox" class="MSearchBoxInactive"><span class="left"><img id="MSearchSelect" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG2YAABzjgAA4DgAAILVAAB6BwAAyrQAADNEAAAcdoQ2Kr0AAAG5SURBVHja5JS7iiJBFIa/2hY6ELoDL3gDURFM1EDUNzAxMOkH8BUUfB4xNzMRc+lWRIQ26UBQVBTEwKhtUGqSHdmdmXUNJljYP6ri/PXVOZxTJaSUfKd+8M3694G+98X5fJaTyYTlcslmsyGZTJLP56lUKgQCAfEqUEgpOZ1OcjAYYFnWJ0O1WqXRaBAMBsXLGU6nUyzLIpVKUSqVyGQyrFYrZrMZk8mESCRCvV5/vWTbtgEol8tUKhU0TROhUEgqisJ6vca2ber1OqPRSPb7/cdhwzCo1WriU1O22y0AxWIRTdMEgKZpolAo8GscEIZhPGCA+LLLiUQCAMdxAN4nXf7cP+IfoOKPY5PL5QAYj8eYponrutI0TcbjMQDpdBqAWq32gD7t8nq9lsPhkPl8/qUpHA7T6XTQdV0AjEajjxf8DvQ8T+52OxaLBY7jsN/vicfjpNNpbNvmdDoRjUZpt9sP6NMMATzPk67r4nket9sNn8+HoihcLhd6vR7H45FYLEar1XoKfbwUVVWFqqqfDH6/XzabTbrdLtfrlev1iq7rf8/wmVzXlYfDgfv9Tjabfa3k/+f7ehsAWai6aMpPxacAAAAASUVORK5CYII=" alt=""><input type="text" id="MSearchField" value="Search" accesskey="S"></span><span class="right"><img id="MSearchCloseImg" border="0" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAA2ElEQVQYGXVRvRJGQAzcGBUKFBQaQ+s1vH+nQ2cGMyjQ3nd7IyrfFpef28smOcGDfd/NsizYtg3neSKKIsRxjDzPkaapkOaOaZrMOI64rkvfvjYMQ5RliaIoxDuO4y+RL6jCQlbRePM8uwQv2rZFVVV0nWUsIrjvG+u6wmePTBB936Oua+fTMlaQ51NGMQyDc5WoMZOcx+PUCragRFrGxhh3zUG9JEmU+xJZUVvSFu36INxv13Wfa9MqQRCgaRpXWShHmS8wz3v7Qc8aLOvrBymdZRlsq25dPwcKeZAOEUXCAAAAAElFTkSuQmCC" alt=""></span></div></li></ul></div>
+
+<div id="MSearchSelectWindow">
+<a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">•</span>All</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Macros</a><a class="SelectItem" href="javascript:void(0)"><span class="SelectionMark">&nbsp;</span>Pages</a></div>
+
+
+<div id="MSearchResultsWindow">
+
+</div>
+
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods" style="">Public Member Functions</a> |
+<a href="#pro-methods">Protected Member Functions</a> |
+<a href="#pro-attribs">Protected Attributes</a> |
+<a href="class_adafruit___s_s_d1306-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Adafruit_SSD1306 Class Reference</div>  </div>
+</div>
+<div class="contents">
+
+<p>Class that stores state and functions for interacting with SSD1306 OLED displays.  
+ <a href="class_adafruit___s_s_d1306.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_adafruit___s_s_d1306_8h_source.html">Adafruit_SSD1306.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Adafruit_SSD1306:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAABQCAMAAAAQu8oLAAAAGFBMVEX///8AAADo7PV1j8KQAAAAkAAAAJDAwMAFidwfAAAACHRSTlMA/////////9XKVDIAAAG0SURBVHgB7Z3bbsQgDESPX9b//8dlsxAbQppLC6lUSzvl4sBxzNC8IiIyXYiq6mQFVVV1pP4Y1abdA1I/nEZ+4m3O3Lw7n1B3+z2q2ONdfi+lNpElBVXVjY6oKemcf/6zRPJ+qWNv3+9copYFC8u6pco27hTCT+0d3yG1rFypLqGWWkpSKrDn1D1qcYZtd4a6mbr0rtUObYVPU6+eq99hc67VcTcethvzE6r3cK5XsZTl5I7FJ3LjvqqqjtPPqfmLqap6WvHfX1V1pIKqqjpSiSoiMlsAN/UCmK5HqK/XE9hHqAn6APYZ6r/ycFABhiqoACMVVICRCirASAUVYKSCCjBSQQUYqaACHEtEZLoQgMkKKsBIPU/t9ZLFAfulURX8hHP7safbwcKuqalVt8PfCZY8XLtibNqaHWq+TcvK/A45tiy1jNeldbsCfXGaGlVLSrx5tB53yp/bLTUnvSb8HdUK4YrWozbcg3e1tY5aLGFnc4Jalfe4wi11XbG1wC616yZHPXaTp27OtSrRCQ9fp3oP52ixlOX0e/cVYJJuUctHEuCW4psDMFJBBRip5cslIjJXX1RZRSpcKwsrAAAAAElFTkSuQmCC" usemap="#Adafruit_5FSSD1306_map" alt="">
+  <map id="Adafruit_5FSSD1306_map" name="Adafruit_5FSSD1306_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a650aa88a18f2d6a5c2d5442602d12286"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a650aa88a18f2d6a5c2d5442602d12286">Adafruit_SSD1306</a> (uint8_t w, uint8_t h, TwoWire *twi=&amp;Wire, int8_t rst_pin=-1, uint32_t clkDuring=400000UL, uint32_t clkAfter=100000UL)</td></tr>
+<tr class="memdesc:a650aa88a18f2d6a5c2d5442602d12286"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor for I2C-interfaced SSD1306 displays.  <a href="#a650aa88a18f2d6a5c2d5442602d12286">More...</a><br></td></tr>
+<tr class="separator:a650aa88a18f2d6a5c2d5442602d12286"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a11aca856b5633ab1131fdd86795ca925"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a11aca856b5633ab1131fdd86795ca925">Adafruit_SSD1306</a> (uint8_t w, uint8_t h, int8_t mosi_pin, int8_t sclk_pin, int8_t dc_pin, int8_t rst_pin, int8_t cs_pin)</td></tr>
+<tr class="memdesc:a11aca856b5633ab1131fdd86795ca925"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor for SPI SSD1306 displays, using software (bitbang) SPI.  <a href="#a11aca856b5633ab1131fdd86795ca925">More...</a><br></td></tr>
+<tr class="separator:a11aca856b5633ab1131fdd86795ca925"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:aca9d2800980ca071696734a91eaacb52"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#aca9d2800980ca071696734a91eaacb52">Adafruit_SSD1306</a> (uint8_t w, uint8_t h, SPIClass *<a class="el" href="class_adafruit___s_s_d1306.html#a32cff6721c6a7760ad9ac8656080f511">spi</a>, int8_t dc_pin, int8_t rst_pin, int8_t cs_pin, uint32_t bitrate=8000000UL)</td></tr>
+<tr class="memdesc:aca9d2800980ca071696734a91eaacb52"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor for SPI SSD1306 displays, using native hardware SPI.  <a href="#aca9d2800980ca071696734a91eaacb52">More...</a><br></td></tr>
+<tr class="separator:aca9d2800980ca071696734a91eaacb52"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a244f237569a51bf69ee6984acc27bc20"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a244f237569a51bf69ee6984acc27bc20">Adafruit_SSD1306</a> (int8_t mosi_pin, int8_t sclk_pin, int8_t dc_pin, int8_t rst_pin, int8_t cs_pin)</td></tr>
+<tr class="memdesc:a244f237569a51bf69ee6984acc27bc20"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">DEPRECATED constructor for SPI SSD1306 displays, using software (bitbang) SPI. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this.  <a href="#a244f237569a51bf69ee6984acc27bc20">More...</a><br></td></tr>
+<tr class="separator:a244f237569a51bf69ee6984acc27bc20"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ac57eea6543c29b297dd0151fe05a8fd2"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ac57eea6543c29b297dd0151fe05a8fd2">Adafruit_SSD1306</a> (int8_t dc_pin, int8_t rst_pin, int8_t cs_pin)</td></tr>
+<tr class="memdesc:ac57eea6543c29b297dd0151fe05a8fd2"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">DEPRECATED constructor for SPI SSD1306 displays, using native hardware SPI. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this. Only the primary SPI bus is supported, and bitrate is fixed at 8 MHz.  <a href="#ac57eea6543c29b297dd0151fe05a8fd2">More...</a><br></td></tr>
+<tr class="separator:ac57eea6543c29b297dd0151fe05a8fd2"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a25448fb0b3523001e26e03bf25822b20"><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a25448fb0b3523001e26e03bf25822b20">Adafruit_SSD1306</a> (int8_t rst_pin=-1)</td></tr>
+<tr class="memdesc:a25448fb0b3523001e26e03bf25822b20"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">DEPRECATED constructor for I2C SSD1306 displays. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this. Only the primary I2C bus is supported.  <a href="#a25448fb0b3523001e26e03bf25822b20">More...</a><br></td></tr>
+<tr class="separator:a25448fb0b3523001e26e03bf25822b20"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a550877cb23b0dba2b1e172363328ce87"><td class="memItemLeft" align="right" valign="top"><a id="a550877cb23b0dba2b1e172363328ce87"></a>
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a550877cb23b0dba2b1e172363328ce87">~Adafruit_SSD1306</a> (void)</td></tr>
+<tr class="memdesc:a550877cb23b0dba2b1e172363328ce87"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor for <a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. <br></td></tr>
+<tr class="separator:a550877cb23b0dba2b1e172363328ce87"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:aa5457e560feed75336001927c8e0f651"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651">begin</a> (uint8_t switchvcc=<a class="el" href="_adafruit___s_s_d1306_8h.html#ad9d18b92ad68b542033c7e5ccbdcced0">SSD1306_SWITCHCAPVCC</a>, uint8_t <a class="el" href="class_adafruit___s_s_d1306.html#a00b9a5307eaf79559003dd66abcbfa17">i2caddr</a>=0, bool reset=true, bool periphBegin=true)</td></tr>
+<tr class="memdesc:aa5457e560feed75336001927c8e0f651"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Allocate RAM for image buffer, initialize peripherals and pins.  <a href="#aa5457e560feed75336001927c8e0f651">More...</a><br></td></tr>
+<tr class="separator:aa5457e560feed75336001927c8e0f651"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a0ef45af1adca923ef66233b2998a150b"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b">display</a> (void)</td></tr>
+<tr class="memdesc:a0ef45af1adca923ef66233b2998a150b"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Push data currently in RAM to SSD1306 display.  <a href="#a0ef45af1adca923ef66233b2998a150b">More...</a><br></td></tr>
+<tr class="separator:a0ef45af1adca923ef66233b2998a150b"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:afe1e0f5efabd931aab7998275356744d"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#afe1e0f5efabd931aab7998275356744d">clearDisplay</a> (void)</td></tr>
+<tr class="memdesc:afe1e0f5efabd931aab7998275356744d"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear contents of display buffer (set all pixels to off).  <a href="#afe1e0f5efabd931aab7998275356744d">More...</a><br></td></tr>
+<tr class="separator:afe1e0f5efabd931aab7998275356744d"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a3e9436a654c826a55942606a2261b5ee"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a3e9436a654c826a55942606a2261b5ee">invertDisplay</a> (bool i)</td></tr>
+<tr class="memdesc:a3e9436a654c826a55942606a2261b5ee"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enable or disable display invert mode (white-on-black vs black-on-white).  <a href="#a3e9436a654c826a55942606a2261b5ee">More...</a><br></td></tr>
+<tr class="separator:a3e9436a654c826a55942606a2261b5ee"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a2661e6166a7a1c00695ed55eaa4ece46"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a2661e6166a7a1c00695ed55eaa4ece46">dim</a> (bool dim)</td></tr>
+<tr class="memdesc:a2661e6166a7a1c00695ed55eaa4ece46"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dim the display.  <a href="#a2661e6166a7a1c00695ed55eaa4ece46">More...</a><br></td></tr>
+<tr class="separator:a2661e6166a7a1c00695ed55eaa4ece46"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ae2851d927a047a770c569c7c9fde4807"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ae2851d927a047a770c569c7c9fde4807">drawPixel</a> (int16_t x, int16_t y, uint16_t color)</td></tr>
+<tr class="memdesc:ae2851d927a047a770c569c7c9fde4807"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set/clear/invert a single pixel. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives.  <a href="#ae2851d927a047a770c569c7c9fde4807">More...</a><br></td></tr>
+<tr class="separator:ae2851d927a047a770c569c7c9fde4807"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a8165eca9ccfee431af10b6f5fa06a406"><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a8165eca9ccfee431af10b6f5fa06a406">drawFastHLine</a> (int16_t x, int16_t y, int16_t w, uint16_t color)</td></tr>
+<tr class="memdesc:a8165eca9ccfee431af10b6f5fa06a406"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a horizontal line. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives.  <a href="#a8165eca9ccfee431af10b6f5fa06a406">More...</a><br></td></tr>
+<tr class="separator:a8165eca9ccfee431af10b6f5fa06a406"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a2058c782206fd0c7a74a1d6d19a383b6"><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a2058c782206fd0c7a74a1d6d19a383b6">drawFastVLine</a> (int16_t x, int16_t y, int16_t h, uint16_t color)</td></tr>
+<tr class="memdesc:a2058c782206fd0c7a74a1d6d19a383b6"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a vertical line. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives.  <a href="#a2058c782206fd0c7a74a1d6d19a383b6">More...</a><br></td></tr>
+<tr class="separator:a2058c782206fd0c7a74a1d6d19a383b6"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a6a9f18f43c19296dc54dfb657eab4d66"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a6a9f18f43c19296dc54dfb657eab4d66">startscrollright</a> (uint8_t start, uint8_t stop)</td></tr>
+<tr class="memdesc:a6a9f18f43c19296dc54dfb657eab4d66"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activate a right-handed scroll for all or part of the display.  <a href="#a6a9f18f43c19296dc54dfb657eab4d66">More...</a><br></td></tr>
+<tr class="separator:a6a9f18f43c19296dc54dfb657eab4d66"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a4c58c2a4ac905e199d6ced49a0098296"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a4c58c2a4ac905e199d6ced49a0098296">startscrollleft</a> (uint8_t start, uint8_t stop)</td></tr>
+<tr class="memdesc:a4c58c2a4ac905e199d6ced49a0098296"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activate a left-handed scroll for all or part of the display.  <a href="#a4c58c2a4ac905e199d6ced49a0098296">More...</a><br></td></tr>
+<tr class="separator:a4c58c2a4ac905e199d6ced49a0098296"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:adbc9f95bb91eb0e76c4465d3c4d941e1"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#adbc9f95bb91eb0e76c4465d3c4d941e1">startscrolldiagright</a> (uint8_t start, uint8_t stop)</td></tr>
+<tr class="memdesc:adbc9f95bb91eb0e76c4465d3c4d941e1"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activate a diagonal scroll for all or part of the display.  <a href="#adbc9f95bb91eb0e76c4465d3c4d941e1">More...</a><br></td></tr>
+<tr class="separator:adbc9f95bb91eb0e76c4465d3c4d941e1"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a8d5b19419f508e5133053fa39da10f98"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a8d5b19419f508e5133053fa39da10f98">startscrolldiagleft</a> (uint8_t start, uint8_t stop)</td></tr>
+<tr class="memdesc:a8d5b19419f508e5133053fa39da10f98"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activate alternate diagonal scroll for all or part of the display.  <a href="#a8d5b19419f508e5133053fa39da10f98">More...</a><br></td></tr>
+<tr class="separator:a8d5b19419f508e5133053fa39da10f98"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ab4559d6aae71a4de8969f9160a6eda40"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ab4559d6aae71a4de8969f9160a6eda40">stopscroll</a> (void)</td></tr>
+<tr class="memdesc:ab4559d6aae71a4de8969f9160a6eda40"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cease a previously-begun scrolling action.  <a href="#ab4559d6aae71a4de8969f9160a6eda40">More...</a><br></td></tr>
+<tr class="separator:ab4559d6aae71a4de8969f9160a6eda40"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a99182555a08549492f6c40ceea0abc3d"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a99182555a08549492f6c40ceea0abc3d">ssd1306_command</a> (uint8_t c)</td></tr>
+<tr class="memdesc:a99182555a08549492f6c40ceea0abc3d"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Issue a single low-level command directly to the SSD1306 display, bypassing the library.  <a href="#a99182555a08549492f6c40ceea0abc3d">More...</a><br></td></tr>
+<tr class="separator:a99182555a08549492f6c40ceea0abc3d"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a861504191b6bd2f294aa0763833d903b"><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a861504191b6bd2f294aa0763833d903b">getPixel</a> (int16_t x, int16_t y)</td></tr>
+<tr class="memdesc:a861504191b6bd2f294aa0763833d903b"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return color of a single pixel in display buffer.  <a href="#a861504191b6bd2f294aa0763833d903b">More...</a><br></td></tr>
+<tr class="separator:a861504191b6bd2f294aa0763833d903b"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a24b8aca91a7bd44dc9459df8a1f555fc"><td class="memItemLeft" align="right" valign="top">uint8_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a24b8aca91a7bd44dc9459df8a1f555fc">getBuffer</a> (void)</td></tr>
+<tr class="memdesc:a24b8aca91a7bd44dc9459df8a1f555fc"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get base address of display buffer for direct reading or writing.  <a href="#a24b8aca91a7bd44dc9459df8a1f555fc">More...</a><br></td></tr>
+<tr class="separator:a24b8aca91a7bd44dc9459df8a1f555fc"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af4b9c3a9c3e93ac9c746bb99e9c35188"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#af4b9c3a9c3e93ac9c746bb99e9c35188">SPIwrite</a> (uint8_t d) __attribute__((always_inline))</td></tr>
+<tr class="memdesc:af4b9c3a9c3e93ac9c746bb99e9c35188"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write a single byte to the SPI port.  <a href="#af4b9c3a9c3e93ac9c746bb99e9c35188">More...</a><br></td></tr>
+<tr class="separator:af4b9c3a9c3e93ac9c746bb99e9c35188"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ab487f39aa59091c06493a6985320e96b"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ab487f39aa59091c06493a6985320e96b">drawFastHLineInternal</a> (int16_t x, int16_t y, int16_t w, uint16_t color)</td></tr>
+<tr class="memdesc:ab487f39aa59091c06493a6985320e96b"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a horizontal line with a width and color. Used by public methods drawFastHLine,drawFastVLine.  <a href="#ab487f39aa59091c06493a6985320e96b">More...</a><br></td></tr>
+<tr class="separator:ab487f39aa59091c06493a6985320e96b"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a961614d584f413c25581287728bbbb2c"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a961614d584f413c25581287728bbbb2c">drawFastVLineInternal</a> (int16_t x, int16_t y, int16_t h, uint16_t color)</td></tr>
+<tr class="memdesc:a961614d584f413c25581287728bbbb2c"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Draw a vertical line with a width and color. Used by public method drawFastHLine,drawFastVLine.  <a href="#a961614d584f413c25581287728bbbb2c">More...</a><br></td></tr>
+<tr class="separator:a961614d584f413c25581287728bbbb2c"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a018550c5b9f0463cb7cd2a74efa4ee48"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a018550c5b9f0463cb7cd2a74efa4ee48">ssd1306_command1</a> (uint8_t c)</td></tr>
+<tr class="memdesc:a018550c5b9f0463cb7cd2a74efa4ee48"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Issue single command to SSD1306, using I2C or hard/soft SPI as needed. Because command calls are often grouped, SPI transaction and selection must be started/ended in calling function for efficiency. This is a protected function, not exposed (see <a class="el" href="class_adafruit___s_s_d1306.html#a99182555a08549492f6c40ceea0abc3d" title="Issue a single low-level command directly to the SSD1306 display, bypassing the library. ">ssd1306_command()</a> instead).  <a href="#a018550c5b9f0463cb7cd2a74efa4ee48">More...</a><br></td></tr>
+<tr class="separator:a018550c5b9f0463cb7cd2a74efa4ee48"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a799f35d2b93cb7a84840a94da69259be"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a799f35d2b93cb7a84840a94da69259be">ssd1306_commandList</a> (const uint8_t *c, uint8_t n)</td></tr>
+<tr class="memdesc:a799f35d2b93cb7a84840a94da69259be"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Issue list of commands to SSD1306, same rules as above re: transactions. This is a protected function, not exposed.  <a href="#a799f35d2b93cb7a84840a94da69259be">More...</a><br></td></tr>
+<tr class="separator:a799f35d2b93cb7a84840a94da69259be"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table><table class="memberdecls">
+<tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a32cff6721c6a7760ad9ac8656080f511"><td class="memItemLeft" align="right" valign="top">SPIClass *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a32cff6721c6a7760ad9ac8656080f511">spi</a></td></tr>
+<tr class="separator:a32cff6721c6a7760ad9ac8656080f511"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ad18dffe0baf2cfc818e507a1475e754d"><td class="memItemLeft" align="right" valign="top">TwoWire *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ad18dffe0baf2cfc818e507a1475e754d">wire</a></td></tr>
+<tr class="separator:ad18dffe0baf2cfc818e507a1475e754d"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a03f9b3bc9dcd71c2461260f4d8ceb375"><td class="memItemLeft" align="right" valign="top">uint8_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a03f9b3bc9dcd71c2461260f4d8ceb375">buffer</a></td></tr>
+<tr class="separator:a03f9b3bc9dcd71c2461260f4d8ceb375"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a00b9a5307eaf79559003dd66abcbfa17"><td class="memItemLeft" align="right" valign="top"><a id="a00b9a5307eaf79559003dd66abcbfa17"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a00b9a5307eaf79559003dd66abcbfa17">i2caddr</a></td></tr>
+<tr class="memdesc:a00b9a5307eaf79559003dd66abcbfa17"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">I2C address initialized when begin method is called. <br></td></tr>
+<tr class="separator:a00b9a5307eaf79559003dd66abcbfa17"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ae0654c81bed89b9b1eaa8061c1b200cf"><td class="memItemLeft" align="right" valign="top"><a id="ae0654c81bed89b9b1eaa8061c1b200cf"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ae0654c81bed89b9b1eaa8061c1b200cf">vccstate</a></td></tr>
+<tr class="memdesc:ae0654c81bed89b9b1eaa8061c1b200cf"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">VCC selection, set by begin method. <br></td></tr>
+<tr class="separator:ae0654c81bed89b9b1eaa8061c1b200cf"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ac8f43d71ecdeeecd4cdd9dda15e4b0bd"><td class="memItemLeft" align="right" valign="top"><a id="ac8f43d71ecdeeecd4cdd9dda15e4b0bd"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#ac8f43d71ecdeeecd4cdd9dda15e4b0bd">page_end</a></td></tr>
+<tr class="memdesc:ac8f43d71ecdeeecd4cdd9dda15e4b0bd"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">not used <br></td></tr>
+<tr class="separator:ac8f43d71ecdeeecd4cdd9dda15e4b0bd"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a6cb1a45ae527d3b5aaf4777d572e103c"><td class="memItemLeft" align="right" valign="top">int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a6cb1a45ae527d3b5aaf4777d572e103c">mosiPin</a></td></tr>
+<tr class="separator:a6cb1a45ae527d3b5aaf4777d572e103c"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:acff51cc479e93a18f3405c310e5a8f23"><td class="memItemLeft" align="right" valign="top"><a id="acff51cc479e93a18f3405c310e5a8f23"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#acff51cc479e93a18f3405c310e5a8f23">clkPin</a></td></tr>
+<tr class="memdesc:acff51cc479e93a18f3405c310e5a8f23"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">(Clock Pin) set when using SPI set during construction. <br></td></tr>
+<tr class="separator:acff51cc479e93a18f3405c310e5a8f23"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a3e5777c373fe33b5de1b250e9a797c2b"><td class="memItemLeft" align="right" valign="top"><a id="a3e5777c373fe33b5de1b250e9a797c2b"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a3e5777c373fe33b5de1b250e9a797c2b">dcPin</a></td></tr>
+<tr class="memdesc:a3e5777c373fe33b5de1b250e9a797c2b"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">(Data Pin) set when using SPI set during construction. <br></td></tr>
+<tr class="separator:a3e5777c373fe33b5de1b250e9a797c2b"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a72ca16987bad2bbb4ca35312bb6e1d0e"><td class="memItemLeft" align="right" valign="top"><a id="a72ca16987bad2bbb4ca35312bb6e1d0e"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a72ca16987bad2bbb4ca35312bb6e1d0e">csPin</a></td></tr>
+<tr class="memdesc:a72ca16987bad2bbb4ca35312bb6e1d0e"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">(Chip Select Pin) set when using SPI set during construction. <br></td></tr>
+<tr class="separator:a72ca16987bad2bbb4ca35312bb6e1d0e"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a6b6c0cb074a7fe3cbebf425ba4619ff5"><td class="memItemLeft" align="right" valign="top"><a id="a6b6c0cb074a7fe3cbebf425ba4619ff5"></a>
+int8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#a6b6c0cb074a7fe3cbebf425ba4619ff5">rstPin</a></td></tr>
+<tr class="memdesc:a6b6c0cb074a7fe3cbebf425ba4619ff5"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Display reset pin assignment. Set during construction. <br></td></tr>
+<tr class="separator:a6b6c0cb074a7fe3cbebf425ba4619ff5"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:af3036407aa0e0c3da75bf3af903d76b7"><td class="memItemLeft" align="right" valign="top"><a id="af3036407aa0e0c3da75bf3af903d76b7"></a>
+uint8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___s_s_d1306.html#af3036407aa0e0c3da75bf3af903d76b7">contrast</a></td></tr>
+<tr class="memdesc:af3036407aa0e0c3da75bf3af903d76b7"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">normal contrast setting for this device <br></td></tr>
+<tr class="separator:af3036407aa0e0c3da75bf3af903d76b7"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+</tbody></table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class that stores state and functions for interacting with SSD1306 OLED displays. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a650aa88a18f2d6a5c2d5442602d12286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650aa88a18f2d6a5c2d5442602d12286">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TwoWire *&nbsp;</td>
+          <td class="paramname"><em>twi</em> = <code>&amp;Wire</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><em>clkDuring</em> = <code>400000UL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><em>clkAfter</em> = <code>100000UL</code>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Constructor for I2C-interfaced SSD1306 displays. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">w</td><td>Display width in pixels </td></tr>
+    <tr><td class="paramname">h</td><td>Display height in pixels </td></tr>
+    <tr><td class="paramname">twi</td><td>Pointer to an existing TwoWire instance (e.g. &amp;Wire, the microcontroller's primary I2C bus). </td></tr>
+    <tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+    <tr><td class="paramname">clkDuring</td><td>Speed (in Hz) for Wire transmissions in SSD1306 library calls. Defaults to 400000 (400 KHz), a known 'safe' value for most microcontrollers, and meets the SSD1306 datasheet spec. Some systems can operate I2C faster (800 KHz for ESP32, 1 MHz for many other 32-bit MCUs), and some (perhaps not all) SSD1306's can work with this – so it's optionally be specified here and is not a default behavior. (Ignored if using pre-1.5.7 Arduino software, which operates I2C at a fixed 100 KHz.) </td></tr>
+    <tr><td class="paramname">clkAfter</td><td>Speed (in Hz) for Wire transmissions following SSD1306 library calls. Defaults to 100000 (100 KHz), the default Arduino Wire speed. This is done rather than leaving it at the 'during' speed because other devices on the I2C bus might not be compatible with the faster rate. (Ignored if using pre-1.5.7 Arduino software, which operates I2C at a fixed 100 KHz.) </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<a id="a11aca856b5633ab1131fdd86795ca925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11aca856b5633ab1131fdd86795ca925">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>mosi_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>sclk_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>dc_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>cs_pin</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Constructor for SPI SSD1306 displays, using software (bitbang) SPI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">w</td><td>Display width in pixels </td></tr>
+    <tr><td class="paramname">h</td><td>Display height in pixels </td></tr>
+    <tr><td class="paramname">mosi_pin</td><td>MOSI (master out, slave in) pin (using Arduino pin numbering). This transfers serial data from microcontroller to display. </td></tr>
+    <tr><td class="paramname">sclk_pin</td><td>SCLK (serial clock) pin (using Arduino pin numbering). This clocks each bit from MOSI. </td></tr>
+    <tr><td class="paramname">dc_pin</td><td>Data/command pin (using Arduino pin numbering), selects whether display is receiving commands (low) or data (high). </td></tr>
+    <tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+    <tr><td class="paramname">cs_pin</td><td>Chip-select pin (using Arduino pin numbering) for sharing the bus with other devices. Active low. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<a id="aca9d2800980ca071696734a91eaacb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca9d2800980ca071696734a91eaacb52">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SPIClass *&nbsp;</td>
+          <td class="paramname"><em>spi_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>dc_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>cs_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&nbsp;</td>
+          <td class="paramname"><em>bitrate</em> = <code>8000000UL</code>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Constructor for SPI SSD1306 displays, using native hardware SPI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">w</td><td>Display width in pixels </td></tr>
+    <tr><td class="paramname">h</td><td>Display height in pixels </td></tr>
+    <tr><td class="paramname">spi_ptr</td><td>Pointer to an existing SPIClass instance (e.g. &amp;SPI, the microcontroller's primary SPI bus). </td></tr>
+    <tr><td class="paramname">dc_pin</td><td>Data/command pin (using Arduino pin numbering), selects whether display is receiving commands (low) or data (high). </td></tr>
+    <tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+    <tr><td class="paramname">cs_pin</td><td>Chip-select pin (using Arduino pin numbering) for sharing the bus with other devices. Active low. </td></tr>
+    <tr><td class="paramname">bitrate</td><td>SPI clock rate for transfers to this display. Default if unspecified is 8000000UL (8 MHz). </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<a id="a244f237569a51bf69ee6984acc27bc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244f237569a51bf69ee6984acc27bc20">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>mosi_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>sclk_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>dc_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>cs_pin</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>DEPRECATED constructor for SPI SSD1306 displays, using software (bitbang) SPI. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">mosi_pin</td><td>MOSI (master out, slave in) pin (using Arduino pin numbering). This transfers serial data from microcontroller to display. </td></tr>
+    <tr><td class="paramname">sclk_pin</td><td>SCLK (serial clock) pin (using Arduino pin numbering). This clocks each bit from MOSI. </td></tr>
+    <tr><td class="paramname">dc_pin</td><td>Data/command pin (using Arduino pin numbering), selects whether display is receiving commands (low) or data (high). </td></tr>
+    <tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+    <tr><td class="paramname">cs_pin</td><td>Chip-select pin (using Arduino pin numbering) for sharing the bus with other devices. Active low. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<a id="ac57eea6543c29b297dd0151fe05a8fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57eea6543c29b297dd0151fe05a8fd2">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>dc_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>cs_pin</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>DEPRECATED constructor for SPI SSD1306 displays, using native hardware SPI. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this. Only the primary SPI bus is supported, and bitrate is fixed at 8 MHz. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">dc_pin</td><td>Data/command pin (using Arduino pin numbering), selects whether display is receiving commands (low) or data (high). </td></tr>
+    <tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+    <tr><td class="paramname">cs_pin</td><td>Chip-select pin (using Arduino pin numbering) for sharing the bus with other devices. Active low. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<a id="a25448fb0b3523001e26e03bf25822b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25448fb0b3523001e26e03bf25822b20">◆&nbsp;</a></span>Adafruit_SSD1306() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">Adafruit_SSD1306::Adafruit_SSD1306 </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&nbsp;</td>
+          <td class="paramname"><em>rst_pin</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>DEPRECATED constructor for I2C SSD1306 displays. Provided for older code to maintain compatibility with the current library. Screen size is determined by enabling one of the SSD1306_* size defines in <a class="el" href="_adafruit___s_s_d1306_8h.html">Adafruit_SSD1306.h</a>. New code should NOT use this. Only the primary I2C bus is supported. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">rst_pin</td><td>Reset pin (using Arduino pin numbering), or -1 if not used (some displays might be wired to share the microcontroller's reset pin). </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_adafruit___s_s_d1306.html" title="Class that stores state and functions for interacting with SSD1306 OLED displays. ...">Adafruit_SSD1306</a> object. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Call the object's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function before use – buffer allocation is performed there! </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa5457e560feed75336001927c8e0f651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5457e560feed75336001927c8e0f651">◆&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool Adafruit_SSD1306::begin </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>vcs</em> = <code><a class="el" href="_adafruit___s_s_d1306_8h.html#ad9d18b92ad68b542033c7e5ccbdcced0">SSD1306_SWITCHCAPVCC</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>addr</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><em>reset</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><em>periphBegin</em> = <code>true</code>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Allocate RAM for image buffer, initialize peripherals and pins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">vcs</td><td>VCC selection. Pass SSD1306_SWITCHCAPVCC to generate the display voltage (step up) from the 3.3V source, or SSD1306_EXTERNALVCC otherwise. Most situations with Adafruit SSD1306 breakouts will want SSD1306_SWITCHCAPVCC. </td></tr>
+    <tr><td class="paramname">addr</td><td>I2C address of corresponding SSD1306 display (or pass 0 to use default of 0x3C for 128x32 display, 0x3D for all others). SPI displays (hardware or software) do not use addresses, but this argument is still required (pass 0 or any value really, it will simply be ignored). Default if unspecified is 0. </td></tr>
+    <tr><td class="paramname">reset</td><td>If true, and if the reset pin passed to the constructor is valid, a hard reset will be performed before initializing the display. If using multiple SSD1306 displays on the same bus, and if they all share the same reset pin, you should only pass true on the first display being initialized, false on all others, else the already-initialized displays would be reset. Default if unspecified is true. </td></tr>
+    <tr><td class="paramname">periphBegin</td><td>If true, and if a hardware peripheral is being used (I2C or SPI, but not software SPI), call that peripheral's <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function, else (false) it has already been done in one's sketch code. Cases where false might be used include multiple displays or other devices sharing a common bus, or situations on some platforms where a nonstandard <a class="el" href="class_adafruit___s_s_d1306.html#aa5457e560feed75336001927c8e0f651" title="Allocate RAM for image buffer, initialize peripherals and pins. ">begin()</a> function is available (e.g. a TwoWire interface on non-default pins, as can be done on the ESP8266 and perhaps others). </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on successful allocation/init, false otherwise. Well-behaved code should check the return value before proceeding. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>MUST call this function before any drawing or updates! </dd></dl>
+
+</div>
+</div>
+<a id="a0ef45af1adca923ef66233b2998a150b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef45af1adca923ef66233b2998a150b">◆&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::display </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Push data currently in RAM to SSD1306 display. </p>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Drawing operations are not visible until this function is called. Call after each graphics command, or after a whole set of graphics commands, as best needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="afe1e0f5efabd931aab7998275356744d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe1e0f5efabd931aab7998275356744d">◆&nbsp;</a></span>clearDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::clearDisplay </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Clear contents of display buffer (set all pixels to off). </p>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a3e9436a654c826a55942606a2261b5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9436a654c826a55942606a2261b5ee">◆&nbsp;</a></span>invertDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::invertDisplay </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Enable or disable display invert mode (white-on-black vs black-on-white). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">i</td><td>If true, switch to invert mode (black-on-white), else normal mode (white-on-black). </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This has an immediate effect on the display, no need to call the <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a> function – buffer contents are not changed, rather a different pixel mode of the display hardware is used. When enabled, drawing SSD1306_BLACK (value 0) pixels will actually draw white, SSD1306_WHITE (value 1) will draw black. </dd></dl>
+
+</div>
+</div>
+<a id="a2661e6166a7a1c00695ed55eaa4ece46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2661e6166a7a1c00695ed55eaa4ece46">◆&nbsp;</a></span>dim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::dim </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Dim the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">dim</td><td>true to enable lower brightness mode, false for full brightness. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This has an immediate effect on the display, no need to call the <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a> function – buffer contents are not changed. </dd></dl>
+
+</div>
+</div>
+<a id="ae2851d927a047a770c569c7c9fde4807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2851d927a047a770c569c7c9fde4807">◆&nbsp;</a></span>drawPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::drawPixel </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&nbsp;</td>
+          <td class="paramname"><em>color</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Set/clear/invert a single pixel. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Column of display – 0 at left to (screen width - 1) at right. </td></tr>
+    <tr><td class="paramname">y</td><td>Row of display – 0 at top to (screen height -1) at bottom. </td></tr>
+    <tr><td class="paramname">color</td><td>Pixel color, one of: SSD1306_BLACK, SSD1306_WHITE or SSD1306_INVERSE. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a8165eca9ccfee431af10b6f5fa06a406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8165eca9ccfee431af10b6f5fa06a406">◆&nbsp;</a></span>drawFastHLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::drawFastHLine </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&nbsp;</td>
+          <td class="paramname"><em>color</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Draw a horizontal line. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Leftmost column – 0 at left to (screen width - 1) at right. </td></tr>
+    <tr><td class="paramname">y</td><td>Row of display – 0 at top to (screen height -1) at bottom. </td></tr>
+    <tr><td class="paramname">w</td><td>Width of line, in pixels. </td></tr>
+    <tr><td class="paramname">color</td><td>Line color, one of: SSD1306_BLACK, SSD1306_WHITE or SSD1306_INVERSE. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a2058c782206fd0c7a74a1d6d19a383b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2058c782206fd0c7a74a1d6d19a383b6">◆&nbsp;</a></span>drawFastVLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::drawFastVLine </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&nbsp;</td>
+          <td class="paramname"><em>color</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Draw a vertical line. This is also invoked by the Adafruit_GFX library in generating many higher-level graphics primitives. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Column of display – 0 at left to (screen width -1) at right. </td></tr>
+    <tr><td class="paramname">y</td><td>Topmost row – 0 at top to (screen height - 1) at bottom. </td></tr>
+    <tr><td class="paramname">h</td><td>Height of line, in pixels. </td></tr>
+    <tr><td class="paramname">color</td><td>Line color, one of: SSD1306_BLACK, SSD1306_WHITE or SSD1306_INVERSE. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a6a9f18f43c19296dc54dfb657eab4d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9f18f43c19296dc54dfb657eab4d66">◆&nbsp;</a></span>startscrollright()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::startscrollright </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>stop</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Activate a right-handed scroll for all or part of the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">start</td><td>First row. </td></tr>
+    <tr><td class="paramname">stop</td><td>Last row. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="a4c58c2a4ac905e199d6ced49a0098296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c58c2a4ac905e199d6ced49a0098296">◆&nbsp;</a></span>startscrollleft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::startscrollleft </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>stop</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Activate a left-handed scroll for all or part of the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">start</td><td>First row. </td></tr>
+    <tr><td class="paramname">stop</td><td>Last row. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="adbc9f95bb91eb0e76c4465d3c4d941e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc9f95bb91eb0e76c4465d3c4d941e1">◆&nbsp;</a></span>startscrolldiagright()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::startscrolldiagright </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>stop</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Activate a diagonal scroll for all or part of the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">start</td><td>First row. </td></tr>
+    <tr><td class="paramname">stop</td><td>Last row. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="a8d5b19419f508e5133053fa39da10f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5b19419f508e5133053fa39da10f98">◆&nbsp;</a></span>startscrolldiagleft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::startscrolldiagleft </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>stop</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Activate alternate diagonal scroll for all or part of the display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">start</td><td>First row. </td></tr>
+    <tr><td class="paramname">stop</td><td>Last row. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="ab4559d6aae71a4de8969f9160a6eda40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4559d6aae71a4de8969f9160a6eda40">◆&nbsp;</a></span>stopscroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::stopscroll </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Cease a previously-begun scrolling action. </p>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="a99182555a08549492f6c40ceea0abc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99182555a08549492f6c40ceea0abc3d">◆&nbsp;</a></span>ssd1306_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::ssd1306_command </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Issue a single low-level command directly to the SSD1306 display, bypassing the library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">c</td><td>Command to issue (0x00 to 0xFF, see datasheet). </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+
+</div>
+</div>
+<a id="a861504191b6bd2f294aa0763833d903b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861504191b6bd2f294aa0763833d903b">◆&nbsp;</a></span>getPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">bool Adafruit_SSD1306::getPixel </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>y</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Return color of a single pixel in display buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Column of display – 0 at left to (screen width - 1) at right. </td></tr>
+    <tr><td class="paramname">y</td><td>Row of display – 0 at top to (screen height -1) at bottom. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if pixel is set (usually SSD1306_WHITE, unless display invert mode is enabled), false if clear (SSD1306_BLACK). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Reads from buffer contents; may not reflect current contents of screen if <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a> has not been called. </dd></dl>
+
+</div>
+</div>
+<a id="a24b8aca91a7bd44dc9459df8a1f555fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b8aca91a7bd44dc9459df8a1f555fc">◆&nbsp;</a></span>getBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">uint8_t * Adafruit_SSD1306::getBuffer </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+</div><div class="memdoc">
+
+<p>Get base address of display buffer for direct reading or writing. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to an unsigned 8-bit array, column-major, columns padded to full byte boundary if needed. </dd></dl>
+
+</div>
+</div>
+<a id="af4b9c3a9c3e93ac9c746bb99e9c35188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b9c3a9c3e93ac9c746bb99e9c35188">◆&nbsp;</a></span>SPIwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::SPIwrite </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Write a single byte to the SPI port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">d</td><td>Data byte to be written.</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>See HAVE_PORTREG which defines if the method uses a port or bit-bang method </dd></dl>
+
+</div>
+</div>
+<a id="ab487f39aa59091c06493a6985320e96b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab487f39aa59091c06493a6985320e96b">◆&nbsp;</a></span>drawFastHLineInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::drawFastHLineInternal </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&nbsp;</td>
+          <td class="paramname"><em>color</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Draw a horizontal line with a width and color. Used by public methods drawFastHLine,drawFastVLine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Leftmost column – 0 at left to (screen width - 1) at right. </td></tr>
+    <tr><td class="paramname">y</td><td>Row of display – 0 at top to (screen height -1) at bottom. </td></tr>
+    <tr><td class="paramname">w</td><td>Width of line, in pixels. </td></tr>
+    <tr><td class="paramname">color</td><td>Line color, one of: SSD1306_BLACK, SSD1306_WHITE or SSD1306_INVERSE. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a961614d584f413c25581287728bbbb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961614d584f413c25581287728bbbb2c">◆&nbsp;</a></span>drawFastVLineInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::drawFastVLineInternal </td>
+          <td>(</td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>__y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int16_t&nbsp;</td>
+          <td class="paramname"><em>__h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&nbsp;</td>
+          <td class="paramname"><em>color</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Draw a vertical line with a width and color. Used by public method drawFastHLine,drawFastVLine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">x</td><td>Leftmost column – 0 at left to (screen width - 1) at right. </td></tr>
+    <tr><td class="paramname">__y</td><td>Row of display – 0 at top to (screen height -1) at bottom. </td></tr>
+    <tr><td class="paramname">__h</td><td>height of the line in pixels </td></tr>
+    <tr><td class="paramname">color</td><td>Line color, one of: SSD1306_BLACK, SSD1306_WHITE or SSD1306_INVERSE. </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Changes buffer contents only, no immediate effect on display. Follow up with a call to <a class="el" href="class_adafruit___s_s_d1306.html#a0ef45af1adca923ef66233b2998a150b" title="Push data currently in RAM to SSD1306 display. ">display()</a>, or with other graphics commands as needed by one's own application. </dd></dl>
+
+</div>
+</div>
+<a id="a018550c5b9f0463cb7cd2a74efa4ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018550c5b9f0463cb7cd2a74efa4ee48">◆&nbsp;</a></span>ssd1306_command1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::ssd1306_command1 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Issue single command to SSD1306, using I2C or hard/soft SPI as needed. Because command calls are often grouped, SPI transaction and selection must be started/ended in calling function for efficiency. This is a protected function, not exposed (see <a class="el" href="class_adafruit___s_s_d1306.html#a99182555a08549492f6c40ceea0abc3d" title="Issue a single low-level command directly to the SSD1306 display, bypassing the library. ">ssd1306_command()</a> instead). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">c</td><td>the command character to send to the display. Refer to ssd1306 data sheet for commands </td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a799f35d2b93cb7a84840a94da69259be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799f35d2b93cb7a84840a94da69259be">◆&nbsp;</a></span>ssd1306_commandList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">void Adafruit_SSD1306::ssd1306_commandList </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&nbsp;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&nbsp;</td>
+          <td class="paramname"><em>n</em>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+
+<p>Issue list of commands to SSD1306, same rules as above re: transactions. This is a protected function, not exposed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tbody><tr><td class="paramname">c</td><td>pointer to list of commands</td></tr>
+    <tr><td class="paramname">n</td><td>number of commands in the list</td></tr>
+  </tbody></table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None (void). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a32cff6721c6a7760ad9ac8656080f511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32cff6721c6a7760ad9ac8656080f511">◆&nbsp;</a></span>spi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">SPIClass* Adafruit_SSD1306::spi</td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+<p>Initialized during construction when using SPI. See SPI.cpp, SPI.h </p>
+
+</div>
+</div>
+<a id="ad18dffe0baf2cfc818e507a1475e754d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18dffe0baf2cfc818e507a1475e754d">◆&nbsp;</a></span>wire</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">TwoWire* Adafruit_SSD1306::wire</td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+<p>Initialized during construction when using I2C. See Wire.cpp, Wire.h </p>
+
+</div>
+</div>
+<a id="a03f9b3bc9dcd71c2461260f4d8ceb375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f9b3bc9dcd71c2461260f4d8ceb375">◆&nbsp;</a></span>buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">uint8_t* Adafruit_SSD1306::buffer</td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+<p>Buffer data used for display buffer. Allocated when begin method is called. </p>
+
+</div>
+</div>
+<a id="a6cb1a45ae527d3b5aaf4777d572e103c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb1a45ae527d3b5aaf4777d572e103c">◆&nbsp;</a></span>mosiPin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tbody><tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tbody><tr>
+          <td class="memname">int8_t Adafruit_SSD1306::mosiPin</td>
+        </tr>
+      </tbody></table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</tbody></table>
+</div><div class="memdoc">
+<p>(Master Out Slave In) set when using SPI set during construction. </p>
+
+</div>
+</div>
+<hr>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_adafruit___s_s_d1306_8h_source.html">Adafruit_SSD1306.h</a></li>
+<li><a class="el" href="_adafruit___s_s_d1306_8cpp.html">Adafruit_SSD1306.cpp</a></li>
+</ul>
+</div>
+
+<hr class="footer"><address class="footer"><small>
+Generated by &nbsp;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAAAfCAYAAAALO4jYAAAOiklEQVR4Ae1deVyV1bp+NDUlVEwNUZRQAUUicZYCj9sxMbFdOGGEdxMqqagoKuIAIgQJiHrA6GA4IKiJom3FLJLy4IRwJCUZlJxC8yg4a4bc9/3c+xs2bPL2u6dr98f3W8/e37fWOz9rvevfBtXV1QBQDwB4DtEQAOoBAM8nGnS0HwIAzwIVAPnIAoB6AMAfx8UzXwOAUTQCgGdAnG3/Cb7yieJjaYn05/97DgCgHgDwx/CsBPl+vcEHgDQ69UhjwvwBoB4A8J/BsxKEqifVAFADxuYBoB4AUDdeaNgAAIzimQl6YoQIY/MAUA8AqBt/hCAzgoag0n3n/08IsnEawbpOBGvdVBnbKMk/kGQgx356AZCPPJKrNJDTx6F/2J7edq16tdmm9axa4mTbLMs202uxXUZ6PAcACpC+WueDc9U/7INzVfgyElMFyeV36jGUY2Bb7Jd9JdG9LtS8NoJCTFqYBw4f+yFGOFsJE7mF11QZ6dt/lyC73iNn813lOnaedT+Hduhi2VKYP3f5Fo6fvsoBBtBnYtHJzNUka0Z+yjvYuQKQxpWi71iuP8kU6GzG2fT14LtOyqq8CK0s7ABIQ6dnQXqVxmzTuhutZ9H6IF2cas7x5RZNhRgzDhzTGNrmb9KzJz2RJNL3Zn1HlZ9TX4f26GNvLsofyLmgOvOjoMNkc67ZOp0aMT28e4PlEjk/9xH9hXpxHNt27tMQaYlEknC/ywmabdntb4Hb4v1h1vxFcdK1dwfMfb8XfnvyBABqgOd79B0VwrqfRk7Dq+1bAJAG609xt8dPU/pYT12wPoKCbXXmxL5lpJM1y3uoStWvoyibtKsfYsLn+5LNGWzTxX2e7/pg6QBV3nmEYWOnwX+GD9RDuorzQWtskbF5pYb0ovn0D3P3QfisN8T19G9KseTEDg35LqVCZS4KWqzQ18fI9uW5B635J9ktUOvsinlGLp6Cnt3aAoACbAdwJn8u6ojwlWryN5JyZZJ6MTm746dIR+34JZz8cbDv/A9614hjrF9rXyIpn0hKbtDRfojQ1pjhtOTVNQoMALXBcYAb/zUjuLfu4JC2KzlUkRwAGIIL8I73Uty4cnoCf5PPtMydCQo9z4V78MOhT6PIZqChzXdnfI6S3C+i3hwTEBgfJBH3r6Lr8PrAO7/gqNaZ4tLGrV2vGtxXIt4vPAuH90TP4LC9/EJ953lJRQEAYwhel4M9W1YGk91osutN5CRsXTtLERP7rrj9EHJ/wqbIKsXyIP900vUkXZVNn/e0O9dJBAGAMejzIYKc9QQFuE0KCgv1G6goZszmPBQVFcHOzg7yNX56v/m2niBtzOoE1aA+luLaqeLriEnOEd7nejvjdVtpt2XnXsbc2dOzTh7e60Y2QhxcfQI3hrsr/I7TLMMnYQEKvZgteUhZvyyRXpfxZvp+3z8ASGP4uIW48fMZe1orNFxzGeWD+7ev2bdu36Pwq+0fA5BGxqFz2Lrr+6dEvj8U8jyWxh+Bdmt4MMUaTbHmbNiwwUke03j/ZJSe3Mn3RUUHu0GqTatnKsgbo1lF7TfbmV5bde39rnZbHHdH5YY9RWS8bte2xubWxWyhJ6hwR9oWayuL5qLArKhDOKqNjeKaMgnHszMASKPfIKGoQtL7U8PF+Vt3f8WYCX54cOf6dIHB5m0T9qTFo6VpE1HmrYlBQjHJZhnZiZs0dbnv7EnSXcs25PIFJf+Gj4+GCzGBdC6STkpwaKx6zKDOUjETjiIzLSK4h4sm7POwMeL8nuzzCFs6h++EvJETFoWFTh8gbZaTVzB/rh9f6NzCnAzX9Tb58ia7Kcbs6qas/eZ9rPF+u3tt+vlder2jTY2VCLpQfgdeH87hOmVRjVTZXyo31cQ5yTiXt8uN7yAzErC2NDdFle7Cv3X3EZNTybtVr6BfAyAfTu269FesZZ24xE7Tj3y7O5m/Bw4eO4zmFMVkHSLIifT48o3etfXvvq69IujEtBHWTU0aK2JZFrWRXxPJ5kXd/M5dB39Qu7lYS4HQnZBJvd6lbxdFPF8duSiERVCxjHxtx8ESoRuR3SyK06m6ulqxzt+6p9dr3SwVa81NmmDE+IVqemUIj1W75gqZwXQaM9PAvZg2l9L2+cu3BHKojbnRfZOTd/Y6nc6n+eu8C798glSdndy1yVEfiEvf51/B4sCZnJRw0dDz4LuDvFlkF+IwIa7gYR4Lwpb49hfnVyQew8EdkcEkL1ysJBfwDDLe7W3eTEiLnwsACuhko0hW3Cw6nfK9u1LNWppKrWGEeio+i1+FTlQo+RwVwoJeU1ZGrVW5OPFF/vTxDtyI8/kZbmQ7q644mVxDXQD4PcjqGG2sxjqCtMZi4xNEZD3B49+eiItVVTVPi3xd/vCuUOjqdonhXF0y3+z/InnIW+95HModp3qjZ3tZq3uEw5kb+DWpFv87d397TjPprW7ixKh3p8GizUui3a37zzI5SWS/kuwLeSnsUN7yOIzFqa+JsRoAQG1Q1PF3amwsNoEg4WhX1R6YZKD24Ax19W3BcK4umeGjx4V0d/ZSDXitnULOtFljjHhnKnZvCgugeX8A8pGVk1usGT/cVpyYMNJOoU/rgpx+jvOSr7doI7RIa/2csThr043fXsBxAUBd4NOT+Cw1NrSv980tzrpVu26FWz5dDkAabu4T+M+ccJtbnDYjDYA0dOturzqO0v59hZc4f+RUOV+eWSQvtEeSS5kZGKke+YaVKPPRkk34qWCfG8lk0bo7+U+Ljw5CC9MmAFADARF7cfZoShTJK9oc6Zanpmwyq03v9t1fMdHTq5J0uL2xbIDr2HlhC6b0qRGrrpC9xkxerJ7q8Zq4Hvl5Lr7bvYpbHAx1L129i2lTffgOnU4+smUxmXGHambaJqKpaRtUXD1rz5vAWJ30LS44NFY18HUhVEWNmCD+LoxPSLS2NJd6d1RyLg7viabLDXj1tbec1oRIxvkZo57IfxYUSPlnCdFo8ZJUJN95cbh6/qhwv7TrPCAgcZVy84/3mokHd//N0fCWSV20PEY10FEK7khBOeTft+/9ig+nB7DOhD3pqRmyGMJGewYF+L4rFVX/bPuqGCnrlyWR/AydrIry0Brmwb6+z7sCR9u2GOksbSJZDZig9FbmtoUbE0IASCMz5wJSN29AxbVirlMFz1E9VDb9xmGaR09qsUV6/XxD3+w3YvlckSDDGsxaRgT9sF8kaN1E3+Uaj2E2AKRReP6m8G/f+WUAUEDt4SnEQwgbNXFRgI/aQVHQ7QeE9oJxI2wV5P0j/TT2pUYkpu9I8Scbcc5vz/Wd59Vb4XPlihCMnTQD8niO/XAVkaEBvNMnki6fao7BiTZATnzkTABQYOGqvSg+luZJsumymHPCItc61ZYPABhi1aaTyNkbE0w2ojlWytNXnqc85juUMz/9qU0b6jNBVg4jtbHL3q+Rj56gBUujVXLdOSGbceF0pkiQo9krNsdWhS9UFFNecMP5cRMFZ0xQJ9o1RQuClsDeuu7EC8tuIjJ8BZ8EO65Xu879ItasVBZ31uK1dPqOTyebCeErV6DDK6biWsyWPBzVxiZuT90sHkmKozA2LsFaLsfx+vhoKklO2pJPZb3JZ0JY0NRa8+T45Dno/AWTnWjS7URTgR6apRqPocqNDAC1Qa8vENRjuPaTYBlBp68ieuV8kaCAxZ+o+jtIBM0PI4LOfCUSxE+Ig6tP4MzJA9DcRAqeDW3c8BniY5YAkMakycJxbbZ1yyZ+92760ssJo8fPgFrVFQBqID2rFF9uW4eH925Op8/dJF++YkWYgoDVKfk4vj82kWz6k83Z5tZ9I2JXKAmcs2QtrpWdcCYZof2SnNZ/YZQiOfb1xYbQJJIR2ptB3CHkO9DR9QPoe37huRs4kZ0O296jMdvTyTCeYLIjtGvSdeQOTsXWDFG5Ymh/5gwAlDj7003hjmGblb+UCHcQExSxaLKirnEfB4oEGeawKGJLDYIEklq+0iXQxult4ePWjcsoyf2C20opBwZAPhIJ/ps3JQsf73t5C8GTvsbS7m9oZvL0Pntw/w4uFx3CrV/OJbEOyRfo5GfrbFob2FxCMkILI5m42vzSunCCaN2a/BWuW6XcPIsjU3DxzEE3kuPYAUiDdDQ6n3xnqHTTTLYqKCTGqbvsBIWu+ZLz9yQ7YpvU2WA9tqOmTYQXTczENfKrt8e+k0i3zEguvJ5IBGUQQe66NX08Qp605m9IED8cvFr3zsYVwQFQjOTkzwFIw9t7CuuzI33UlRwMyQmBAsD/FshXQK/h/mGzJvUU537+5R6CAmeUkT/euQCkQfKaHi7/tc78lTYo+fEkLhV+I8wTyejSczTkdviZ9lEAn3gLssU5AEANkE0+cq1k9aixKQDAGFR9OwKAUQgENWnWMoVPMAD8hTDz8cM78+YsirSytRLrg5R9Z5GjXYsXGjflHTmI4Klfe/zo7uqeQz76aOp7jo0BoC7I7PBJGUnwAIA/EVtLc3d6NtJ/de39Dqw7tQeA5x6nT+XiSslhy7adenaw6WSGBg2kteKCbLTp6IiKq8X8eb5j98Ho1s0eJ3IO4PrFf5lUVwPV9NOwoUwJgHwcyr2MvOytaPhC4yDdVOvuAyfDsl1LAPiPo+zizyg9uUt4FwkCgL8KTMwsUP2kyrV1B4cGuYXXiKCnxb734DEe3avE/Tu/cEcYROR4WlnbCmtm5ja4+fOP5jeunK7+NrfVbx3avtRIfvKu3riP4gsVOFX4k3CPPLp3M6FhoxfP0ZIfkTPozyIHgGKILc7cus9fqsVdK8tNqXr8sHOTZi0G6udox+PR/crj9P81fVpRTmJ70z/lJf9cU1X12LlJ0+Z9fn1wW5xv1MSE6tACTU1a4U7F5UA+jIQAsuECAH82KD+hxekJ4ku9KwD8P8Al3X/dty8AGMcxgjnhVQD4P0IpEZTV6OIZ3mzI0gEA6gEAzwkaAkA9AOD5xH8D3p4OaxCtrsUAAAAASUVORK5CYII=" alt="doxygen">
+</a> 1.8.13
+</small></address>
+
+
+<span class="cleanslate TridactylStatusIndicator TridactylModevisual">visual</span></body>

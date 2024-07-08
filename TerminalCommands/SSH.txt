@@ -1,0 +1,29 @@
+1. Install the OpenSSH server or client (Should already be installed)
+    sudo apt install openssh-server 
+    sudo apt install openssh-client
+
+2. Start the OpenSSH server (will start on boot now)
+    sudo systemctl start sshd
+    sudo systemctl enable sshd
+    sudo systemctl status sshd
+
+3. Configure Firewall
+    sudo ufw allow ssh
+    sudo ufw enable
+    sudo ufw status
+
+3. Generate Key pair (if you haven't already)
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+        -t = type of encryption (rsa)
+        -b = number of bits in the key (4096) which is stronger than the default 2048
+
+5. Transfer public SSH key (your computer you want to connect from) to the server
+    ssh username@remote_host
+        Type in password
+    ssh-copy-id username@server_ip
+
+
+Now the fun part! 
+
+Copy a folders contents via ssh:
+    scp -r /path/to/local/folder username@remote_host:/path/to/remote/folder

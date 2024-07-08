@@ -1,3 +1,8 @@
+Purge packages with the 'nvidia' or 'cuda' in it's name 
+sudo apt-get purge '^nvidia-.*' '^cuda-.*'
+    meaning of the above command:
+        ^nvidia-.*: remove all packages that start with 'nvidia-'
+        ^cuda-.*: remove all packages that start with 'cuda-'
 
 Force remove broken packages 
 sudo dpkg --remove --force-remove-reinstreq package_name

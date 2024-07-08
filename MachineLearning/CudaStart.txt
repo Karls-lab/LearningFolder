@@ -1,5 +1,7 @@
 
 Install Nvidia graphic card drivers 
 
+1. Install Nvidia driver ()
+
 2. install cuda 
     https://developer.nvidia.com/cuda-downloads?target_os=Linux

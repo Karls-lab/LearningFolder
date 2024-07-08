@@ -4,3 +4,9 @@ View your gpu statistics in real time
 
 install Tensorflow:
     python3 -m pip install tensorflow[and-cuda]
+
+install CUDA toolkit 
+    sudo apt-get install nvidia-cuda-toolkit
+
+install cuDNN
+    sudo apt-get install libcudnn8
