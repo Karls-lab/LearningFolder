@@ -1,0 +1,41 @@
+You always want to use pre-made model architectures
+
+List of Conv2d Models at the keras.applications website: https://keras.io/api/applications/
+
+
+What is Gradient Boosting? 
+
+A weak learner is one where it's only slightly better than random. The idea 
+is to combine many weak learners to create a strong learner.
+
+AdaBoost was the first successful boosting algorithm developed for binary classification.
+AdaBoost works by putting more weight on difficult to classify instances and less on those already handled well.
+Increasingly larger weights until the algorithm identifies a trend. 
+
+How Gradient Boosting Works: 
+    1. A loss function to be optimized
+    2. A weak learner to make predictions 
+    3. An additive model to add weak learners to minimize the loss function.
+
+Weak Learner:
+    Decision Trees are are used as weak learners in gradient boosting.
+
+Additive Model:
+    Trees are added one at a time, and existing trees in the model are not changed.
+    A gradient procedure is used to minimize the loss when adding trees.
+
+Dangers:
+    Gradient Boosting can overfit the training dataset.
+
+Solutions and Improvements:
+    1. Tree Constraints: Limit the number of nodes, the depth, or the minimum number of samples in a leaf node.
+    2. Shrinkage: The contribution of each tree to the model can be weighted to slow down the learning process.
+    3. Random Sampling: Randomly sample the training dataset to train each tree.
+    4. Penalized Learning: Regularization can be used to control the complexity of the model.
+
+List of python gradient Boosting libraries:
+    1. XGBoost: https://xgboost.readthedocs.io/en/stable/install.html
+    2. LightGBM
+    3. CatBoost
+
+    
