@@ -1,0 +1,51 @@
+MODULE 5 NOSQL SOLUTIONS
+
+What is DynamoDB? Fully Managed, NoSQL, database service. 
+    NoSQL = SQL + unstructured, semi structured data
+    Amazon handles the backend infrastructure for you
+    Multiple Availability Zones
+    Can use IAM 
+    Backup and restore available 
+    Stream processing: event driven programming (Programs are driven by user inputs, 
+        or something like events happening in the system to trigger responses, it's also
+        asynchronous, so it doesn't wait for a response, it just keeps going, call back 
+        functions in js, event handler, event loop.)
+
+Relational Database: 
+    MS SQL server
+    Oracle Database
+    MySQL
+
+Non-Relational Database: (faster, horizontal scaling, more flexible, can use dicts)
+    DynamoDB
+    MongoDB
+    Cassandra
+
+
+Database Options:
+    Amazon Offers these: DynamoDB, Elasticache, Neptune
+
+Identify the features of Amazon DynamoDB
+    Tables: Contains items with attributes
+    Items: Each table contains zero or more items, group of attributes, 
+    Attributes: 
+    Primary key: Unique identifier for table 
+
+    Each Item has a primary key. 
+    Primary key can be simple or composite. Composite is a partition key and sort key.
+
+    An Attribute can be null, binary, boo, number string,
+        set types: string set, number set, binary set
+        Lists and map. 
+
+Explain how DynamoDB uses Partitions
+    
+
+
+Keeps data Consistent
+
+Global tables and Streaming
+
+Backup and Restore Process
+
+SDK + DynamoDB

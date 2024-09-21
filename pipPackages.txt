@@ -1,0 +1,23 @@
+Generate a requirements package: 
+    Install pipreqs:
+        pip install pipreqs
+    Generate a requirements file:
+        pipreqs /path/to/project
+
+Install python requirements file: 
+    pip install -r requirements.txt
+
+View a python package version:
+    pip show [package_name]
+
+To freeze you python packages into a requirements.txt file:
+    pip freeze > requirements.txt
+
+To start a project with a python virtual environment:
+    python3 -m venv directory_name
+    Run "source bin/activate" *from bash*
+
+If pip is not installed, try this command:
+    python -m ensurepip --upgrade
+This reinstalls pip
+    

@@ -1,0 +1,21 @@
+Globbing is to use a wild card 
+Use man 7 glob to view the manual page for globbing
+    * - matches any character
+    ? - matches any single character
+    [...] - matches any character in the brackets
+    [!...] - matches any character not in the brackets
+    {...} - matches any of the comma separated patterns
+    A-F = ABCDEF
+    a-f = abcdef
+    0-9 = 0123456789
+
+Examples:
+    echo D*n* - match any file that starts with D and has n in it
+    echo ??? - match any file with 3 character
+    echo w?? - starts with w and has 2 characters
+    echo w??* - stars with w and has 2 or more characters
+    echo [PMT]* - match any file that starts with P, M, or T
+    echo /etc/rc[3-6]* - match any file that starts with /etc/rc3, /etc/rc4, /etc/rc5, /etc/rc6
+
+
+

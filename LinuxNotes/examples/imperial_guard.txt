@@ -1,0 +1,49 @@
+Name          Rank    Regiment   Specialty   Wounds
+Gorvoth, A    Sergeant Cadia Shock  Heavy Gunner 3
+Karsus, K     Lieutenant Vostroya Firstborn Sniper 2
+Thrain, G     Guardsman Mordian Iron  Driver 1
+Vexar, S       Captain  Valhallan Ice  Commander 0
+Ryker, J      Sergeant Cadian Shock  Demolitions 4
+Ortega, P     Lieutenant Tallarn Desert  Medic 3
+Krael, V      Guardsman Elysian Drop  Gunner 2
+Thane, R      Sergeant Molech Hive  Sapper 1
+Vashin, A     Lieutenant Krieg Death  Forward Observer 0
+Grigor, I    Sergeant Vraksian Night  Comms Specialist 4
+Kharon, K     Guardsman AdMech Skitari  Tech-Priest 3
+Bryce, E      Captain  Valhallan Ice  Company Commander 0
+Nemova, N     Lieutenant Cadia Shock  Artillery Liaison 2
+Roth, G       Sergeant Cadian Shock  Mortar Crew 1
+Korvus, K     Guardsman Mordian Iron  Heavy Gunner 4
+Draconis, D   Captain  Vostroya Firstborn Company Commander 0
+Thoren, T    Lieutenant Tallarn Desert  Armored Fist 3
+Gundrik, G   Sergeant Elysian Drop  Pathfinder 2
+Vorgath, V   Guardsman Krieg Death  Forward Observer 1
+Korben, A    Captain  Valhallan Ice  Company Commander 0
+Ragnar, R    Lieutenant Cadian Shock  Demolitions 4
+Orkell, O    Sergeant Molech Hive  Sapper 3
+Kharon, N    Guardsman AdMech Skitari  Tech-Priest 2
+Bane, B      Captain  Vraksian Night  Company Commander 0
+Narvath, N   Lieutenant Cadia Shock  Artillery Liaison 1
+Ryker, S     Sergeant Krieg Death  Forward Observer 4
+Graxus, G    Guardsman Mordian Iron  Heavy Gunner 3
+Vexis, V     Captain  Elysian Drop  Company Commander 0
+Drekk, D     Lieutenant Valhallan Ice  Armored Fist 2
+Gorbag, G   Sergeant Tallarn Desert  Medic 1
+Kael, K      Guardsman Cadian Shock  Gunner 4
+Thrain, R    Captain  Mordian Iron  Company Commander 0
+Vorgath, A  Lieutenant AdMech Skitari  Tech-Priest 3
+Kharon, T   Sergeant Vraksian Night  Comms Specialist 2
+Roth, E      Guardsman Krieg Death  Forward Observer 1
+Narvath, N  Captain  Cadia Shock  Company Commander 0
+Ortega, G   Lieutenant Cadian Shock  Demolitions 4
+Gundrik, R Sergeant Elysian Drop  Pathfinder 3
+Drekk, T    Guardsman Valhallan Ice  Armored Fist 2
+Bane, S     Captain  Vostroya Firstborn Company Commander 0
+Graxus, K   Lieutenant Molech Hive  Sapper 1
+Korvus, A   Sergeant Tallarn Desert  Heavy Gunner 4
+Vashin, R  Guardsman AdMech Skitari  Tech-Priest 3
+Ryker, G    Captain  Cadian Shock  Company Commander 0
+Nemova, K  Lieutenant Vraksian Night  Artillery Liaison 2
+Krael, A   Sergeant Elysian Drop  Gunner 1
+Thane, T    Guardsman Mordian Iron  Driver 4
+Vexar, G   Captain  Valhallan Ice  Commander 0

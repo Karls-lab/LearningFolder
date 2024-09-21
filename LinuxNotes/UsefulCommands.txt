@@ -1,0 +1,32 @@
+Every Day at a certain time, run git commands to sync my password repository 
+
+Run commands at a schedulued time using cron jobs 
+crontab -e to edit the cron jobs
+crontab -l to list the cron jobs
+crontab -r to remove the cron jobs
+Add a new cron job by adding a line to the crontab file 
+* * * * * /path/to/your-script.sh
+Minute (0-59) Hour (0-23) Day of Month (1-31) Month (1-12) Day of Week (0-7) (Sunday is 0 or 7)
+Example: run every day at 3:30 AM 
+    30 3 * * * /path/to/your-script.sh
+* Make sure the file you are running has the correct permissions to execute
+
+
+If you want more flexibility and ability to run missed jobs, use systemd timers 
+Systemd files are stored in /etc/systemd/system
+Create a new file with the .service extension
+Example Script: 
+    [Unit]
+    Description=My Custom Systemd Service
+    After=network.target  # Only runs after the network is up (optional)
+
+    [Service]
+    ExecStart=/home/username/my-script.sh
+    Restart=on-failure  # Restart on failure (optional)
+    User=username  # Optional, to run the script as a specific user
+
+    [Install]
+    WantedBy=multi-user.target  # Makes the service start when the system is in multi-user mode
+
+
+

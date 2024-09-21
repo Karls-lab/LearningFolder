@@ -1,0 +1,74 @@
+MODULE 10 NOTES - AUTOSCALING AND LOAD BALANCING
+
+Section 1: Elastic Load Balancing 
+    With millions of incoming connections, elastic load balancing 
+    automatically distributes incoming application traffic across multiple
+    targets, such as Amazon EC2 instances, containers, IP addresses, and
+    Lambda functions. It can handle the varying load of your application
+    traffic in a single Availability Zone or across multiple Availability
+    Zones. 
+    Elastic Load Balancing offers three types of load balancers
+    1. Application Load Balancers: HTTP and HTTPS traffic
+    2. Network Load Balancers: TCP, TLS, and UDP traffic (extreme performance)
+    3. Classic Load Balancers: HTTP, HTTPS, TCP, and SSL traffic (everything else)
+
+    Application and Network balance by targeting certain groups 
+    Classic targets EC2 instances
+
+    Load Balancing Monitoring:
+    1. CloudWatch Metrics: alarm if goes outside of metrics 
+    2. Access logs: detailed information 
+    3. AWS CloudTrail logs: who, what, when, and where someone did something. 
+
+
+Section 2: Amazon CloudWatch
+    Metrics, Dashboards, Logs, Events, Canary Tests, Container Insights, Integration 
+    Threshold must be definite like code. 
+
+Section 3: Amazon EC2 Auto Scaling 
+    Amazon Web Services (AWS) Auto Scaling is a service that automatically adjusts the capacity of your AWS resources to handle varying workloads. It helps you ensure that your applications are both highly available and cost-efficient by automatically adding or removing resources based on predefined scaling policies. Auto Scaling is commonly used with Amazon Elastic Compute Cloud (EC2) instances, but it can also be used with other AWS services.
+
+Key features and concepts of AWS Auto Scaling include:
+
+    Scaling Groups:
+        Auto Scaling uses groups to organize and manage instances that are launched from a common Amazon Machine Image (AMI).
+        Scaling groups define the minimum, desired, and maximum number of instances to maintain.
+
+    Scaling Policies:
+        Scaling policies define the conditions under which Auto Scaling should add or remove instances.
+        You can create policies based on various metrics like CPU utilization, network traffic, or custom CloudWatch metrics.
+
+    Launch Configurations or Launch Templates:
+        These configurations specify the instance type, AMI, and other settings for instances launched by Auto Scaling.
+        Launch configurations are being phased out in favor of launch templates.
+
+    Dynamic Scaling:
+        Auto Scaling can automatically adjust the number of instances based on changing traffic patterns and performance metrics.
+        It can scale out (add instances) during traffic spikes and scale in (remove instances) during periods of lower demand.
+
+    Scheduled Scaling:
+        You can schedule scaling actions to occur at specific times or dates.
+        This is useful for handling predictable traffic patterns or planned maintenance events.
+
+    Target Tracking Scaling:
+        Auto Scaling can target a specific metric (e.g., CPU utilization) and automatically adjust the number of instances to maintain a predefined target value.
+
+    Simple and Step Scaling:
+        Simple scaling policies allow you to specify static adjustments (e.g., add or remove a fixed number of instances).
+        Step scaling policies allow you to specify adjustments based on various conditions and steps.
+
+    Integration with Application Load Balancers:
+        Auto Scaling works seamlessly with Application Load Balancers (ALB) to distribute traffic evenly across instances.
+
+    Integration with AWS CloudWatch:
+        Auto Scaling leverages Amazon CloudWatch to monitor metrics and trigger scaling events based on alarms and thresholds.
+
+    Instance Termination Policies:
+        You can define policies that determine which instances should be terminated when scaling in.
+
+AWS Auto Scaling simplifies the management of your infrastructure by 
+automating the scaling process based on your application's requirements and 
+resource usage. It helps you maintain application availability, 
+optimize resource utilization, and reduce operational overhead.
+
+

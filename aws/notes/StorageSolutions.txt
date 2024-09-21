@@ -1,0 +1,55 @@
+DEVELOPING STORAGE SOLUTIONS, MODULE 3
+
+The essential part of an S3 bucket are objects, buckets, and keys
+keys: the name of the object
+objects: the data itself
+buckets: containers for objects
+
+S3 bucket names are globally unique, and must be unique across all regions
+Buckets are located in regions, and can be accessed from anywhere. 
+Objects in buckets are referenced through virtual-host-style URLs
+Prefixes imply a folder structure in an S3 bucket 
+
+Two types of Meta-Data: 
+    1. System-defined metadata: object creation date, size, etc.
+    2. User-defined metadata: custom metadata, such as tags
+
+Put Object:
+    Use the put object API to upload objects to S3
+    Use multipart if above 100MB. Must use over 5 GB
+
+Use the Select API to retrieve only a subset of data from an object
+    Use SQL expressions to filter data
+    Use the Select API to retrieve only a subset of data from an object
+    Use SQL expressions to filter data
+
+Versioning is a feature that allows you to preserve, retrieve, and restore every version of every object stored in an S3 bucket
+    Versioning is enabled at the bucket level
+    Versioning is disabled by default
+    Versioning is a great way to protect against unintended overwrites and deletions
+
+You can use the delete option with two options:
+    1. Versioning enabled 
+        - Must delete specific version
+    2. Versioning disabled
+        - object is deleted
+    
+Three total S3 operations:
+    1. PUT
+    2. GET
+    3. DELETE
+
+Data Encryption:
+    1. Data in Transit:
+        - SSL/TLS
+        - encryption before uploading to S3
+    2. Data at Rest:
+        - Server Side Encryption
+            - S3 Managed Keys (SSE-S3)
+            - AWS Key Management Service (SSE-KMS)
+            - Server Side Encryption with Customer Provided Keys (SSE-C)
+        - Client Side Encryption
+            - Client Side Encryption with AWS KMS Managed Keys (CSE-KMS)
+            - Client Side Encryption with Customer Provided Keys (CSE-C)
+    
+    

@@ -1,0 +1,244 @@
+There are three parts of the Linux system: the kernel, the shell, and the programs.
+kernel: the core of the system, responsible for managing the hardware, running the programs, and maintaining the file system.
+shell: the interface between the user and the kernel, which allows the user to interact with the system.
+programs: the applications that run on the system, such as text editors, web browsers, and games.
+
+The BASH is the most common shell used in Linux systems. It stands for "Bourne Again SHell" 
+
+the file /etc/passwd conatins the users's information like: 
+ username, group id, user id, home directory, and the shell that the user uses.
+The shadow file /etc/shadow contains the encrypted passwords of the users.
+
+The operating system manages programs. Each program makes system calls to the kernel to request resources. 
+Types of Commands: Built in, External, Aliases, and Functions
+Built in: Commands that are part of the shell itself. They are executed directly by the shell. (cd, echo, pwd, etc.)
+External: separate programs, like ls, grep, find, etc.
+Aliases: user-defined shortcuts for commands. (alias ll='ls -l')
+Functions: user-defined functions that can be used in the shell. (function ll { ls -l $@; }) Can override built in
+
+Double quotes: Allows some variables in the string to be expanded. (echo "Hello $USER")
+Single quotes: String literal
+
+Special character: "!!" - repeats the last command.
+
+WildCards: *, $, `, \, and !     Wildcards cant be blocked by double quotes. 
+
+Options are specified by the "-" dash character. Like ls -A
+Example: ls -ltr (list in long format, sorted by time, in reverse order)
+If an option has a parameter, put it at the end or separate by a space. ls -lr -w 40 OR ls -w 40 -T 12
+
+The exec command replaces the current shell with the command you specify and kills anything remaining in the script 
+The fork command DOES create a new process and keeps the current script running 
+
+uname is used to get information about the system. uname -a for all info or uname --help 
+
+pwd = print working directory 
+type [command] to view the type of command it is.
+
+Use the 'which' command to find the location of a command.
+
+Use the 'man' pages for linux commands to help understand what they do. 
+Use SHIFT + H to view help on the 'less' pager (to view man pages)
+To navigate man pages: j,k (up and down one line) d,u to go up and down
+/term (search) and press n to find next term (like vim)
+
+man passwd -f will search man pages for the term 'passwd' (can have multiple matches)
+'whatis' command does the same thing
+man -k password will search all man pages for the term 'password'
+
+Variables 
+
+commands can be put into variables. Make sure to capitalize them with no invalid special characters. 
+Examples: INITIATE_LOCKDOWN = "echo 'Lockdown initiated'"
+Export it directly to the shell with export INITIATE_LOCKDOWN or export INITIATE_LOCKDOWN="echo 'Lockdown initiated'"
+To use the variable, use $INITIATE_LOCKDOWN
+To remove variables, use unset INITIATE_LOCKDOWN
+
+To view created variables, use the 'env' command 
+To View language settings, use 'locale' command
+to Set language to english: sudo update-locale LANG=en_US.UTF-8
+
+View environment 
+
+/bin - contains essential command binaries
+/sbin - contains essential admin commands 
+/usr/bin - commands available for usr to execute 
+
+Must specify full path if you want to execute a command not in the PATH variable.
+
+global configuration files are stored in /etc
+
+Login Shells are one when you log in using SSH or the console. 
+Login SHells read /etc/profile, ~/.bash_profile, ~/.bash_login, ~/.profile
+Non-login shells are when you open a terminal window.
+Non-login shells read ~/.bashrc
+
+/etc/profile - used for system wide login settings
+/etc/bashrc - used by admin for global settings
+~/.bash_profile, ~/.bash_login, ~/.profile - used by users for personal settings
+~/.bashrc - used by users for personal settings *** Located on UBUNTU MACHINES
+
+Append a path to PATH variable: export PATH=$PATH:/path/to/append
+
+There is a file called ~./bash_logout that runs scripts when the user logs out of the shell
+or closes the window. Can perform cleanup operations and such. 
+
+use CTRL + D to log out of the shell
+use CTRL + C to stop a running command
+use CTRL + Z to pause a running command
+use CTRL + R to search command history
+
+NAVIGATION
+set -o vi
+
+etc/inputrc is a file that contains keybindings for the shell.
+
+Use the history command to view the history of commands
+history n where n is the number of commands to display
+history -c to clear the history
+history -w to write the history to a file
+history -r to read the history from a fileGlobbing is to use a wild card 
+Use man 7 glob to view the manual page for globbing
+    * - matches any character
+    ? - matches any single character
+    [...] - matches any character in the brackets
+    [!...] - matches any character not in the brackets
+    {...} - matches any of the comma separated patterns
+    A-F = ABCDEF
+    a-f = abcdef
+    0-9 = 0123456789
+
+Examples:
+    echo D*n* - match any file that starts with D and has n in it
+    echo ??? - match any file with 3 character
+    echo w?? - starts with w and has 2 characters
+    echo w??* - stars with w and has 2 or more characters
+    echo [PMT]* - match any file that starts with P, M, or T
+    echo /etc/rc[3-6]* - match any file that starts with /etc/rc3, /etc/rc4, /etc/rc5, /etc/rc6
+
+
+
+lists files in long notation
+ls -l 
+
+First line of the output:
+d = directory 
+- = regular file
+1 = symbolic link (points to another file)
+s = socket (communication)
+p = pipe (communication)
+b = block device (hardware communication)
+c = character file (hardware communication)
+
+The next 9 characters repsent the permissions of the file
+User Owner, Group Owner, Other 
+r = read 
+w = write 
+x = execute
+
+Example:
+root is the owner and the group owner too
+size is 0 bytes 
+date is 2019-07-07 12:00
+file name is file.txt
+-rw-r--r-- 1 root root 0 2019-07-07 12:00 file.txt
+
+ls command options:
+-s sort by file size 
+-t sort by time
+-r reverse the order
+-lh human readable file size
+-R recursive list of files in subdirectories
+
+Use the 'file' command to view the file type
+use 'cat' to view the contents of the file
+
+'touch' command creates a new file
+or updates the timestamp of an existing file
+
+rm -i command prompts before delete file
+/ 	The root of the primary filesystem hierarchy.
+/bin 	Contains essential user binary executables.
+/boot 	Contains the kernel and bootloader files.
+/dev 	Populated with files representing attached devices.
+/etc 	Configuration files specific to the host.
+/home 	Common location for user home directories.
+/lib 	Essential libraries to support /bin and /sbin executables.
+/mnt 	Mount point for temporarily mounting a filesystem.
+/opt 	Optional third-party add-on software.
+/root 	Home directory for the root user.
+/sbin 	Contains system or administrative binary executables.
+/srv 	May contain data provided by system services.
+/tmp 	Location for creating temporary files.
+/usr 	The root of the secondary filesystem hierarchy.
+/usr/bin 	Contains the majority of the user commands.
+/usr/include 	Header files for compiling C-based software.
+/usr/lib 	Shared libraries to support /usr/bin and /usr/sbin.
+/usr/local 	The root of the third filesystem hierarchy for local software.
+/usr/sbin 	Non-vital system or administrative executables.
+/usr/share 	Location for architecturally-independent data files.
+/usr/share/dict 	Word lists.
+/usr/share/doc 	Documentation for software packages.
+/usr/share/info 	Information pages for software packages.
+/usr/share/locale 	Locale information.
+/usr/share/man 	Location for man pages.
+/usr/share/nls 	Native language support files.
+
+
+locate is old and depreciated, use find instead 
+
+find [OPTIONS]... [starting-point...] [expression]
+-iname LOSTFILE 	Case insensitive search by name.
+-mtime -3 	Files modified less than three days ago.
+-mmin -10 	Files modified less than ten minutes ago.
+-size +1M 	Files larger than one megabyte.
+-user joe 	Files owned by the user joe.
+-nouser 	Files not owned by any user.
+-empty 	Files that are empty.
+-type d 	Files that are directory files.
+-maxdepth 1 	Do not use recursion to enter subdirectories; only search the primary directory.
+-size +1M 	Files larger than one megabyte.
+-size -1K 	Files smaller than one kilobyte.
+
+multiple criteria can be chained together with -a (and) or -o (or)
+find . -user sysadmin -o -name Downloads
+
+You can also pipe the output of the find command to less 
+
+use the whereis command to find the file paths of a command that is attached to your path 
+whereis [OPTION] [Name]
+Example: whereis pip 
+output: pip: /usr/bin/pip /usr/local/bin/pip /home/x1b3d3ad/.local/bin/pip /usr/share/man/man1/pip.1.gz
+
+common options:
+-b 	Search for binaries.
+-m 	Search for manual pages.
+-s 	Search for source code.
+-u 	Search for binaries and source code.
+
+
+------ Type command -------
+The type command is used to determine the type of a command.
+type [OPTION] [COMMAND]
+Can determine if a command is an alias, a built-in command, a function, or an external command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The cat command can be really useful 
+
+cat [OPTION] [FILE]
+Example: cat 07TextUtils.txt - outputs the content of the file to the terminal 
+But it can also concatenate files together - cat file1 file2 file3 > newfile

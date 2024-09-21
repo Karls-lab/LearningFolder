@@ -3,29 +3,45 @@ VIM GUIDE
 
 NORMAL MODE COMMANDS
     u       The undo command, undos the most recent change. 
-
     ''      The last position of the cursor.
-
     e       Move to the end of the word.
-
     b       Move to the beginning of the previous word.
-
     w       Move to the beginning of the next word.
-
     $       Move to the end of the line.
 
 
 INSERT MODE COMMANDS 
     i       Insert before the cursor.
-
     a       Insert (append) after the cursor.
-
     A       Insert (append) at the end of the line.
-
     o       Append (open) a new line below the current line.
-
     O       Append (open) a new line above the current line.
-
     ea      Insert (append) at the end of the word.
-
     Esc     Exit insert mode.
+
+
+DELETE COMMANDS 
+    dd     Delete (cut) a line.
+    dw     Delete (cut) a word.
+    d3w    Delete (cut) three words.
+    dd3    Delete (cut) three lines.
+
+
+YANK COMMANDS 
+    yy     Yank (copy) a line.
+    y3w    Yank (copy) three words.
+    p      Put (paste) the clipboard after the cursor.
+
+/term - search forward for a term 
+?term - search backward for a term
+
+
+EX MODE 
+    :w      Write (save) the file, but don't exit.
+    :wq     Write (save) and quit.
+    :q      Quit (fails if there are unsaved changes).
+    :q!     Quit and throw away unsaved changes.
+    :e!     Revert to the last saved version.
+    :1      Go to the first line. Or any other line specified.
+    :e filename Open a file in a new buffer.
+    :WW     Write the file and quit.

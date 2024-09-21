@@ -1,0 +1,1164 @@
+MODULE 10 NOTES - AUTOSCALING AND LOAD BALANCING
+
+Section 1: Elastic Load Balancing 
+    With millions of incoming connections, elastic load balancing 
+    automatically distributes incoming application traffic across multiple
+    targets, such as Amazon EC2 instances, containers, IP addresses, and
+    Lambda functions. It can handle the varying load of your application
+    traffic in a single Availability Zone or across multiple Availability
+    Zones. 
+    Elastic Load Balancing offers three types of load balancers
+    1. Application Load Balancers: HTTP and HTTPS traffic
+    2. Network Load Balancers: TCP, TLS, and UDP traffic (extreme performance)
+    3. Classic Load Balancers: HTTP, HTTPS, TCP, and SSL traffic (everything else)
+
+    Application and Network balance by targeting certain groups 
+    Classic targets EC2 instances
+
+    Load Balancing Monitoring:
+    1. CloudWatch Metrics: alarm if goes outside of metrics 
+    2. Access logs: detailed information 
+    3. AWS CloudTrail logs: who, what, when, and where someone did something. 
+
+
+Section 2: Amazon CloudWatch
+    Metrics, Dashboards, Logs, Events, Canary Tests, Container Insights, Integration 
+    Threshold must be definite like code. 
+
+Section 3: Amazon EC2 Auto Scaling 
+    Amazon Web Services (AWS) Auto Scaling is a service that automatically adjusts the capacity of your AWS resources to handle varying workloads. It helps you ensure that your applications are both highly available and cost-efficient by automatically adding or removing resources based on predefined scaling policies. Auto Scaling is commonly used with Amazon Elastic Compute Cloud (EC2) instances, but it can also be used with other AWS services.
+
+Key features and concepts of AWS Auto Scaling include:
+
+    Scaling Groups:
+        Auto Scaling uses groups to organize and manage instances that are launched from a common Amazon Machine Image (AMI).
+        Scaling groups define the minimum, desired, and maximum number of instances to maintain.
+
+    Scaling Policies:
+        Scaling policies define the conditions under which Auto Scaling should add or remove instances.
+        You can create policies based on various metrics like CPU utilization, network traffic, or custom CloudWatch metrics.
+
+    Launch Configurations or Launch Templates:
+        These configurations specify the instance type, AMI, and other settings for instances launched by Auto Scaling.
+        Launch configurations are being phased out in favor of launch templates.
+
+    Dynamic Scaling:
+        Auto Scaling can automatically adjust the number of instances based on changing traffic patterns and performance metrics.
+        It can scale out (add instances) during traffic spikes and scale in (remove instances) during periods of lower demand.
+
+    Scheduled Scaling:
+        You can schedule scaling actions to occur at specific times or dates.
+        This is useful for handling predictable traffic patterns or planned maintenance events.
+
+    Target Tracking Scaling:
+        Auto Scaling can target a specific metric (e.g., CPU utilization) and automatically adjust the number of instances to maintain a predefined target value.
+
+    Simple and Step Scaling:
+        Simple scaling policies allow you to specify static adjustments (e.g., add or remove a fixed number of instances).
+        Step scaling policies allow you to specify adjustments based on various conditions and steps.
+
+    Integration with Application Load Balancers:
+        Auto Scaling works seamlessly with Application Load Balancers (ALB) to distribute traffic evenly across instances.
+
+    Integration with AWS CloudWatch:
+        Auto Scaling leverages Amazon CloudWatch to monitor metrics and trigger scaling events based on alarms and thresholds.
+
+    Instance Termination Policies:
+        You can define policies that determine which instances should be terminated when scaling in.
+
+AWS Auto Scaling simplifies the management of your infrastructure by 
+automating the scaling process based on your application's requirements and 
+resource usage. It helps you maintain application availability, 
+optimize resource utilization, and reduce operational overhead.
+
+
+AWS INTRODUCTION NOTES 
+
+
+Amazon VPC:
+    Stands for Virtual Private Cloud 
+    Creates a logically isolated section in the AWS cloud 
+
+    Benefits:
+        Isolation
+        Custom IP Address Ranges 
+        Subnets(different availability zones, but same region)
+        Security Groups (Amazon firewalls)
+        VPN Connectivity for secure access
+        Transit Gateways: VPC can talk to each other directly 
+        VPC can talk to other Amazon Services without going through the internet 
+
+    Subnets are given 256 IP addresses, but some are reserved, so only 251 available 
+
+    A route table specifies where things should be routed too. 
+    By default, each route table has a default local pointer for local communication 
+
+
+VPC Networking:
+    VPC can come with an internet gateway that is scalable. It 
+    helps the VPC connect to the internet
+
+    A NAT helps the VPC connect to the internet and prevents random internet connections 
+    from messing anything up. It allows address translation
+    Enables instances in a private subnet to connect to the internet
+
+    VPC endpoint: Connects your VPC to supported AWS services
+
+    VPC peering: Connects your VPC to other VPCs
+
+    AWS Site to Site VPN: Connects your VPC to remote networks
+
+    AWS Transit Gateway: A hub and spoke connection alternative to VPC peering
+
+
+VPC Security
+    Each instance of an VPC has it's own Security group
+    A security group filters traffic like a firewall 
+    Default: Allow all outbound, deny all inbound 
+
+    You can specify allow rules, but not deny rules 
+
+    A network ACL (Access control list) is optional. It is like 
+    a firewall for one or more subnets. ACL's can allow or deny traffic 
+    It's stateless, meaning return traffic must be explicitly allowed
+    By default, ACL's deny everything 
+
+
+Amazon Route 53 
+    Route 53 is a DNS web service. 
+    Routes names like example.com into 192.168.1.1
+    Features traffic flow
+    You can buy domain names directly through the service. 
+    Health check on endpoints
+    Provides logging and monitoring 
+
+
+Amazon CloudFront 
+    Fast, secure, CDN service for global reach 
+    They use edge locations to reach globally. 
+    Module 6 - Compute 
+
+Section 01: Compute Services Overview 
+
+Quick Overview of Compute Services:
+    Amazon EC2: resizable compute capacity in the cloud
+    Elastic Beanstalk: run and manage web apps
+    Lambda: run code without provisioning or managing servers
+
+    Instance based Computing: 
+        AWS Batch: run batch jobs at any scale
+        Lightsail: launch and manage virtual private servers
+        AWS far gate: run containers without managing servers or clusters
+
+    
+Section 02: Amazon EC2 
+    EC2 provides resizable servers on the cloud to host your servers 
+
+    Steps to Create an EC2:
+        1. choose an Amazon Machine Image (AMI)
+        2. Choose an Instance Type
+            Types: 
+                a, m, t: general purpose 
+                c: compute optimized
+                r,x , z: memory optimized
+                f,g,p: accelerated computing
+                d,h,i: storage optimized
+        3. Specify network settings 
+        4. Attach IAM role (optional)
+            An IAM role is an IAM identity that you can create in your account that has specific permissions.
+        5. User data script 
+            User data is a script that runs when an instance starts. 
+            You can use it to install packages or write files to the instance.
+        6. Add storage
+            EBS: Elastic Block Storage, it is a network drive you can attach to your instances while they run.
+        7. Add tags (optional)
+            Tags are labels you can attach to your AWS resources.
+            They are used to identify, organize, and search for your resources.
+        8. Configure security groups
+            A security group is a virtual firewall that controls the traffic for one or more instances.
+            When you launch an instance, you associate one or more security groups with the instance.
+            You add rules to each security group that allow traffic to or from its associated instances.
+        9. Identify or create the key pair 
+            A key pair, consisting of a private key and a public key, is a set of security credentials 
+            that you use to prove your identity when connecting to an instance.Amazon EC2 stores the public key, 
+            and you store the private key. You use the private key to connect to your instance.
+        
+        Use Cloud Watch to monitor your EC2 instances
+        User scripts configure your instance when it boots up
+        Only instances that are backed up by EBS can be stopped
+
+
+Section 03: Amazon EC2 Cost optimization 
+    
+    Spiky workloads: 
+        Use on-demand instances
+
+    Time-Insensitive workloads:
+        Use reserved instances
+
+    Steady-state workloads:
+        Use spot instances
+
+    Highly sensitive workloads:
+        Use dedicated hosts
+
+    Four pillars of cost optimization:
+        1. Right sizing
+        2. Optimize pricing model 
+        3. Increase elasticity
+        4. Optimize storage
+
+    Spot instances are spare EC2 instances that are available at a discount compared to on-demand pricing.
+        They are cheaper than on-demand instances, but can be taken away from you at any time 
+        if your max price is less than the current spot price.
+
+    
+Section 04: Container Services 
+    Containers are a method of operating system virtualization 
+    Benefits: 
+        - Lightweight
+        - Portable
+        - Loosely coupled
+        - Scalable
+        - Secure
+        - faster to start or stope than EC2 instances
+
+    What is Docker? 
+        Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+        Containers allow a developer to package up an application with all of the parts it needs, 
+        such as libraries and other dependencies, and ship it all out as one package.
+
+    Amazon Elastic Container Service (ECS) 
+        is a container service. Runs docker containers on EC2 instances.
+        Kind of the same as EC2 but with containers.
+        A task is a running container on an EC2 instance.
+
+        Amazon ECS cluster options: Do you want to manage the ECS cluster that runs the containers? 
+            Yes: Create an ECS cluster. 
+            No: Use Fargate, which is a serverless compute engine for containers.
+
+    What is Kubernetics? (EKS)
+        Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, and management.
+        It was originally designed by Google and is now maintained by the Cloud Native Computing Foundation.
+        It manages all of your docker applications. Automates a bunch of things. 
+        Amazon calls it Amazon Elastic Container Service for Kubernetes (EKS)
+
+    Amazon Elastics Container Registry (ECR)
+        is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy 
+        Docker container images. Amazon ECR is integrated with Amazon Elastic Container Service (ECS),
+        simplifying your development to production workflow. Amazon ECR eliminates the need to operate 
+        your own container repositories or worry about scaling the underlying infrastructure.
+        Amazon ECR hosts your images in a highly available and scalable architecture, allowing you
+        to reliably deploy containers for your applications. Integration with AWS Identity and 
+        Access Management (IAM) provides resource-level control of each repository.
+
+
+Section 05: AWS Lambda
+    AWS Lambda is a serverless compute service. 
+    You create a lambda function, which is the AWS resource that contains the code that you upload. 
+    You can then invoke the function over the internet via an API call or from an AWS service that triggers the function.
+    You can also have it on a timer. 
+    * You only pay for the time your code is running.
+
+    Benefits:
+        - No servers to manage
+        - Continuous scaling
+        - Subsecond metering
+        - Integrated with the whole AWS platform
+        - Easy to get started
+
+    Use cases:
+        - Web, mobile, and IoT backends
+        - Real-time file processing
+        - Stream processing
+        - Extract, transform, and load (ETL)
+        - Operational automation
+        - Chatbots
+
+    Hard limits: 
+        RAM: 10GB
+        Function timeout: 15min
+        Package size: 250 MB unzipped 
+        Image code packet size: 10GB 
+
+
+Section 06: Introduction to Elastic Beanstalk 
+    Elastic Beanstalk is a service for deploying and scaling web applications and services.
+    Pay for only what you use. 
+MODULE 07 STORAGE 
+
+General Overview of Storage: 
+    Instance Store is temporary storage that is physically attached to the host computer for an instance.
+
+    EBS (Elastic Block Store) is persistent storage that can be attached to an instance.
+
+    EFS (Elastic File System) is persistent storage that can be attached to multiple instances.
+
+    S3 (Simple Storage Service) is object storage that can be used to store and 
+        retrieve any amount of data, at any time, from anywhere on the web.
+
+    S3 Glacier is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup.
+
+
+Section 01: Amazon Elastic Block Store (EBS)
+    Block Storage vs Object Storage:
+        Block you only need to change the character in the file. Object you need to change the whole file.
+    EBS allows you to create storage volumes and attach them to EC2 instances.
+    Volumes are automatically replicated within the availability zone. 
+
+    Volume types: 
+        General Purpose SSD (GP2) - General purpose, balances both price and performance.
+        Provisioned IOPS SSD (IO1) - Designed for I/O intensive applications such as large relational or NoSQL databases.
+        Throughput Optimized HDD (ST1) - Big data, data warehouses, log processing.
+        Cold HDD (SC1) - Lowest cost storage for infrequently accessed workloads.
+
+    Other EBS features:
+        Snapshots
+        Encryption 
+        Elasticity: increase capacity, change to different types 
+
+    Volumes are independent of the life of an instance.
+
+    EBS Charges: snapshots per GB per month 
+        Inbound data transfer is free. Outbound data transfer is charged per GB.
+
+   
+Section 02: Amazon Simple Storage Service (S3)
+        Simple storage is object based storage. This means if you want to modify/change a file, you 
+        must download the entire file, make the changes, and upload the entire file again.
+
+        S3 stores data as objects within buckets. Buckets are folders. Objects are files.
+        Designed for 11 9's durability, Single object size is 0 bytes to 5 TB. Unlimited storage.
+        You could take entire snapshots of databases into a single object. 
+        
+        S3 buckets are stored in a region and are backed up to multiple availability zones in the same region. 
+
+        S3 offers different types of storage classes: 
+            S3 standard - used for most everything, super durable.
+            S3 Intelligent-Tiering - moves data to the most cost-effective tier. 
+            S3 Standard Infrequent Access (IA) - for data that is accessed less frequently, 
+                                            but requires rapid access when needed.
+            S3 Glacier - very cheap, but used for archival only.
+            S3 Glacier Deep Archive - cheapest, but used for archival only. 
+                Data this is accessed once or twice a year. Spread about 3 availability zones 
+
+        S3 Bucket URLs (two styles):
+            regional style: https://s3-eu-west-1.amazonaws.com/acloudguru
+            path style: https://acloudguru.s3-eu-west-1.amazonaws.com
+
+        Access the data from S3 from anywhere. You can use AWS console, CMD interface, or SDK. 
+
+        Use Cases: 
+            Backup and storage
+            Disaster recovery
+            Archive
+            Big data analytics
+            Hybrid cloud storage
+            Cloud-native applications
+            Static website hosting
+
+        Encryption: 
+            S3 encryption is at the server side.
+            types of S3 encryption: 
+                S3 managed keys - SSE-S3
+                AWS Key Management Service, Managed Keys - SSE-KMS
+                Server Side Encryption with Customer Provided Keys - SSE-C
+                Client Side Encryption - CSE/
+
+        Payment/Charges:
+            You do not pay for data into S3 or transfer to other amazon services in the same region.
+            Pay for storage, requests, and storage management.
+        Things to consider: 
+            1. Storage class type (tiers) 
+            2. Amount of storage 
+            3. Requests, Number and type 
+            4. Data Transfer, watch out for transfer out of availability zones. 
+
+
+Section 03: Amazon Elastic File System (EFS)
+    Will grow and shrink automatically without disturbing the application. 
+    Uses the NFS (network file system) protocol.
+
+    Works well with: 
+        Big data 
+        Media processing 
+        Content management
+        Web serving 
+        Home directories 
+
+    Low latency, shared storage, highly available, scalable, and elastic file system.
+    Can run in multiple availability zones.
+
+
+Section 04: Amazon S3 Glacier 
+    Secure, durable, low cost for archiving and long-term backup.
+    Three terms:
+        Archive - what you are storing in Glacier.
+        Vault - container for archives.
+        Vault access policy - controls access to vaults.
+
+    Three options to retrieve data from Glacier:
+        Expedited - 1 to 5 minutes
+        Standard - 3 to 5 hours
+        Bulk - 5 to 12 hours
+
+    Use Cases:
+        Media archives
+        Healthcare and financial records
+        Regulatory archives
+        Scientific data
+        Digital preservation
+
+    Besides creating and deleting vaults, You must use the SDK or API. 
+
+    Lifecycle policies can be used to move objects from S3 to Glacier or to automatically delete objects based on age.
+    S3 -> 30d ays -> Infrequent Access -> 60 days -> Glacier -> 365 days -> Delete
+    Glacier is more expensive to retrieve data from than S3, but is cheaper to store. 
+
+    MODULE 8, DATABASES
+
+All relational databases offered from amazon can be managed from 
+the AWS console, CLI, or SDK.
+
+Section 1: Amazon Relational Database Service (RDS)
+        
+    Unmanaged vs. Managed Databases
+        Unmanaged: Scaling, Patching, Backups, High Availability, Monitoring, Replication, Failover, etc.
+                    Must all be done manually
+        Managed: AWS handles all of the above for you
+
+    Challenge of relational databases:
+        1. Server maintenance
+        2. Software update and patches 
+        3. Backups 
+        4. Scaling
+        5. Data Security 
+
+    If your database in on EC2, then you still need to patch, updates, and backup 
+    RDS or Aurora, auto scales for you, manage backups and patching for you. 
+
+    Managed Responsibilities
+        You manage:
+            Application optimization 
+        AWS manages:
+            OS installation and patching
+            DB installation and patching
+            Automated backups
+            Availability and reliability
+            Scaling 
+            Server maintenance
+
+    The basic building block is a database instance. 
+        Supports: MySQL, Amazon Aurora, PostgreSQL, Oracle, Microsoft SQL Server, MariaDB. 
+
+    Usually the DB instance is in a private cloud. 
+
+    Read replicas: 
+        Used for scaling read operations. 
+        Can be in the same region or cross region. 
+        Can be in the same VPC or cross VPC. 
+        Can be in the same account or cross account.
+
+    Use cases:
+        Web and mobile applications 
+        Ecommerce applications
+        Mobile and online games 
+
+
+    Do not use RDS when: 
+        Massive read writes (150,000 per sec)
+        Sharding 
+        Simple GET and PUT a noSQL database is better.
+
+    use RDS when:
+        You want a managed service 
+        You want to use a relational database 
+        You want to scale read operations 
+        You want to use a familiar database engine 
+        You want to use a database that is highly available and scalable
+
+    Cost considerations:
+        1. Clock hours/service time 
+        2. Which resources incur charges 
+
+    Purchase types:
+        1. On-demand: compute capacity by the hour 
+        2. Reserved instances: One time payment reserved 1 to 3 years. 
+
+    No charge for backed up DB
+    Charged for backup terminated DB GB/month
+    Charged for backup storage in addition to provisioned storage GB/month
+    AWS backs up your database in a different availability zone.
+
+
+NON-RELATIONAL DATABASES:
+    A non relational database is a database that does not use the tabular
+    schema of rows and columns found in most traditional database systems.
+    They scale out horizontally, and are designed to scale to massive workloads.
+    They prioritize speed and availability over consistency. "Eventually consistent"
+
+
+
+Section 2: Amazon DynamoDB
+    DynamoDB is a non Relational database 
+    A non relational database is a database that does not use the tabular 
+    schema of rows and columns found in most traditional database systems.
+    They scale out horizontally, and are designed to scale to massive workloads.
+
+    DynamoDB is a managed service that sets up and operates a non relational database in the cloud.
+
+    Offers:
+        Virtually unlimited throughput and storage
+        Items can have different attributes 
+        low latency for reads and writes
+
+    Composed of Tables, items, and attributes 
+    Items are a group of attributes that are uniquely identifiable among all other items.
+    Attributes are atomic. 
+    Two different types of keys: 
+        Partition key: a simple primary key and has an attribute called the sort key 
+        Partition key and sort key: a composite primary key.
+
+    Runs exclusively on SSDs
+
+
+SECTION 3: AMAZON REDSHIFT
+    Quick Properties:
+        Fully Managed 
+        Relational Database
+        Used for data analytics 
+        compatible with SQL based clients and business intelligence tools
+
+
+
+SECTION 4 AMAZON Aurora
+    What is it: 
+        A relational database engine that combines the speed and availability of 
+        high end commercial databases with the simplicity and cost effectiveness of open source databases.
+
+    KEY POINTS ABOUT AMAZON AURORA:
+    Amazon Aurora is a high-performance, fully managed relational database service.
+    It is compatible with MySQL and PostgreSQL, which means you can use familiar SQL queries and tools.
+    Aurora offers features such as automatic replication, high availability, and scalability.
+    It is designed to provide low-latency and high-throughput performance for cloud-based applications.
+
+
+MODULE 9: CLOUD ARCHITECTURE
+
+SECTION 1: AWS WELL-ARCHITECTED FRAMEWORK
+    The framework is a set of guidelines to build a robust 
+    and stable AWS application. 
+    Build on 5 Core pillars: 
+
+    1. Operational Excellence
+        Practices to run and monitor systems to deliver business value
+        Defining performance metrics 
+        Automating things like deployments, testing, and infrastructure changes
+
+    2. Security
+        Design systems that focuses on IAM (Identity and Access Management)
+        principle of least privilege. If it's not explicitly allowed, it's denied.
+        Encryption of data in transit and at rest.
+        Logging and auditing of actions and changes to the environment.
+                Security
+                Monitoring
+                Identity and Access Management
+                Detection
+                Infrastructure protection
+                Data protection
+                Incident response
+
+    3. Reliability
+        Systems that can recover from outages. 
+        Fault tolerance, disaster recovery, and incident response. 
+                Automatically recover from failure
+                Test recovery procedures
+                Stop guessing capacity
+                Manage change in automation
+
+
+    4. Performance Efficiency
+        Efficient use of computing resources. 
+        Selecting the right resource types and sizes based on workload requirements.
+        Monitoring Performance. 
+        Four Areas: 
+            1. Tradeoffs 
+            2. Selection 
+            3. Monitoring 
+            4. Review
+        Design Principles:
+            1. Serverless Architecture
+            2. Democratize advanced technologies
+            3. Experiment more often 
+
+    5. Cost Optimization
+        Avoiding unneeded costs. 
+        Selecting the most appropriate and right number of resource types and sizes based on workload requirements.
+        Analyzing spend over time
+        Scaling without wasting resources.
+
+    6. Sustainability
+        Designing for the future. 
+        Using renewable energy sources. 
+        Minimizing the carbon footprint. 
+        
+
+    Benefits:
+        Reliability and availability 
+        Enhanced security
+        Better cost Management and utilization 
+        Reduced operational overhead and increased Efficiency
+        A foundation to build scalable and resilient applications in the cloud 
+
+
+SECTION 2: RELIABILITY AND AVAILABILITY 
+
+    1. Reliability: 
+        Definition: perform intended function without failure or disruptions
+        Importance: available when needed, minimize downtime for customers 
+        AWS practices: Services provided by AWS include: auto-scaling, 
+            load balancing, and data redundancy across multiple availability zones    
+        
+    2. Availability:
+        Definition: Measures the percentage of time that a system is operational. 
+            Called mean time between failures (MTBF) = total time / number of failures. 
+            Percentage of up-time 
+        Importance: Customers expect services to be available when needed.
+            Make sure your customers are happy. 
+        AWS practices
+
+    Key practices to ensure Reliability and Availability:
+        1. Multi availability zones 
+        2. Auto scaling 
+        3. Elastic load balancing
+        4. Data replication 
+        5. Disaster recovery
+        6. Monitoring and Alerting 
+        7. Highly resilient architecture 
+        8. Regular Testing 
+        9. Security best practices
+
+
+SECTION 3: AWS TRUSTED ADVISOR 
+    Realtime tool that provides guidance to help you provision your resources
+    Looks at entire AWS environment and gives you recommendations in 5 categories: 
+        1. Cost Optimization
+        2. Performance 
+        3. Security 
+        4. Fault Tolerance
+        5. Service Limits
+
+
+    Which of the following AWS tools help your application scale up or down based on demand?
+Amazon EC2 Auto Scaling
+Elastic Load Balancing
+Which service would you use to send alerts based on Amazon CloudWatch alarms?
+Amazon Simple Notification Service (Amazon SNS)
+Which of the following are characteristics of Amazon EC2 Auto Scaling?
+Choose three
+Responds to changing conditions by adding or terminating instances
+Launches instances from a specified Amazon Machine Image (AMI)
+Enforces a minimum number of running Amazon EC2 instances
+Which of the following must be configured on an Elastic Load Balancing load balancer to expect incoming traffic
+A listener
+Which of the following elements are used to create an Amazon EC2 Auto Scaling launch configuration?
+Amazon Machine Image (AMI)
+Instance type
+Amazon Elastic Block Store (Amazon EBS) volumes
+Which of the following services can help you conflict important metrics from Amazon Relational Database Service (Amazon RDS) and Amazon Elastic Compute Cloud (Amazon EC2) instances?
+Amazon Watch
+Which of the following are elements of an Auto Scaling group
+(Choose three)
+Maximum size
+Desired capacity
+Minimum size
+There is an adult at your company and they need to have a big log of all access to AWS resources in the account. Which of the following services can assist in providing these details?
+AWS CloudTrail
+In Elastic Load Balancing, when the load balancing detects an unhealthy target, which of the following are true
+(Choose three)
+Stops routing traffic to that target
+Resumes routing traffic when it detects that the target is healthy again
+Routes traffic to a healthy target
+What are the three types of load balancers that Elastic Load Balancing offers?
+(Choose three)
+Application Load Balancer
+Network Load Balancer
+Classic Load Balancer
+
+
+MODULE 1:
+What are the advantages of cloud computing over computing on-premises?
+All of the above
+
+Avoid large capital purchases
+Use on-demand capacity
+Increase speed and agility
+What is the pricing model that enables AWS customers to pay for resources on an as-needed basis?
+Pay as you go
+Which of these is not a cloud deployment
+System administration as a service
+True of False? AWS owns and maintains the network-connected hardware required for application services, while you provision and use what you need.
+True
+Which of these is not a benefit of cloud computing over on-premises computing?
+Pay for racking, stacking, and powering services
+Which of the following are not benefits of AWS Cloud computing?
+High Latency
+Multiple procurement cycles
+Which of the following is a compute service? (Select the best answer)
+Amazon EC2
+True or False? Cloud Computing provides a simple way to access servers, storage, databases, and a broad set of application services over the internet. You own the network-connected hardware required for these services and Amazon Web Services provisions what you need.
+False
+Economics of Scale result from_______
+having hundreds of thousands of customers aggregated in cloud
+
+MODULE 2: 
+For certain services like Amazon Elastic Compute Cloud (Amazon EC2) and Amazon Relational Database Service (Amazon RDS), you can invest in reserved capacity. What options are available for Reserved Instances?
+AURI
+NURI
+PURI
+Where can a customer go to get more details about Amazon Elastic Compute Cloud (Amazon EC2) billing activity that took the place 3 months ago?
+AWS Cost Explorer
+True or false? To receive the discounted rate associated with Reserved Instances, you must make a full, upfront payment for the term of the agreement
+False
+There is no charge for which of the following?
+Inbound data transfer (with some exceptions)
+Data transfer between services within the same AWS Reg
+What are the four support plans offered by AWS Support?
+Basic, Developer, Business, Enterprise
+What AWS tool compares the cost of running your application in an on-premises data center to AWS?
+Total Cost of Ownership (TCO) calculator
+As AWS grows, the cost of doing business is reduced and savings are passed back to the customer with lower pricing. What is this optimization called?
+Economics of scale
+True or false? AWS offers a variety of services at no charge, for example, Amazon Virtual Private Cloud (Amazon VPC), AWS Identity and Access Management (IAM), Consolidated Billing, AWS Elastic Beanstalk, automatic scaling, AWS OpsWorks and AWS CloudFormation. However, you might be charged for other AWS services that you use in conjunction with these services
+True
+When are free data transfers applicable across AWS?
+Free inbound data transfer for Amazon Elastic Computer Cloud (Amazon EC2) instances
+
+Free outbound data transfer between AWS services within the same Region
+True of false? Unlimited services are available with the AWS Free Tier to new AWS customers for 12 months following their AWS sign-up date.
+False
+
+
+Module 3:
+Which component of the AWS Global Infrastructure does Amazon Cloudfront use to ensure low-latency delivery? (Select the best answer.)
+Amazon CloudFront uses AWS edge locations to ensure low-latency delivery.
+You can run applications and workloads from a Region closer to the end users to _______ latency
+You can run applications and workloads from a region closer to the end users to decrease latency.
+True or False? Networking, storage, compute, and databases are examples of service categories that AWS offers.
+These are examples of services that AWS offers.
+Which of the following are geographic areas that host two or more Availability Zones? (Select the best answer.)
+AWS Regions host two or more availability zones.
+_____ means the infrastructure has built-in component redundancy and ____ means that resources dynamically adjust to increases or decreases in capacity requirements.
+Fault tolerant means that the infrastructure has built-in component redundancy and elastic and scalable means that resources dynamically adjust to increases or decreases in capacity requirements.
+True or False? Availability Zones within a Region are connected through low-latency links.
+It's true that Availability Zones within a Region are connected through low latency links.
+Which of these statements about Availability Zones is not true? (Select the best answer.)
+A data center cannot be used for more than one Availability Zone.
+What is true about Regions? (Choose two.)
+Low Latency links
+AWS highly recommends provisioning your compute resources across _____ Availability Zones. (Select the best answer.)
+AWS highly recommends provisioning your compute resources across multiple Availability Zones.
+True or False? Edge locations are only located in the same general area as Regions.
+Edge locations do not need to be located in the same general area as Regions.
+
+
+Module 4: 
+In the shared responsibility model, AWS is responsible for providing what? (Select the best answer).
+
+Security of the cloud.
+Security to the cloud.
+Security for the cloud.
+Security in the cloud.
+Security of the cloud.
+In the shared responsibility model, which of the following are examples of "security in the cloud?" (Choose two).
+
+Compliance with compute security standards and regulation.
+Physical security of the facilities in which the services operate.
+Security group configurations.
+Encryption of data at rest and data in transit.
+Protecting the global infrastructure.
+Security group configurations.
+Encryption of data at rest and data in transit.
+Which of the following is the responsibility of AWS under the AWS shared responsibility model? (Select the best answer).
+
+Configuring third party applications.
+Maintaining physical hardware.
+Security application access and data.
+Managing custom Amazon machine images (AMI's).
+Maintaining physical hardware.
+When creating an AWS Identity and Access Management (IAM) policy, what are the two types of access that can be granted to a user? (Choose two).
+
+Institutuional Access.
+Authorized Access.
+Programmatic Access.
+AWS Management Console Access.
+Administrative Root Access.
+Programmatic Access.
+AWS Management Console Access.
+True or false? AWS organizations enables you to consolidate multiple aws accounts so that you centrally manage them.
+
+True.
+False.
+True.
+Which of the following are best practices to secure your account using aws identity and access management? (Choose 2).
+
+Provide users with default administrative privileges.
+Leave unused and unnecessary users and credentials in place.
+Manage access to AWS resources.
+Avoid using IAM groups to grant the same access permissions to multiple users.
+Define fine-grained access rights.
+Manage access to AWS resources.
+Define fine-grained access rights.
+Which of the following should be done by the AWS account root user? (Select the best answer).
+
+Secure access for applications.
+Integrate with other AWS services.
+Change granular permissions.
+Change the AWS support plan.
+Change the AWS support plan.
+After initial login, what does AWS recommend as the best practice for the AWS account root user?
+
+Delete the AWS account root user.
+Revoke all permissions on the AWS account root user.
+Restrict permission on the AWS account root user.
+Delete the access keys of the AWS account root user.
+Delete the access keys of the AWS account root user.
+How would a system administrator add an additional layer of login security to a user's AWS management console?
+
+Use Amazon Cloud Directory.
+Audit AWS Identity and Access Management (IAM) roles.
+Enable multi-factor authentication.
+Enable AWS CloudTrail.
+Enable multi-factor authentication.
+True or false? AWS key management service (AWS KMS) enables you to assess, audit, and evaluate the configurations of your AWS resources.
+
+True.
+False.
+False.
+
+*AWS KMS is a service that allows you to create and manage encryption keys and control the use of encryption across a wide range of AWS services and in your applications.
+
+
+Module 5: 
+With Amazon Virtual Private Cloud (Amazon VPC), what is the smallest size subnet you can have in VPC? (Select the best answer).
+
+/28
+/26
+/30
+/24
+/28
+With Amazon VPC, what is the maximum size IP address range you can have? (Select the best answer).
+
+/24
+/16
+/28
+/30
+/16
+You need to allow resources in private subnet to access the internet. which of the following must be present to enable access? (Select the best answer).
+
+Security groups.
+Route tables.
+NAT gateway.
+Network access control lists.
+NAT gateway.
+Which AWS networking service enables a company to create a virtual network within AWS? (Select the best answer).
+
+Amazon Virtual Private Cloud (Amazon VPC).
+AWS Config.
+Amazon Route 53.
+AWS Direct Connect.
+Amazon Virtual Private Cloud (Amazon VPC).
+True or false? Private subnets have direct access to the internet.
+
+True.
+False.
+False.
+Which component of aws global infrastructure does Amazon Cloudfront use to ensure low-latency delivery? (Select the best answer).
+
+Amazon Virtual Private Cloud (Amazon VPC).
+AWS Availability Zones.
+AWS Regions.
+AWS Edge Locations.
+AWS Edge Locations.
+Which of the following is an optional security control that can be applied at the subnet layer of a VPC? (Select the best answer).
+
+Firewall.
+Network ACL.
+Web application firewall.
+Security group.
+Network ACL.
+What happens when you use Amazon Virtual Private Cloud to create a new VPC? (Select the best answer).
+
+An internet gateway is created by defualt.
+Three subnets are created by default: in one Availability Zone.
+Three subnets are created by default: one for each Availability Zone.
+A main route table is created by default.
+A main route table is created by default.
+Which of the following can be used to protect Amazon Elastic Compute Cloud (Amazon EC2) instances hosted in AWS? (Select the best answer).
+
+AMI.
+All of the above.
+Security group.
+Internet Gateway.
+Security Group.
+
+*Acts as a virtual firewall for your instance to control inbound and outbound traffic.
+You are a solutions architect who works at a large retail company that is migrating its existing infrastructure to AWS. You recommend that they use a custom VPC. When you create a VPC, you assign it to an IPv4 Classless Inter-Domain Routing (CIDR) block of 10.0.1.0/24 (Which has 256 total IP addresses). How many IP addresses are available?
+
+246.
+251.
+256.
+250.
+251.
+
+* The subnet has 256 IP addresses but only 251 are available because 5 are reserved.
+
+
+Module 6:
+Why is AWS more economical than traditional data centers for applications with varying compute workloads? (Select the best answer).
+
+Amazon EC2 Costs are billed on a monthly basis.
+Customers retain full administrative access to their Amazon EC2 instances.
+Customers can permanently run enough instances to handle peak workloads.
+Amazon EC2 instances can be launched on-demand when needed.
+Amazon EC2 instances can be launched on-demand when needed.
+If your project requires monthly reports that iterate through very large amounts of data, which Amazon Elastic Compute Cloud EC2 purchasing option should you consider? (Select the best answer).
+
+Spot Instances.
+Scheduled Reserved Instances.
+Dedicated Hosts.
+On-Demand Instances.
+Scheduled Reserved Instances.
+What is included in an Amazon Machine Image (AMI)? Select the best answer.
+
+A template for the root volume for the instance.
+Launch permissions that control which AWS accounts can use the AMI to launch instances.
+A block device mapping that specifies the volumes to attach to the instance when it's launched.
+All of the above.
+All of the above.
+Which Amazon Elastic Compute Cloud EC2 feature ensures your instances will not share a physical host with instances from any other AWS customer? (Select the best answer).
+
+Amazon VPC.
+Placement Groups.
+Dedicated Instances.
+Reserved Instances.
+Dedicated Instances.
+Which of the following services is a serverless compute service in AWS? (Select the best answer).
+
+AWS Config.
+AWS Lambda.
+AWS OpsWork.
+Amazon EC2.
+AWS Lambda.
+What is the service provided by AWS that enables developers to easily deploy and manage applications in the cloud? (Select the best answer).
+
+Amazon Elastic Container Service.
+AWS Elastic Beanstalk.
+AWS OpsWork
+AWS CloudFormation
+AWS Elastic Beanstalk.
+
+*Elastic Beanstalk is an AWS compute service option. It is a Platform as a Service (or PaaS) that facilitates quick deployment, scaling, and managing of your web applications and services.
+Your web application needs four instances to support steady traffic all of the time. On the last day of the month, the traffic triples. What is the most cost-effective way to handle this pattern? (Select the best answer).
+
+Run 12 reserved instances all of the time.
+Run four On-demand Instances constantly, then add eight more On-Demand on the last day of each month.
+Run four Reserved Instances constantly, then add eight On-Demand Instances on the last day of each month.
+Run four On-Demand Instances constantly, then add eight Reserved Instances on the last day of each month.
+Run four Reserved Instances constantly, then add eight On-Demand Instances on the last day of each month.
+
+*Reserved Instances provide cost savings when you can commit to running instances full-time, such as to handle the base traffic. On-Demand Instances provide the flexibility to handle traffic spikes.
+True or false? Containers contain an entire operating system.
+
+True.
+False.
+False.
+
+*Containers are smaller than virtual machines, and do not contain an entire operating system.
+Which Amazon EC2 optiion is best for long-term workload with predictable usage patterns? (Select the best answer).
+
+Spot Instances.
+On-Demand Instances.
+Reserved Instances.
+Reserved Instances.
+Which of the following must be specified when launching a new Amazon Elastic Cloud Compute EC2 windows instance? (Choose two).
+
+Amazon EC2 instance type.
+Amazon Machine Image (AMI).
+The Amazon EC2 Instance ID.
+Password for the administrator account.
+Amazon EC2 instance type.
+Amazon Machine Image (AMI).
+
+*AWS assigns the EC2 instance ID as part of the launch process and the administrator password, which is encrypted via the public key. The instance type defines the virtual hardware and the AMI defines the inital software state. Both must be specified on launch.
+
+
+Module 7:
+True or false. Amazon simple storage service S3 is an object storage suitable for the storage of flat files like Microsoft Word documents, photos, etc.
+
+True
+False
+True.
+Amazon S3 replicates all objects _____. (Select the best answer).
+
+-On multiple volumes within an availability zone.
+-In multiple Availability zones within the same region.
+-Across multiple regions for higher durability.
+-On multiple S3 buckets.
+In multiple Availability zones within the same region.
+Which of the following can be used as a storage class for an S3 object lifecycle policy?
+
+-S3 Standard Access.
+-AWS Storage Gateway.
+-S3 Infrequent Access.
+-Simple Storage Service Glacier.
+-S3 Reduced Redundancy Storage.
+-Amazon Dynamo DB.
+Glacier, S3 infrequent access and S3 standard access.
+The name of an S3 bucket must be unique.
+
+-Worldwide across all AWS accounts.
+-Within a region.
+-Across all your AWS accounts.
+-Within your AWS account.
+Worldwide across all AWS accounts.
+You can use amazon elastic file system efc to: (Select the best answer).
+
+-Provide simple, scalable, elastic file storage for use only within AWS.
+-Implement storage for Amazon EC2 instances that multiple virtual machines can access at the same time.
+-Host a robust CDN to deliver entire web sites with dynamic, static, and streaming content.
+-Generate user specific content.
+Implement storage for EC2 instances that multiple virtual machines can access at the same time.
+Amazon Elastic Block Storage (Amazon EBS) is recommended when data _____ and ______ (Choose two).
+
+-Requires object level storage.
+-Must be quickly accessbile, requiring long-term persistence.
+-Requires an encryption solution.
+-Needs to be stored in a different availability zone than the one the EC2 instance is in.
+Must be quickly accessible, requiring longterm persistence and requires an encryption solution.
+True or false, by default all data stored in amazon S3 is viewable by the public.
+
+True.
+False.
+False.
+Regarding amazon S3 glacier, what is a vault?
+
+-The rules that determine who may (or may not) access archives.
+-An object (photos, videos, files, or documents).
+-A container for storing archives.
+-A policy that identifies who can access content stored in Glacier.
+Container for storing archives.
+True or false. When you create a bucket in amazon S3, it is associated with a specific aws region.
+
+True.
+False.
+True.
+Which of the following are features of Amazon Elastic Block Store (Amazon EBS). (Choose two).
+
+-Data on an Amazon EBS volume is lost when the attched instance is stopped.
+-Amazon EBS volumes can be encrypted transparently to workloads on the attached instance.
+-Amazon EBS data is automatically backed up to tape.
+-Data stored on Amazone EBS is automatically replicated within an Availability Zone.
+-Amazon EBS volumes can be encrypted transparently to workloads on the attached instance.
+-Data stored on Amazone EBS is automatically replicated within an Availability Zone.
+
+
+Module 8: 
+You are designing an ecommerce web application that will scale to hundreds of thousand of concurrent users. What database technology is best suited to hold session state?
+
+-Amazon Relational Database Service (Amazon RDS).
+-Amazon DynamoDB.
+-Amazon Redshift.
+-Amazon Simple Storage Service (Amazon S3).
+Amazon DynamoDB.
+Amazon RDS automatically patches the database software and backs up your database storing the backups for a user defined retention period and enabling point in time recovery.
+
+True.
+False.
+True.
+You need to find an item in an amazon DynamoDB table using an attribute other than item's primary key.
+
+-PutItem.
+-Scan.
+-Query.
+-GetItem.
+Scan.
+In Amazon DynamoDB, what does the query operation enable you to do? (Select the best answer).
+
+- Query a table using the parition key and an optional sort key filter.
+- Query any secondary indexes that exist for a table.
+- Efficiently retrieve items from a table or e=secondary index.
+- All of the above.
+- All of the above.
+Which AWS cloud service is best suited for analyzing your data by using standard structured query language(SQL) and existing business intelligence (BI) tools?
+
+- Amazon relational database service (Amazon RDS).
+- Amazon Simple Storage Service Glacier.
+- Amazon Dynamo DB.
+- Amazon Redshift.
+- Amazon Redshift.
+In Amazon DynamoDB, an attribute is _____ (Select the best answer).
+
+- A fundamental data element.
+- A collection of items.
+- A collection of attributes.
+Fundamental data element.
+If you are developing an application that requires a database with extremely fast performance, fast scalability, and flexibility in database schema, which service should you consider?
+
+- Amazon Relational Database Service
+- Amazon ElastiCache
+- Amazon DynamoDB
+- Amazon Redshift.
+Amazon DynamoDB.
+Which of the following use cases is appropriate for using amazon relational database services (Amazon RDS).
+
+- Massive read/write rates.
+- Simpel get or put requests.
+- Complex transactions.
+- All of the above.
+Complex transactions.
+What should you consider when choosing a database type?
+
+Data size.
+Data access period.
+Query frequency.
+Highly available.
+All of the above.
+All of the above.
+A company has an application, which consists of .NET layer that connects to MYSQL database. They want to move this application to AWS and use AWS features such as high availability and automated backups. Which of the following would be an ideal database for this use case? (Select the best answer).
+
+- Amazon RDS.
+- Amazon Aurora.
+- Amazon DynamoDB.
+- Amazon Redshift.
+- Amazon Aurora.
+
+
+Module 9: 
+Which of the following is not one of the four areas of the Performance Efficiency pillar of the AWS Well-Architected Framework?
+Tranceability
+Which of the following is a principle when designing cloud-based systems?
+Assume everything will fail
+Which of the following are pillars of the AWS Well-Architected Framework?
+(Choose three)
+Security
+Operational Excellence
+Cost Optimization
+Which design principles are recommended when considering performance efficiency?
+(Choose 2)
+Use serverless architecture
+Democratize advanced technologies
+AWS Trusted Advisor provides insight regarding which five categories of an AWS account?
+Performance, cost optimization, security, fault tolerance, service limits
+The AWS Well-Architected Framework is organized into how many pillars?
+5
+After you move to the AWS Cloud, you want to ensure that the right security settings are put in place.Which online tool can assist in security compliance?
+AWS Trusted Advisor
+Which of the following is a measure of your system's ability to provide functionality when desired by the user?
+Reliability
+What is defined as the ability for a system to remain operational even if some of the components of that system fail?
+Fault Tolerance
+Which of the following best describes a system that can withstand some measures of degradation, experiences minimal downtime, and requires minimal human intervention
+Highly available
+
+

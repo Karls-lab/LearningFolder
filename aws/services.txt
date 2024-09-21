@@ -1,0 +1,216 @@
+AWS batch 
+    Run thousands of jobs in parallel
+    Automatically provisions EC2 instances and SPOT instances for you 
+
+AWS CloudTrail 
+    Enables governance, compliance, operational auditing, and 
+    risk auditing of your AWS account
+    TRACKS all API calls made on your account
+    Give a history log of things users have done
+
+Elastic Beanstalk 
+    Simplifies deployment and management of web applications
+    PaaS (Platform as a Service)
+    Sets up the background stuff for you, just upload your code
+
+EFS (Elastic File System)
+    Managed file storage for EC2 instances
+    Can be shared across multiple instances
+
+Inspector 
+    Automated to improve security 
+
+Artifact 
+    On-demand access to AWS compliance reports
+
+SNS (Simple Notification Service)
+    Pub/Sub messaging service
+    Push notifications to mobile devices, email, and HTTP endpoints
+
+SWF (Simple Workflow Service)
+    Coordinate work across distributed application components
+
+SQS (Simple Queue Service)
+    Fully managed message queuing service
+    Decouple and scale microservices, distributed systems, and serverless applications
+
+Step Functions
+    Coordinate multiple AWS services into serverless workflows
+
+FarGate 
+    Serverless compute service that runs code in response to events
+    Automatically scales
+
+Glue
+    Fully managed extract, transform, and load (ETL) service
+    Makes it easy to prepare and load data for analytics
+
+Lambda 
+    Run code without provisioning or managing servers
+    Automatically scales
+
+Spot Instances 
+    Cheaper EC2 instances because they are not being used by anyone else 
+    They may be interrupted at any time. AWS gives 2 minutes warning. 
+
+CloudFront 
+    Content delivery network (CDN)
+    Sends the data from the nearest edge location to the user
+    Used to speed up the delivery of your website
+
+Global Accelerator 
+    Improve the availability and performance of your applications with local or global users
+    Reroutes traffic to the best endpoint
+    Caches data at the edge
+
+ElastiCache 
+    improve performance by cache
+
+
+Types of Instances:
+    On-Demand - Pay for what you use
+    Reserved - Reserved for a period of time
+    Spot - Cheaper, but can be interrupted at any time
+    Dedicated Hosts - Physical server dedicated for your use
+
+AWS support plans:
+    Basic - Free
+    Developer - $29/month
+    Business - $100/month
+    Enterprise - $15,000/month
+
+Macie:
+    Uses machine learning to automatically discover, classify, and protect sensitive data in AWS
+
+Trusted Advisor:
+    Provides best practices in four categories: 
+    cost optimization, performance, security, and fault tolerance
+    Will also tell you if you need more compute resources or if you have too many.
+
+Amazon DynamoDB
+    Scalable and Flexible NoSQL Database:
+    High performance: on SSDs
+
+AMAZON REDSHIFT
+    Relational Database
+    Optimized for large databases and data analytics
+    DataLakes
+
+AMAZON Aurora
+    relational database (SQL, Postgres, MySQL)
+    Automatically Scales up to 64TB
+    Backups are automatic
+
+CodeCommit 
+    Integrates with GIT to incorporate version control
+
+CloudWatch
+    Monitor AWS resources and applications
+    Collect and track metrics
+    Set alarms
+    Automatically react to changes in your AWS resources
+    used for performance, not security
+
+SDKs
+    Software Development Kits
+    CLI, GUI, and API for any popular language
+
+Snowball
+    Petabyte-scale data transport solution
+    Securely transfer large amounts of data into and out of AWS
+
+Snowball Edge 
+    Transfer up to 100TB of data into AWS using a physical device. (A large suitcase of hard drives)
+    Pretty much a mini EC2 instance
+    
+AWS Glue 
+    Fully managed extract, transform, and load (ETL) service
+    Makes it easy to prepare and load data for analytics
+
+ECS (Elastic Container Service)
+    Run and manage Docker containers
+
+IAM best practices:
+    Creating individual IAM users with unique credentials
+    Using groups to assign permissions to IAM users
+    Implementing the principle of least privilege (PoLP)
+    Rotating access keys regularly
+    Monitoring and auditing IAM activity
+
+Organizations:
+    Allows you to manage multiple AWS accounts
+    Consolidated billing
+    Control access to AWS services
+    Automate account creation and management
+    Service control policies manage permissions in all accounts in the organization
+    Allow or deny access to services
+
+Athena
+    Query data in S3 using SQL
+    Serverless
+
+QuickSight
+    Business Intelligence tool
+    Visualize data
+
+Kinesis
+    Real-time data streaming
+    Analyze data as it arrives
+
+AWS Direct Connect 
+    Establish a dedicated network connection from your premises to AWS
+    Doesn't use the internet, a direct connection to the servers
+
+Cloud HSM 
+    Hardware Security Module
+    Secure cryptographic key storage
+
+Storage Gateway
+    Connects on-premises computers with cloud-based storage
+
+DMS (Database Migration Service)
+    Migrate databases to AWS with minimal downtime
+
+SWS (Server Migration Service)
+    Migrate on-premises servers to AWS
+
+KMS (Key Management Service)
+    Create and control encryption keys
+
+AWS Storage Gateway 
+    Connects on-premises software appliance with cloud-based storage
+    File types: file, volume, or tape.
+    File Gateway: flat files stored in S3
+    Volume Gateway: block storage
+    Tape Gateway: virtual tape library
+
+Business and Enterprise Plans have support via 
+    Email, Chat, and Phone.
+
+WAF (Web Application Firewall)
+    Protects web applications from common web exploits
+
+RedShift 
+    Data warehouse
+    Analyze data using SQL
+    Database
+    Analyze with SQL and business intelligence tools
+
+EMR 
+    Elastic MapReduce
+    Process large amounts of data
+    Big Data
+    Hadoop (process data across a cluster of computers)
+
+Internet Gateway 
+    Connects VPC to the internet
+    Route tables
+    Allows traffic to and from the internet
+
+AWS managed policies cannot be edited
+
+OpsWorks 
+    Automate operations with Chef and Puppet
+    Configure and manage apps
+
+

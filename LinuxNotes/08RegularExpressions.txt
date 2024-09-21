@@ -1,0 +1,94 @@
+Regular Expressions 
+
+Remember to use strong quotes ('') around the reg ex to prevent weird side effects.
+The most basic regex is a word or character that you can match. 
+    Example: grep 'root' /etc/passwd
+
+Basic Regex:
+    . Matches any character
+    [] [^] Defines a list of characters to match or not to match 
+    * Matches zero or more instances of the previous character 
+    ^ Matches the start of a line
+    $ Matches the end of a line
+
+The ^ anchor tag is used to ensure something is at the beginning. 
+    Example: grep '^root' /etc/passwd
+    Must be at the start of the search 
+
+The same thing for th $ tag. It must be at the end. so 'root$'
+
+    ^Hello 	Matches any line that begins with the Hello string
+    World$ 	Matches any line that ends with the World string
+    ^Hello World$ 	Matches any line which matches the Hello World string exactly
+
+The . matches only one character. 
+    Example: k.ll matches k followed by one character (any) and then two ll's 
+    Example: r..t 
+
+To find lines that have numbers in them, use the range [] 
+    Example: cat example.txt | grep [0-9]
+    Meaning that it will match anything with a number in it. Think of it as an or list
+
+Extended Regex 	Operators 	Meaning
+    Grouping operator 	( ) 	Groups characters together to form a subpattern.
+    Asterisk operator 	* 	Previous character (or subpattern) is present zero or more times.
+    Plus operator 	+ 	Previous character (or subpattern) is present at least one or more times.
+    Question mark operator 	? 	Previous character (or subpattern) is present zero or one time (but not more).
+    Curly brace operator 	{,} 	Specify minimum, maximum, or exact matches of the previous character (or subpattern).
+    Alternation operator 	| 	Logical OR of choices. For example, abc|def|xyz matches abc or def or xyz.
+
+Watch out! Some programs cannot recognize extended characters. Grep can, but needs the -E option 
+    Example:
+    echo 'Miss Mister Mississippi Missed Mismatched' | grep -E 'M(iss)*'
+    (a|b)c matches ac or bc. a|bc wouldn't work because it matches a or bc 
+
+The + operator matches one or more character 
+    The * matches zero or more, but the + needs at least one to match
+    Example: 
+    xyz+ matches xy followed by one or more z's
+
+The ? is an option match. It matches zero or one of the previous character 
+    Example: 
+    xyz? matches xy followed by zero or one z's
+    colou?r matches color or colour
+
+a{0,} 	Zero or more a characters
+a{1,} 	One or more a characters
+a{0,1} 	Zero or one a characters
+a{5} 	Five a characters
+a{,5} 	Five or fewer a characters
+a{3,5} 	From three to five a characters
+
+The *, +, ? and {} are considered quantifying operators. They are used to specify how many times the previous character should be repeated.
+
+Backslash Sequence 	Pattern Equivalent 	Matches
+    \b 		Word boundary operator
+    \B 		Not a word boundary operator
+    \w 	[A-Za-z0-9] 	Word character class
+    \W 	[^A-Za-z0-9] 	Not a word character class
+    \d 	[0-9] 	Digit character class
+    \s 		Whitespace character class
+    \S 		Not a whitespace character class
+    \\ 		Literal backslash character
+
+Grep command options: 
+    Option 	Meaning
+    -i 	Case insensitive
+    -v 	Invert search results (logically negates criteria) - returns all lines that don't contain the specified pattern
+    -l 	List the file name of content in file matches
+    -r 	Perform a recursive search including subdirectories
+    -w 	Match whole word only
+    -q 	Quietly operate without producing output
+
+
+fgrep always treats its pattern as string literals, not as regular expressions. 
+    Examples: 
+        fgrep 'root' /etc/passwd
+        fgrep "*" /etc/passwd will search for the * character, not all characters
+
+Some examples 
+([a-z/]+) matches /bin/bash or /usr/bin/python
+    The [] matches literally, so it's save to put the / in there
+
+Find the string 'arduino' in all file in the current dir 
+    grep -rli 'arduino' ./

@@ -1,0 +1,39 @@
+lists files in long notation
+ls -l 
+
+First line of the output:
+d = directory 
+- = regular file
+1 = symbolic link (points to another file)
+s = socket (communication)
+p = pipe (communication)
+b = block device (hardware communication)
+c = character file (hardware communication)
+
+The next 9 characters repsent the permissions of the file
+User Owner, Group Owner, Other 
+r = read 
+w = write 
+x = execute
+
+Example:
+root is the owner and the group owner too
+size is 0 bytes 
+date is 2019-07-07 12:00
+file name is file.txt
+-rw-r--r-- 1 root root 0 2019-07-07 12:00 file.txt
+
+ls command options:
+-s sort by file size 
+-t sort by time
+-r reverse the order
+-lh human readable file size
+-R recursive list of files in subdirectories
+
+Use the 'file' command to view the file type
+use 'cat' to view the contents of the file
+
+'touch' command creates a new file
+or updates the timestamp of an existing file
+
+rm -i command prompts before delete file

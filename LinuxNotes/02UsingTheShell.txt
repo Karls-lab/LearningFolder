@@ -1,0 +1,36 @@
+Types of Commands: Built in, External, Aliases, and Functions
+Built in: Commands that are part of the shell itself. They are executed directly by the shell. (cd, echo, pwd, etc.)
+External: separate programs, like ls, grep, find, etc.
+Aliases: user-defined shortcuts for commands. (alias ll='ls -l')
+Functions: user-defined functions that can be used in the shell. (function ll { ls -l $@; }) Can override built in
+
+Double quotes: Allows some variables in the string to be expanded. (echo "Hello $USER")
+Single quotes: String literal
+
+Special character: "!!" - repeats the last command.
+
+WildCards: *, $, `, \, and !     Wildcards cant be blocked by double quotes. 
+
+Options are specified by the "-" dash character. Like ls -A
+Example: ls -ltr (list in long format, sorted by time, in reverse order)
+If an option has a parameter, put it at the end or separate by a space. ls -lr -w 40 OR ls -w 40 -T 12
+
+The exec command replaces the current shell with the command you specify and kills anything remaining in the script 
+The fork command DOES create a new process and keeps the current script running 
+
+uname is used to get information about the system. uname -a for all info or uname --help 
+
+pwd = print working directory 
+type [command] to view the type of command it is.
+
+Use the 'which' command to find the location of a command.
+
+Use the 'man' pages for linux commands to help understand what they do. 
+Use SHIFT + H to view help on the 'less' pager (to view man pages)
+To navigate man pages: j,k (up and down one line) d,u to go up and down
+/term (search) and press n to find next term (like vim)
+
+man passwd -f will search man pages for the term 'passwd' (can have multiple matches)
+'whatis' command does the same thing
+man -k password will search all man pages for the term 'password'
+

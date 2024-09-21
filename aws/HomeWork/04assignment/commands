@@ -1,0 +1,5 @@
+host B command: 
+java -jar consumer.jar -rb usu-cs5250-quartz-requests -pdbc jdbc:postgresql://cs5250.cpu4u2ilfx2q.us-east-1.rds.amazonaws.com:5432/hw4 -pdbu postgres -pdbp 123Drago
+
+host A command:
+java -jar producer.jar -rb usu-cs5250-quartz-requests

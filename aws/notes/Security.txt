@@ -1,0 +1,53 @@
+MODULE 4 SECURITY
+
+SECTION 2: SHARED RESPONSIBILITY
+    The customer is responsible for securing the data and applications in the cloud. The cloud
+    provider is responsible for securing the cloud infrastructure. This is known as the shared
+    responsibility model.
+
+
+SECTION 3: IDENTITY AND ACCESS MANAGEMENT, IAM 
+    Authentication: Who is requesting access 
+    Authorization: What should the user be allowed to do?
+
+    An IAM user is given a permanent set of creds, which they keep until a forced rotation
+    IAM roles are temporary creds, which are rotated automatically. 
+    IAM policy that explicitly lists permissions. Can be attached to role, user, or group 
+    For long term, attack policies to groups. 
+
+
+SECTION 4: AUTHENTICATING WITH IAM 
+    To auth through the console, you must use username and password.
+    To auth programmatically, (CLI, SDK, API) must use access key. This key is 
+        a combination of an access key ID and a secret access key 
+    
+    Enable MFA for Management console users and API users 
+    requires two or more things, something you know, have, or are.
+
+    Roles are temporary. users assume all rules of a specific role. 
+    For temporary access, consider a role for a period of time 
+
+    Ways to provide access to AWS resources from AWS cloud 9:
+        1. If EC2, use temp creds to grant access to resources
+        2. Attach IAM instance profile to an EC2 instance. 
+        3. SSH: store your permanent creds within the environment.  
+
+    Run the aws configure command to set up your credentials.
+    Use cred files instead of publicly accessed things. 
+
+
+SECTION 5: AUTHORIZING WITH IAM
+    Resource based policies are attached to a resource 
+    Identity based policies are attached to a user, role or group 
+    Managed policies are standalone, identity-based policies that you can attach to 
+        multiple users, groups, and roles. 
+    Managed policies have several features: reusability, version control, and central 
+        control over permissions.
+    
+    Inline policies are embedded in a principle entity such as a user, group or role. 
+        The policy is inherent to the role 
+    Impossible to centrally manage inline policies.
+    Useful when you want to maintain a strict one to one relationship between a policy 
+        and the principle entity that it controls.
+    
+Lab bucket: kp-2023-10-11-s3site

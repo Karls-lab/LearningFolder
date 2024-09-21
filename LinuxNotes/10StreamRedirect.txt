@@ -1,0 +1,10 @@
+All commands follow a philosophy of accepting text as input and producing text as output.
+
+When command output is run without any errors, the output is standard output (stdout). 
+When there is an error, the output is standard error (stderr).
+The > operator is used to redirect stdout to a file.
+Example: redirect the output of ls ~ (list the home directory) to a file called home.txt
+    ls ~ > home.txt
+
+>> appends the text, > overrides the text
+&> redirects both stdout and stderr to a file, overrides

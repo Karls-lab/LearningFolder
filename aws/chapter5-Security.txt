@@ -1,0 +1,49 @@
+Four most important security AWS Things to do:
+    - Keep your software up to date 
+    - Restrict access to your AWS account 
+    - Control networking traffic to and from EC2 
+    - Create a private network in AWS
+
+Security is not just protecting yourself form attackers, but 
+preventing mistakes form yourself and coworkers. 
+- Don't save passwords in plaintext and use TLS/SSL for traffic 
+
+Install updates at boot or shutdown. 
+    apt-get update && apt-get upgrade -y
+    dnf -y update
+    yum -y update
+
+Use AWS Systems Manager for patch management.
+Key: Run Command 
+    Triggers on start 
+    Executes EC2 instance 
+    Patch manager triggers on schedule 
+    Defined in a YAML file
+
+IAM: Identity and Access Management
+    - Users 
+    - Groups 
+    - Roles 
+    - Policies
+Deny always wins over allow. 
+
+Managed policy: 
+    Can be reused, can either be a preset policy (AWS) or a custom one
+Inline policy:
+    Attached to a single user, group, or role.
+Inline are more flexible, but harder to manage.
+
+Example Creating an IAM user 
+Password: 7TwaddUpvow$ (SEVEN-Twadd-Up-vow-DOLLAR_SIGN)
+    aws iam create-group --group-name "admin"
+    aws iam attach-group-policy --group-name "admin" --policy-arn / 
+        "arn:aws:iam::aws:policy/AdministratorAccess"
+    aws iam create-user --user-name "myuser"
+    aws iam add-user-to-group --group-name "admin" --user-name "myuser"
+    aws iam create-login-profile --user-name "myuser" --password '7TwaddUpvow$'
+
+AccountID: 
+122610477537
+UserID: 
+AIDARZDBHNHQ2NWBN2YPI
+password: 7TwaddUpvow$

@@ -1,0 +1,70 @@
+MODULE 7, DEVELOPING EVENT DRIVEN SERVERLESS APPLICATIONS 
+
+Overview of Serverless Computing: 
+    - No OS instances to manages
+    - Flexible scaling 
+    - Pay per usage 
+    - Built in fault tolerance 
+    - Zero maintenance
+    You can focus on: Building and deploying code and monitoring and maintaining applications 
+
+Monolith: does one thing
+Microservice: does one thing well, lots of them 
+
+Introducing Lambda: 
+    Invokes code responding to events 
+    Scales auto 
+    Code monitoring and logging 
+
+    Use cases: Backends, Data processing, Chatbot, IT automation. 
+
+Factors that influence concurrency: 
+    Reserved concurrency
+    Regional Quota 
+    Burst Quota 
+    Request rate and function duration 
+    Event source 
+
+
+Invoking Lambda Functions:  
+    Pull event: 
+        - Polls event source 
+        - Event source sends event to Lambda 
+        - Lambda invokes function
+    Push event: 
+        - Event source invokes Lambda 
+        - Lambda invokes function
+
+    If fails with async invocation, Lambda will retry twice.
+    It will not retry if synchronous invocation fails.
+
+
+Setting Permissions for lambda:
+    An IAM resource policy gives permission to invoke a function 
+    The execution role specifies what the lambda function is permitted to do 
+        attached: IAM, and trust policy 
+        You must have iam:PassRole action 
+
+    Need permissions to invoke lambda function, and permissions to access resources.
+
+Configuring Lambda Functions:
+    When you create a function, you specify the function handler. 
+    It's the entry point. It takes two objects, the event object and the context object.
+    Event Object: 
+        - Contains data passed to the function 
+        - Can be null 
+        - Can be a simple type, or a complex type
+    Context Object:
+        - Contains information about the invocation, function, and execution environment 
+        - Can be used to interact with AWS services 
+        - Can be used to retrieve function configuration information
+
+    
+Deploying: 
+    .zip or container images 
+    You can also write the function in the lambda console editor 
+    Layers: up to 5 layers, 250MB
+    aliases to point at different versions 
+    layers are libraries that can be shared across functions
+
+    

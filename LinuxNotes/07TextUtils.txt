@@ -1,0 +1,112 @@
+The cat command can be really useful 
+
+cat [OPTION] [FILE]
+Example: cat 07TextUtils.txt - outputs the content of the file to the terminal 
+But it can also concatenate files together - cat file1 file2 file3 > newfile
+Options:
+    -n: Number all output lines
+
+
+Use the less command! (less is more)
+Essential operations:
+    q - quit
+    / - forward search
+    ? - backward search 
+    n - next search result
+    gg - top of the file
+    G - bottom of the file
+    SPACE - next page
+    j,k - up, down
+    d,u- up, down half a page
+
+
+The split command can be used to split a file into smaller files
+Example: split -l 1000 07TextUtils.txt
+by default, files will be named xaa, xab, xac, etc.
+Split doesn't modify the original file.
+    -b: Split the file by byte count (e.g., -b 1000000 splits the file into 1MB chunks)
+    -l: Split the file by line count (e.g., -l 10 splits the file into chunks of 10 lines each)
+    -d: Use numeric suffixes instead of alphabetic suffixes (e.g., x00, x01, x02, etc.)
+You can change this behavior by specifying an output prefix using the -a option:
+    split -b 1MB large_file.txt new_
+    In this case, the split files would be named new_aa, new_ab, new_ac, etc.
+
+
+The nl command is used to number lines in a file
+    - b: count blank lines
+    - i: increment by a specified number
+    - w: specify the number of digits to use
+    - a: number all lines
+    Output to another file: nl 07TextUtils.txt > 07TextUtilsNumbered.txt
+    The > operator is used to redirect output to a file
+    the >> operator is used to append output to a file
+
+The head command is used to display the first few lines of a file (head -n 5 07TextUtils.txt)
+The tail command is used to display the last few lines of a file (tail -n 5 07TextUtils.txt)
+
+The paste command combines the lines of two or more files side by side
+Can specify a delimiter with the -d option
+Example: paste -d, file1 file2
+
+The join command is used to join lines of two files on a common field
+The common field is specified with the -1 and -2 options
+Example: join-t ' ' field1.txt field2.txt - This will join when the first word matches in both files
+-j can be used to specify the field number to join on
+    Example: join -j 2 file1 file2
+-a can be used to include unpairable lines from the first or second file
+    Example: join -a 1 file1 file2
+To list available fields in a file use the command: head -n 1 file.txt | tr ' ' '\n' | nl
+
+The cut command is used to extract sections from each line of a file. Kind of like extracting columns from a CSV file
+Example:
+    cut -d, -f 1,3 file.csv - This will extract the first and third columns from the file.csv
+    -d specifies the delimiter, Space: -d   Tab: -d$'\t'  Comma: -d,  colon -d:
+    -f specifies the fields to extract. -f1-3 will extract fields 1 through 3 or -f1,3 will extract fields 1 and 3
+    -c can be used to extract characters instead of fields. -c1-5 will extract characters 1 through 5
+
+The sort command is used to sort the lines of a file
+by default, sort will sort the lines in ASCII order (pretty much alphabetical order)
+Example: sort file.txt
+    -r can be used to sort in reverse order
+    -n can be used to sort numerically
+    -k can be used to sort by a specific field
+    -t can be used to specify a delimiter
+    -u can be used to remove duplicate lines
+    -o can be used to specify an output file
+    -R can be used to sort randomly
+
+od (octal dump) use this command when the file contains character that are not printable 
+    Single Option 	Option with Argument 	Meaning
+    -a 	-t a 	Named characters, ignoring high bit
+    -b 	-t o1 	Octal bytes
+    -c 	-t c 	ASCII characters or backslash escapes
+    -d 	-t u2 	Unsigned decimal 2-byte units
+    -f 	-t fF 	Floats
+    -i 	-t dI 	Decimal integers
+    -l 	-t dL 	Decimal longs
+    -o 	-t o2 	Octal 2-byte units
+    -s 	-t d2 	Decimal 2-byte units
+    -x 	-t x2 	Hexadecimal 2-byte units
+
+The Translate command (tr) is used to translate or delete characters
+Example (turn lowercase into uppercase)
+cat alpha-first.txt | tr 'a-z' 'A-Z'
+    B IS FOR BEAR
+    C IS FOR CAT
+    D IS FOR DOG
+
+Stream Editor Command (sed) finds the text pattern and replaces it with a new one
+s/PATTERN/REPLACEMENT/
+sed 's/Animal/Apple/' alpha-first.txt
+Delete a pattern: 's/Animal//'
+
+The wc command is used to count the number of lines, words, and characters in a file
+Default output (no args): Lines, Words, Characters
+Options:
+    -l: Count lines
+    -w: Count words
+    -c: Count characters
+    -m: Count characters (bytes)
+    -L: Print the length of the longest line
+
+

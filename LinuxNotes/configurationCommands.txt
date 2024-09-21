@@ -1,0 +1,4 @@
+LIST OF HELPFUL CONFIGURATION COMMANDS 
+
+Change the default editor (nano, vim, code): 
+    sudo update-alternatives --config editor

@@ -1,0 +1,49 @@
+     1	Bane, B      Captain  Vraksian Night  Company Commander 0
+     2	Bane, S     Captain  Vostroya Firstborn Company Commander 0
+     3	Bryce, E      Captain  Valhallan Ice  Company Commander 0
+     4	Draconis, D   Captain  Vostroya Firstborn Company Commander 0
+     5	Drekk, D     Lieutenant Valhallan Ice  Armored Fist 2
+     6	Drekk, T    Guardsman Valhallan Ice  Armored Fist 2
+     7	Gorbag, G   Sergeant Tallarn Desert  Medic 1
+     8	Gorvoth, A    Sergeant Cadia Shock  Heavy Gunner 3
+     9	Graxus, G    Guardsman Mordian Iron  Heavy Gunner 3
+    10	Graxus, K   Lieutenant Molech Hive  Sapper 1
+    11	Grigor, I    Sergeant Vraksian Night  Comms Specialist 4
+    12	Gundrik, G   Sergeant Elysian Drop  Pathfinder 2
+    13	Gundrik, R Sergeant Elysian Drop  Pathfinder 3
+    14	Kael, K      Guardsman Cadian Shock  Gunner 4
+    15	Karsus, K     Lieutenant Vostroya Firstborn Sniper 2
+    16	Kharon, K     Guardsman AdMech Skitari  Tech-Priest 3
+    17	Kharon, N    Guardsman AdMech Skitari  Tech-Priest 2
+    18	Kharon, T   Sergeant Vraksian Night  Comms Specialist 2
+    19	Korben, A    Captain  Valhallan Ice  Company Commander 0
+    20	Korvus, A   Sergeant Tallarn Desert  Heavy Gunner 4
+    21	Korvus, K     Guardsman Mordian Iron  Heavy Gunner 4
+    22	Krael, A   Sergeant Elysian Drop  Gunner 1
+    23	Krael, V      Guardsman Elysian Drop  Gunner 2
+    24	Name          Rank    Regiment   Specialty   Wounds
+    25	Narvath, N  Captain  Cadia Shock  Company Commander 0
+    26	Narvath, N   Lieutenant Cadia Shock  Artillery Liaison 1
+    27	Nemova, K  Lieutenant Vraksian Night  Artillery Liaison 2
+    28	Nemova, N     Lieutenant Cadia Shock  Artillery Liaison 2
+    29	Orkell, O    Sergeant Molech Hive  Sapper 3
+    30	Ortega, G   Lieutenant Cadian Shock  Demolitions 4
+    31	Ortega, P     Lieutenant Tallarn Desert  Medic 3
+    32	Ragnar, R    Lieutenant Cadian Shock  Demolitions 4
+    33	Roth, E      Guardsman Krieg Death  Forward Observer 1
+    34	Roth, G       Sergeant Cadian Shock  Mortar Crew 1
+    35	Ryker, G    Captain  Cadian Shock  Company Commander 0
+    36	Ryker, J      Sergeant Cadian Shock  Demolitions 4
+    37	Ryker, S     Sergeant Krieg Death  Forward Observer 4
+    38	Thane, R      Sergeant Molech Hive  Sapper 1
+    39	Thane, T    Guardsman Mordian Iron  Driver 4
+    40	Thoren, T    Lieutenant Tallarn Desert  Armored Fist 3
+    41	Thrain, G     Guardsman Mordian Iron  Driver 1
+    42	Thrain, R    Captain  Mordian Iron  Company Commander 0
+    43	Vashin, A     Lieutenant Krieg Death  Forward Observer 0
+    44	Vashin, R  Guardsman AdMech Skitari  Tech-Priest 3
+    45	Vexar, G   Captain  Valhallan Ice  Commander 0
+    46	Vexar, S       Captain  Valhallan Ice  Commander 0
+    47	Vexis, V     Captain  Elysian Drop  Company Commander 0
+    48	Vorgath, A  Lieutenant AdMech Skitari  Tech-Priest 3
+    49	Vorgath, V   Guardsman Krieg Death  Forward Observer 1

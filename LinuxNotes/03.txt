@@ -1,0 +1,52 @@
+Variables 
+
+commands can be put into variables. Make sure to capitalize them with no invalid special characters. 
+Examples: INITIATE_LOCKDOWN = "echo 'Lockdown initiated'"
+Export it directly to the shell with export INITIATE_LOCKDOWN or export INITIATE_LOCKDOWN="echo 'Lockdown initiated'"
+To use the variable, use $INITIATE_LOCKDOWN
+To remove variables, use unset INITIATE_LOCKDOWN
+
+To view created variables, use the 'env' command 
+To View language settings, use 'locale' command
+to Set language to english: sudo update-locale LANG=en_US.UTF-8
+
+View environment 
+
+/bin - contains essential command binaries
+/sbin - contains essential admin commands 
+/usr/bin - commands available for usr to execute 
+
+Must specify full path if you want to execute a command not in the PATH variable.
+
+global configuration files are stored in /etc
+
+Login Shells are one when you log in using SSH or the console. 
+Login SHells read /etc/profile, ~/.bash_profile, ~/.bash_login, ~/.profile
+Non-login shells are when you open a terminal window.
+Non-login shells read ~/.bashrc
+
+/etc/profile - used for system wide login settings
+/etc/bashrc - used by admin for global settings
+~/.bash_profile, ~/.bash_login, ~/.profile - used by users for personal settings
+~/.bashrc - used by users for personal settings *** Located on UBUNTU MACHINES
+
+Append a path to PATH variable: export PATH=$PATH:/path/to/append
+
+There is a file called ~./bash_logout that runs scripts when the user logs out of the shell
+or closes the window. Can perform cleanup operations and such. 
+
+use CTRL + D to log out of the shell
+use CTRL + C to stop a running command
+use CTRL + Z to pause a running command
+use CTRL + R to search command history
+
+NAVIGATION
+set -o vi
+
+etc/inputrc is a file that contains keybindings for the shell.
+
+Use the history command to view the history of commands
+history n where n is the number of commands to display
+history -c to clear the history
+history -w to write the history to a file
+history -r to read the history from a file

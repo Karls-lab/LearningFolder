@@ -1,0 +1,30 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS in action, chapter 4'
+Parameters:
+  VPC:
+    Type: 'AWS::EC2::VPC::Id'
+  Subnet:
+    Type: 'AWS::EC2::Subnet::Id'
+  InstanceType:
+    Description: 'Select one of the possible instance types'
+    Type: 'String'
+    Default: 't2.micro'
+    AllowedValues: ['t2.micro'] 
+Resources:
+  SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      # [...]
+  VM:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: 'ami-061ac2e015473fbe2'
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: 'ec2-ssm-core'
+      SecurityGroupIds: [!Ref SecurityGroup]
+      SubnetId: !Ref Subnet
+Outputs:
+  InstanceId:
+    Value: !Ref VM
+    Description: 'Instance id (connect via Session Manager)'

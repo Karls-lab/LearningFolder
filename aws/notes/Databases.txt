@@ -1,0 +1,75 @@
+MODULE 8, DATABASES
+
+All relational databases offered from amazon can be managed from 
+the AWS console, CLI, or SDK.
+
+Section 1: Amazon Relational Database Service (RDS)
+        
+    OverView:
+        Un-managed vs. Managed Databases
+            Un-managed: Scaling, Patching, Backups, High Availability, Monitoring, Replication, Failover, etc.
+                        Must all be done manually
+            Managed: AWS handles all of the above for you
+
+        Supports: MySQL, Amazon Aurora, PostgreSQL, Oracle, Microsoft SQL Server, MariaDB. 
+
+        A Relational Database is a traditional Database that is defined with schemas and tables. 
+        Think of SQL. Supports complex queries like JOIN, GROUP BY, etc.
+
+    Key Features:
+        Read replicas: Used for scaling read operations, can be in a different region, VPC, or account.
+        High Availability: AWS backs up your database in a different availability zone
+
+    Use Cases:
+        Web and mobile applications 
+        E-commence applications
+        Mobile and Online games 
+
+    When NOT to use:
+        Massive read writes (150,000 per sec)
+        Sharding 
+        Simple GET and PUT requests. A noSQL database is better.
+
+    use RDS when:
+        You want a managed service 
+        You want to use a relational database 
+        You want to scale read operations 
+        You want to use a familiar database engine 
+        You want to use a database that is highly available and scalable
+
+    Cost considerations:
+        1. Clock hours/service time 
+        2. Which resources incur charges 
+
+        Purchase types:
+            1. On-demand: compute capacity by the hour 
+            2. Reserved instances: One time payment reserved 1 to 3 years. 
+
+        No charge for backed up DB
+        Charged for backup terminated DB GB/month
+        Charged for backup storage in addition to provisioned storage GB/month
+        AWS backs up your database in a different availability zone.
+
+
+NON-RELATIONAL DATABASES:
+    A non relational database is a database that does not use the tabular
+    schema of rows and columns found in most traditional database systems.
+    They scale out horizontally, and are designed to scale to massive workloads.
+    They prioritize speed and availability over consistency. "Eventually consistent"
+
+
+
+Amazon DynamoDB
+    Scalable and Flexible NoSQL Database:
+    High performance: on SSDs
+
+AMAZON REDSHIFT
+    Relational Database
+    Optimized for large databases and data analytics
+    DataLakes
+
+AMAZON Aurora
+    relational database (SQL, Postgres, MySQL)
+    Automatically Scales up to 64TB
+    Backups are automatic
+

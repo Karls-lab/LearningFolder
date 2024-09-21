@@ -1,0 +1,7 @@
+
+Credentials Not working? Refresh them 
+rm ~/.aws/credentials
+rm ~/.aws/config
+aws configure
+
+

@@ -1,0 +1,107 @@
+MODULE 9: CLOUD ARCHITECTURE
+
+SECTION 1: AWS WELL-ARCHITECTED FRAMEWORK
+    The framework is a set of guidelines to build a robust 
+    and stable AWS application. 
+    Build on 5 Core pillars: 
+
+    1. Operational Excellence
+        Practices to run and monitor systems to deliver business value
+        Defining performance metrics 
+        Automating things like deployments, testing, and infrastructure changes
+
+    2. Security
+        Design systems that focuses on IAM (Identity and Access Management)
+        principle of least privilege. If it's not explicitly allowed, it's denied.
+        Encryption of data in transit and at rest.
+        Logging and auditing of actions and changes to the environment.
+                Security
+                Monitoring
+                Identity and Access Management
+                Detection
+                Infrastructure protection
+                Data protection
+                Incident response
+
+    3. Reliability
+        Systems that can recover from outages. 
+        Fault tolerance, disaster recovery, and incident response. 
+                Automatically recover from failure
+                Test recovery procedures
+                Stop guessing capacity
+                Manage change in automation
+
+
+    4. Performance Efficiency
+        Efficient use of computing resources. 
+        Selecting the right resource types and sizes based on workload requirements.
+        Monitoring Performance. 
+        Four Areas: 
+            1. Tradeoffs 
+            2. Selection 
+            3. Monitoring 
+            4. Review
+        Design Principles:
+            1. Serverless Architecture
+            2. Democratize advanced technologies
+            3. Experiment more often 
+
+    5. Cost Optimization
+        Avoiding unneeded costs. 
+        Selecting the most appropriate and right number of resource types and sizes based on workload requirements.
+        Analyzing spend over time
+        Scaling without wasting resources.
+
+    6. Sustainability
+        Designing for the future. 
+        Using renewable energy sources. 
+        Minimizing the carbon footprint. 
+        
+
+    Benefits:
+        Reliability and availability 
+        Enhanced security
+        Better cost Management and utilization 
+        Reduced operational overhead and increased Efficiency
+        A foundation to build scalable and resilient applications in the cloud 
+
+
+SECTION 2: RELIABILITY AND AVAILABILITY 
+
+    1. Reliability: 
+        Definition: perform intended function without failure or disruptions
+        Importance: available when needed, minimize downtime for customers 
+        AWS practices: Services provided by AWS include: auto-scaling, 
+            load balancing, and data redundancy across multiple availability zones    
+        
+    2. Availability:
+        Definition: Measures the percentage of time that a system is operational. 
+            Called mean time between failures (MTBF) = total time / number of failures. 
+            Percentage of up-time 
+        Importance: Customers expect services to be available when needed.
+            Make sure your customers are happy. 
+        AWS practices
+
+    Key practices to ensure Reliability and Availability:
+        1. Multi availability zones 
+        2. Auto scaling 
+        3. Elastic load balancing
+        4. Data replication 
+        5. Disaster recovery
+        6. Monitoring and Alerting 
+        7. Highly resilient architecture 
+        8. Regular Testing 
+        9. Security best practices
+
+
+SECTION 3: AWS TRUSTED ADVISOR 
+    Realtime tool that provides guidance to help you provision your resources
+    Looks at entire AWS environment and gives you recommendations in 5 categories: 
+        1. Cost Optimization
+        2. Performance 
+        3. Security 
+        4. Fault Tolerance
+        5. Service Limits
+
+
+    

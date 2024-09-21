@@ -1,0 +1,80 @@
+/ 	The root of the primary filesystem hierarchy.
+/bin 	Contains essential user binary executables.
+/boot 	Contains the kernel and bootloader files.
+/dev 	Populated with files representing attached devices.
+/etc 	Configuration files specific to the host.
+/home 	Common location for user home directories.
+/lib 	Essential libraries to support /bin and /sbin executables.
+/mnt 	Mount point for temporarily mounting a filesystem.
+/opt 	Optional third-party add-on software.
+/root 	Home directory for the root user.
+/sbin 	Contains system or administrative binary executables.
+/srv 	May contain data provided by system services.
+/tmp 	Location for creating temporary files.
+/usr 	The root of the secondary filesystem hierarchy.
+/usr/bin 	Contains the majority of the user commands.
+/usr/include 	Header files for compiling C-based software.
+/usr/lib 	Shared libraries to support /usr/bin and /usr/sbin.
+/usr/local 	The root of the third filesystem hierarchy for local software.
+/usr/sbin 	Non-vital system or administrative executables.
+/usr/share 	Location for architecturally-independent data files.
+/usr/share/dict 	Word lists.
+/usr/share/doc 	Documentation for software packages.
+/usr/share/info 	Information pages for software packages.
+/usr/share/locale 	Locale information.
+/usr/share/man 	Location for man pages.
+/usr/share/nls 	Native language support files.
+
+
+locate is old and depreciated, use find instead 
+
+find [OPTIONS]... [starting-point...] [expression]
+-iname LOSTFILE 	Case insensitive search by name.
+-mtime -3 	Files modified less than three days ago.
+-mmin -10 	Files modified less than ten minutes ago.
+-size +1M 	Files larger than one megabyte.
+-user joe 	Files owned by the user joe.
+-nouser 	Files not owned by any user.
+-empty 	Files that are empty.
+-type d 	Files that are directory files.
+-maxdepth 1 	Do not use recursion to enter subdirectories; only search the primary directory.
+-size +1M 	Files larger than one megabyte.
+-size -1K 	Files smaller than one kilobyte.
+
+multiple criteria can be chained together with -a (and) or -o (or)
+find . -user sysadmin -o -name Downloads
+
+You can also pipe the output of the find command to less 
+
+use the whereis command to find the file paths of a command that is attached to your path 
+whereis [OPTION] [Name]
+Example: whereis pip 
+output: pip: /usr/bin/pip /usr/local/bin/pip /home/x1b3d3ad/.local/bin/pip /usr/share/man/man1/pip.1.gz
+
+common options:
+-b 	Search for binaries.
+-m 	Search for manual pages.
+-s 	Search for source code.
+-u 	Search for binaries and source code.
+
+
+------ Type command -------
+The type command is used to determine the type of a command.
+type [OPTION] [COMMAND]
+Can determine if a command is an alias, a built-in command, a function, or an external command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

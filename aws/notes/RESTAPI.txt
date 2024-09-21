@@ -1,0 +1,59 @@
+Developing REST APIs
+
+Definition of an API:   
+    An API (Application Programming Interface) is a set of rules and protocols 
+    that allows different software applications to communicate and interact with each
+    other. It defines how requests and responses should be structured, making it possible
+    for developers to access specific features or data from a software system or service.
+
+
+Typically, a client sends a request, and the server sends a response in JSON format. 
+Status codes:
+    20x - OK
+    40x - Client Error
+    50x - Server Error 
+
+REST API (Representational State Transfer)
+    This is the architecture that APIs should follow
+    Key parts:
+        1. STATELESS
+            Server does not store information about the user between requests 
+            Each request should contain all the information the server needs 
+        2. CLIENT-SERVER 
+            A clear division of tasks. User is for interface and server is 
+            for data storage and processing. 
+        3. UNIFORM INTERFACE 
+            Standard way of interaction between client and server.
+            Uses GET, POST, PUT, DELETE
+        4. RESOURCE BASES 
+            Each resource should be uniquely identifiable with a URI
+            URI = Uniform Resource Identifier
+        5. REPRESENTATIONAL
+            The data that is returned should be in a standard format
+            JSON is the most common format. Also XML and HTML
+        6. STATELESS COMMUNICATION
+            Each request from client to server should not need any information
+            from past requests 
+        7. LAYERED SYSTEMS 
+            Can be composed of multiple layers (e.g. load balancer, caching, etc.)
+            without affecting the client.
+            
+
+Amazon Gateway API:
+    Supports RESTful and WebSockets. 
+    Key Features;
+
+HTTP API: Simple, low cost. Useful for lambdas and HTTP backends.
+REST API: Full control, custom auth, API keys, etc.
+
+
+Base Structure for API:
+    restapi_id, region, and stage name.(storage name)
+
+I can use different stage names to deploy different versions of the API. 
+    e.g. dev, test, prod
+
+To protect against common attacks, use WAF (Web Application Firewall) 
+    and AWS Shield (DDoS protection)
+
+Integration latency measures the speed of the backend. 

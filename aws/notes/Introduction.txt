@@ -1,0 +1,65 @@
+AWS INTRODUCTION NOTES 
+
+
+Amazon VPC:
+    Stands for Virtual Private Cloud 
+    Creates a logically isolated section in the AWS cloud 
+
+    Benefits:
+        Isolation
+        Custom IP Address Ranges 
+        Subnets(different availability zones, but same region)
+        Security Groups (Amazon firewalls)
+        VPN Connectivity for secure access
+        Transit Gateways: VPC can talk to each other directly 
+        VPC can talk to other Amazon Services without going through the internet 
+
+    Subnets are given 256 IP addresses, but some are reserved, so only 251 available 
+
+    A route table specifies where things should be routed too. 
+    By default, each route table has a default local pointer for local communication 
+
+
+VPC Networking:
+    VPC can come with an internet gateway that is scalable. It 
+    helps the VPC connect to the internet
+
+    A NAT helps the VPC connect to the internet and prevents random internet connections 
+    from messing anything up. It allows address translation
+    Enables instances in a private subnet to connect to the internet
+
+    VPC endpoint: Connects your VPC to supported AWS services
+
+    VPC peering: Connects your VPC to other VPCs
+
+    AWS Site to Site VPN: Connects your VPC to remote networks
+
+    AWS Transit Gateway: A hub and spoke connection alternative to VPC peering
+
+
+VPC Security
+    Each instance of an VPC has it's own Security group
+    A security group filters traffic like a firewall 
+    Default: Allow all outbound, deny all inbound 
+
+    You can specify allow rules, but not deny rules 
+
+    A network ACL (Access control list) is optional. It is like 
+    a firewall for one or more subnets. ACL's can allow or deny traffic 
+    It's stateless, meaning return traffic must be explicitly allowed
+    By default, ACL's deny everything 
+
+
+Amazon Route 53 
+    Route 53 is a DNS web service. 
+    Routes names like example.com into 192.168.1.1
+    Features traffic flow
+    You can buy domain names directly through the service. 
+    Health check on endpoints
+    Provides logging and monitoring 
+
+
+Amazon CloudFront 
+    Fast, secure, CDN service for global reach 
+    They use edge locations to reach globally. 
+    

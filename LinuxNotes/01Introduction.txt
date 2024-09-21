@@ -1,0 +1,12 @@
+There are three parts of the Linux system: the kernel, the shell, and the programs.
+kernel: the core of the system, responsible for managing the hardware, running the programs, and maintaining the file system.
+shell: the interface between the user and the kernel, which allows the user to interact with the system.
+programs: the applications that run on the system, such as text editors, web browsers, and games.
+
+The BASH is the most common shell used in Linux systems. It stands for "Bourne Again SHell" 
+
+the file /etc/passwd conatins the users's information like: 
+ username, group id, user id, home directory, and the shell that the user uses.
+The shadow file /etc/shadow contains the encrypted passwords of the users.
+
+The operating system manages programs. Each program makes system calls to the kernel to request resources. 
