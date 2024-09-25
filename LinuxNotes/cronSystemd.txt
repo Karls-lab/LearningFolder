@@ -27,6 +27,11 @@ Example Script:
 
     [Install]
     WantedBy=multi-user.target  # Makes the service start when the system is in multi-user mode
+Reload: sudo systemctl daemon-reload
+Start service: sudo systemctl start myservice
+Enable on start: sudo systemctl enable myservice
+Check: sudo systemctl status myservice
+
 
 
 

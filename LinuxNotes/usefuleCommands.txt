@@ -1,0 +1,32 @@
+List files in a directory by time and revered at the top:
+ls -ltr
+
+rsync for directory sync:
+    rsync -avh /source/dir /dest/dir
+
+Watch to monitor shell processes:
+    watch -n 1 'nvidia-smi'
+
+find with exec to run a command on the found files:
+    find . -name "*.txt" -exec cp {} /tmp/ \;
+    Delete all files in a directory: find . -type f -delete
+    find /path -name '*.log' -type f -exec rm -f {} +
+        Find the path with the '*.log' extension. with file type 'file' and execute rm 
+        -force, replace dir with {} empty and + for batch processing. 
+
+Convert output to csv file format 
+cat psaux_output.txt | tr -s ' ' | tr ' ' ',' | tee psaux_output.csv
+    tr -s ' ' replaces multiple spaces with a single space
+    tr ' ' ',' replaces spaces with commas
+    | tee psaux_output.csv writes the output to a file
+
+Sort a csv by column 
+sort -t, -k2 -n file.csv
+    -t, specifies the delimiter as a comma
+    -k2 specifies the column to sort by (counting from 1)
+    -n specifies a numerical sort
+
+Remove everything beyond the 12'th column in a csv file
+cut -d, -f1-12 file.csv
+    -d, specifies the delimiter as a comma
+    -f1-12 specifies the columns to keep (1-12)

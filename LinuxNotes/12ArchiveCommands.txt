@@ -1,0 +1,44 @@
+Archiving: combining multiple files into one file 
+Compression: reducing the size of a file
+
+The tar command bundles files together for archiving.
+tar -cvf archive.tar file1 file2 file3 
+
+gzip [OPTIONS] file
+gzip by default replaces the file, so use the -c option to keep the original file
+gzip -c numbers.txt > numbers.txt.gz - gzip sends the compression to stout, which is redirected to a file
+
+The gunzip command is used to decompress a file
+gunzip [OPTIONS] file.gz
+It's just gzip called with different parameters. 
+use gunzip -l to list the contents of a compressed file
+gzip can recursively compress every file in the directory using the -r arg
+zcat = gunzip -c Can be used to view the contents of a compressed file
+
+The bzip2 and bunzip2 are symmetrical to gzip and gunzip
+They offer better compression, but are slower. Compression about ~10% better than gzip
+
+*** Honestly, just use zip and unzip for all compression, because its supported on all systems ***
+
+The tar command is used to group files together. You'll commonly see compressed file in the format of file.tar.gz
+tar is short for 'tape archive'
+Three main options: create, extract, list. 
+tar -c [-f ARCHIVE] [OPTIONS] [FILE...] - create an archive
+c = create, f = file, v = verbose, z = gzip, j = bzip2, -J = xz, -x = extract, -t = list
+EXAMPLE: tar -cvzf mydocuments.tar.gz ~/Documents
+
+
+The dd command is used to copy entire partitions and hard drives. 
+if=FILE 	The input file to be read.
+of=FILE 	The output file to be written.
+bs=SIZE 	The block size to be used. By default, the value is considered to be in bytes. 
+             Use the following suffixes to specify other units: K, M, G, and T for kilobytes, megabytes, gigabytes, and terabytes respectively.
+count=NUMBER 	The number of blocks to read from the input file.
+EXAMPLE:
+dd if=/dev/zero of=/tmp/swapex bs=1M count=500 - count and block size are needed if not entire hard drive
+dd if=/dev/sda of=/dev/sdb - This command copies the entire sda drive to sdb
+dd if=/dev/dvd of=dvd.iso - This command copies the contents of a DVD to a file called dvd.iso
+
+/dev/sda 	first hard drive on the system.
+/dev/sdb 	second hard drive on the system.
+/dev/dvd 	first DVD drive on the system.

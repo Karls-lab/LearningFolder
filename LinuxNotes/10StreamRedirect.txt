@@ -8,3 +8,11 @@ Example: redirect the output of ls ~ (list the home directory) to a file called 
 
 >> appends the text, > overrides the text
 &> redirects both stdout and stderr to a file, overrides
+2>&1 redirect both stdout and stderr to a file.
+
+Put #!/bin/sh at the first line of a file to specify it as standard input
+
+The | command pipes the output of the left command to the command on the right. 
+
+The tee command outputs the command while also writing to a file
+ls | tee output.txt

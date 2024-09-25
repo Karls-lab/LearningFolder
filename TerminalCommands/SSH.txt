@@ -23,6 +23,12 @@
     ssh-copy-id username@server_ip
 
 
+OTHER USEFUL SSH COMMANDS 
+
+View past SSH connections:
+    code ~/.ssh/known_hosts
+
+
 Now the fun part! 
 
 Copy a folders contents via ssh:

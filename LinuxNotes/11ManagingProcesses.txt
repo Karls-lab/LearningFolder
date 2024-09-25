@@ -1,0 +1,96 @@
+The ps command can be used to list processes. 
+ps [options]
+Will display the running processes in the current terminal by default. 
+
+PID: Process ID
+TTY: Terminal
+TIME: Time the process has been running
+CMD: Command that started the process
+
+Use the x argument to display all processes
+STAT: Process status
+Statuses:
+    D: Uninterruptible sleep
+    R: Running
+    S: Sleeping
+    T: Traced or stopped
+    Z: Zombie
+    L: Pages locked in memory
+
+ps aux Shows all processes running on the system
+    a: Show processes from all users
+    u: Display the user/owner of the process
+    x: Show processes not attached to a terminal
+
+ps can be used with grep to filter the output
+Find all processes with the name sshd in the string
+ps aux | grep sshd 
+
+Use the watch command to repeat the specified command at regular intervals
+watch date OR watch ps aux --- default timer interval is 2s
+watch -n 1 -d free (n: interval, d: highlight differences of available memory)
+
+*** Use the ; to run multiple commands on the same line! ***
+echo Hello; sleep 5; echo World
+
+To run commands that might take a long time, run them in the background. 
+The shell starts a child process and releases the terminal.
+COMMAND &
+[job] PID (when pressed enter)
+
+To view running background processes, use the jobs command
+jobs
+The + and - symbols indicate the current and previous jobs
+use fg n(job num) to bring a background process to the foreground
+use bg n(job num) to run a background process that's stopped
+you can then use ctrl+c to stop the process
+Use CTRL + Z to pause a running foreground process
+
+Processes receive signals from the kernel or other processes
+Too view all signals, use the kill -l command
+CTRL + Z: Pause signal (SIGSTOP), 
+CTRL + C: Interrupt signal (SIGINT), 
+Common signals:
+    1: Hangup (SIGHUP)
+    9: Kill (SIGKILL)
+    15: Terminate (SIGTERM)
+The kill command can take the number, shortname, or full name as an argument
+
+kill [OPTIONS] PID
+By default, the kill sends the SIGKILL signal
+use jobs -l to view the PID of a job
+
+When a user logs off the system, all user processes are sent a HUP signal (SIGHUP)
+To have a process ignore a HUP signal: (command can be a bash script)
+nohup command &
+
+
+Processes can have PRIORITIES. This is called the nice level. -20 (highest), 0 (default), 19 (lowest)
+nice [OPTION] [COMMAND] [ARGUMENTS]
+Use the -n option to set the nice level
+nice -n 10 command (sets the nice level to 10)
+renice sets the nice level of a running process
+renice [OPTION] [PRIORITY] [PID]
+
+The top command displays a dynamic view of system processes
+press the 'H' key to display help
+the K and R processes can be used to kill and renice processes
+
+uptime and freetime can be used to display system load and memory usage
+
+tmux is a terminal multiplexer that allows multiple terminal sessions in one window
+Its useful for running multiple commands over SSH
+to split terminals with tmux, use the command tmux CTRL + B % (vertical) or tmux CTRL + B " (horizontal)
+How to unsplit a terminal: tmux CTRL + B x
+
+
+
+
+
+
+
+
+
+
+
+
