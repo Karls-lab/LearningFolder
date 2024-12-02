@@ -86,6 +86,10 @@ How to unsplit a terminal: tmux CTRL + B x
 
 
 
+******* USEFUL COMMANDS: ******* U
+
+List processes with a name: ps aux | grep nameofprocess
+
 
 
 

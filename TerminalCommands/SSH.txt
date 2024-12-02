@@ -28,8 +28,10 @@ OTHER USEFUL SSH COMMANDS
 View past SSH connections:
     code ~/.ssh/known_hosts
 
-
-Now the fun part! 
-
 Copy a folders contents via ssh:
     scp -r /path/to/local/folder username@remote_host:/path/to/remote/folder
+
+Exit the SSH connection:
+    exit
+
+

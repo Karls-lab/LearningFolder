@@ -1,0 +1,8 @@
+Runlevels/targets are used by systemd. 
+0 Halt 
+1 Admin task 
+2 network, multi-user
+3 Normal 
+4 User define 
+5 Start with graphical 
+6 Restart system 
