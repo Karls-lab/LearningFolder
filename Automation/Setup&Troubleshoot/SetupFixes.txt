@@ -1,0 +1,2 @@
+So in VirtualBox, make sure your graphics driver is set to VGA, not SVGA. 
+If it's SVGA, it gives you really werid graphical text glitches in the VM and studio 5000 in particular. 

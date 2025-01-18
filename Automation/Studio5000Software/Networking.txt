@@ -1,0 +1,8 @@
+Allen Bradley PLC's are just microcontrollers connected to the internet or local subnet 
+
+FactoryTalk and RSLinx are communication services/programs that enable you to communicate 
+with the PLCs 
+
+RSLinx Classic is legacy used for Old PCCC protocols like Remote IO, DH+, and DH-485. 
+FactoryTalk Linx is the newest one and the next generation of RSLinx. Can only be used with 
+modern CIP protocols like DeviceNet, ControlNet, and EtherNet. 

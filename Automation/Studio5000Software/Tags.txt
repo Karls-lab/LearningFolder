@@ -1,0 +1,14 @@
+It's impossible to reorganize tags once they are created, the solution is to export your tags as a csv, 
+edit them there, and then reimport them. 
+
+I've left a program I found online called Tag Converter.py, which can easily import all of your Factory IO 
+tags with their description into Studio 5000
+
+I've learned the best way to organize controller tags is to first import them/define them like normal, and 
+create a User Defined Tag (UDT). This way I can accesss inputs and outputs like this:
+Tank[0].Level or Tank[1].Level or Tank[0].Flow  
+Much easier to understand and work with! 
+Now, create a subroutine to map the BOOL_IN_0 tags into the UDT. Example: 
+TankIOArray[0].LevelMeter := IN_FLOAT_0;
+TankIOArray[0].FlowMeter := IN_FLOAT_1;
+

@@ -1,0 +1,2 @@
+If you are having trouble connecting to your PLC over ethernet, try disabling 
+the firewall for your computer. 
