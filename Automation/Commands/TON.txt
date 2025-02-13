@@ -1,0 +1,8 @@
+    
+    
+    
+    ACC : Accumulated Value. This shows how much time has elapsed since the timer started.
+    DN : Done. Indicates whether the timer has reached its preset value.
+    EN : Enable. Starts or stops the timer based on the input.
+    PRE : Preset Value. Sets the target time for the timer.
+    TT : Timer Timing. Shows if the timer is currently active.
