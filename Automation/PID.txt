@@ -1,0 +1,42 @@
+A PID controller is like a smart adjustment system that keeps 
+things steady—whether it’s a car’s cruise control, a thermostat, or a drone hovering in place.
+
+It works by constantly checking the error 
+(the difference between the desired value and the actual value) 
+and adjusting the system to correct it.
+
+PID Tuning is the process of adjusting 
+Proportional (P), Integral (I), and Derivative (D) 
+parameters to optimize a PID controller’s performance.
+
+PID Components:
+    P (Proportional): Reacts to current error, increasing response speed.
+    I (Integral): Addresses past errors, eliminating steady-state error.
+    D (Derivative): Predicts future errors, improving stability.
+
+Tuning Methods:
+    Trial & Error: Manually adjusting parameters.
+    Ziegler-Nichols: Systematic method using oscillation tests.
+    Bump Test: Applying a disturbance and calculating response.
+    Autotuning Software: Automates tuning for efficiency.
+
+A well-tuned PID ensures stable, responsive, and efficient control.
+
+
+The Ziegler-Nichols method is a popular way to tune a PID controller 
+by systematically finding the best P, I, and D values. 
+It helps achieve a good balance between stability and responsiveness.
+How It Works (Steps):
+
+    Set I and D to zero – Start with only the Proportional (P) term.
+    Increase P until the system oscillates – Gradually raise P until the 
+    system starts to oscillate at a constant amplitude (this is called the ultimate gain, Ku).
+    Record the oscillation period (Pu) – Measure the time for one full oscillation cycle.
+    Use the Ziegler-Nichols table – Plug Ku and Pu into predefined 
+    formulas to calculate P, I, and D values.
+
+Ziegler-Nichols Tuning Rules:
+Controller Type	P	I	D
+P	0.5 * Ku	—	—
+PI	0.45 * Ku	Pu / 1.2	—
+PID	0.6 * Ku	Pu / 2	Pu / 8
