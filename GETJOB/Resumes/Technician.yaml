@@ -1,0 +1,103 @@
+cv:
+  name: Karl Poulson
+  location: Tooele UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+
+  sections:
+    summary:
+      - Hi, I'm Karl, a skilled Technician with a passion for fixing things.
+      - My background in mechanical and electrical systems makes me a valuable asset.
+      - Physically fit, able to lift heavy objects, and work in various weather conditions.
+
+    Skills:
+      - label: Electrical Specialist
+        details: Experience troubleshooting networks, soldering and crimping wires, 
+                diagnosing issues, and repairing electrical systems.
+
+      - label: Cable Splicing 
+        details: I have experience splicing and repairing various types of wires and cables using 
+                wire strippers, crimpers, and soldering irons.
+              
+      - label: Mechanical Knowledge 
+        details: I have a strong understanding of mechanical systems, this includes how things work, 
+                and how to fix them.
+
+    experience:
+
+      - position: IT Technician 1 
+        company: F2F Catalyst Investments
+        location: Tooele, UT
+        date: '2024-04 - 2024-11'
+        highlights:
+          - Developed strong problem-solving skills while troubleshooting computer hardware and network issues
+
+      - position: Stadium Lighting Technician
+        company: Luke's Lighting
+        location: SLC, UT
+        date: '2023-02 - 2024-04'
+        highlights:
+          - Installed and maintained stadium lighting systems.
+          - Ran wiring through conduit, securing all connections and ensuring proper insulation and protection.
+
+      - position: Automotive Technician Assistant
+        company: Honda Independent Garage
+        location: SLC, UT
+        date: '2020-01 - 2021-09'
+        highlights:
+          - Oil changes and fluid level checks.
+          - Assisted in the disassembly and reassembly of vehicle suspension systems.
+          - Replaced engine components and electrical parts.
+
+    technologies:
+      - label: Tools
+        details: Diagnostic Scanners, Hydraulic Jacks, Impact Wrenches, Hand Tools, carpentry tools
+      - label: Software
+        details: Repair Manuals, Maintenance Management Software
+      - label: Skills
+        details: Vehicle Diagnosis, Suspension Systems, Lube and Oil Changes, Component Repair and Replacement
+
+    highlights:
+      - label: Drug Free
+        details: Able to pass a drug test
+      - label: Reliable transportation
+        details: No check engine lights
+      - label: Punctual and on time
+        details: I am always on time and ready to work
+        
+design:
+  theme: classic
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in:
+    - Experience

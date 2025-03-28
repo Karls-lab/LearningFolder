@@ -1,0 +1,117 @@
+cv:
+  name: Nathan P
+  location: UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+  website: https://portfolio-608ee.web.app
+  social_networks:
+    - network: GitHub
+      username: Karls-Lab
+
+  sections:
+    summary:
+      - Hello, my name is Nathan, I enjoy tinkering on cars, hiking, and Lego.
+      - Work isn't an individual sport, but a team effort. 
+      - I'm great at troubleshooting and problem-solving, I have a background 
+        in IT solutions and automotive repair.
+        
+    education:
+      - institution: Utah State University
+        area: Computer Science
+        degree: BS
+        start_date: 2018-09
+        end_date: 2024-05
+        highlights:
+          - '**Coursework:** Modern Web Dev, Networking, Database Management (SQL and AWS),
+            Security, Operating Systems'
+
+    Skills:
+      - label: Electrical Specialist
+        details: I know how to troubleshoot and repair electrical systems.
+
+      - label: OS troubleshooting 
+        details: extensive experience troubleshooting Windows, Mac, IOS, and Linux operating systems 
+                using command line tools and GUI interfaces.
+              
+      - label: Networking 
+        details: I have experience setting up and configuring routers, switches, and firewalls. 
+                I have experience with TCP/IP, DNS, DHCP, and VPNs.
+
+    Experience:
+      - position: IT Technician
+        company: F2F Catalyst Investments
+        location: Tooele, UT
+        start_date: '2024-04'
+        end_date: '2024-08'
+        highlights:
+          - Assisted in the setup and configuration of new computers and software.
+          - Troubleshot and resolved hardware and software issues.
+          - Managed Company Website
+
+    Projects:
+      - name: Internet of Things Home Automation
+        date: '2024-06'
+        highlights:
+            - Developed an automated Garage door opener using an ESP32 micro-controller.
+            - Created an automated watering system and lighting system using a Raspberry Pi.
+
+      - name: Custom Server
+        date: '2024-03'
+        highlights:
+          - Built a home high-performance computer with server grade components.
+          - Self-hosted on the web using proper security measures.
+
+    Certifications:
+      - name: A+ 
+        date: '2022-06'
+        highlights:
+          - Proficiency in computer hardware and software knowledge and troubleshooting.
+
+      -name: Network+ 
+        date: '2024-07'
+        highlights:
+          - Proficiency in basic networking concepts and troubleshooting.
+
+    Technologies:
+      - label: Software Expertise
+        details: Windows, Linux, BASH, GIT, Excel/Word, Google Suite.
+
+      - label: Services and Tools
+        details: CLI expertise, Cloud Computing, docker containers, python automation. 
+
+design:
+  theme: classic
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in:
+    - Experience

@@ -1,0 +1,76 @@
+cv:
+  name: Karl Poulson
+  location: Tooele UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+
+  sections:
+    summary:
+      - My core skills that I'm proud of are troubleshooting and problem-solving.
+      - In my family I'm the go-to person if they have a mechanical problem with their car.
+      - I'm fluent in computer language and enjoy creating programs.
+      - My past bosses have always liked me :) 
+      - Industrial Automation is my calling! Willing to Travel, Reliable Transportation and a clean record.
+
+    education:
+      - institution: Utah State University
+        area: Computer Science
+        degree: BS
+        start_date: 2018-09
+        end_date: 2024-05
+
+      - institution: Tooele Technical College
+        area: Automation Technology 
+        summary: Classes focused on turning electrical theory into practical industrial knowledge
+        highlights:
+          - "Three-phase power"
+          - "Motor Control"
+          - "Industrial Repair"
+
+    Projects: 
+      - label: Simulated Water Tanks
+        details: Developed a robust control program using Studio 5000 for efficient water tank management
+
+      - label: Convenor belt system
+        details: Designed and implemented an automated sorting system for pallets based on size
+
+      - label: Panel Building 
+        details: Built clean, well-organized PLC and electrical control panels using hand tools.
+
+    Skills:
+      - label: Programming
+        details: Experience and Proficiency with PLC programming languages - Ladder Logic and Structured Text. 
+          Experience with C++ (arduino micro-controllers), Python and Java. 
+
+      - label: Network and Computer Systems
+        details: Familiar with Ethernet/IP, Modbus, I/O configuration.
+
+      - label: Electrical Knowledge
+        details: A passion to troubleshoot and repair electrical systems. Experience working with 
+          solenoids, relays, switches, motors, and high voltage systems.
+
+      - label: Mechanical Knowledge 
+        details: knowledge of hydraulic systems, pneumatic systems, and mechanical systems.
+
+    experience:
+      - position: IT Technician
+        company: F2F Catalyst Investments
+        location: Tooele, UT
+        start_date: '2024-02'
+        end_date: '2025'
+        highlights:
+          - Resolved network communication issues.
+          - Updated old computers with new software.
+          - Conveyed technical information in laymen terms.
+
+    technologies:
+      - label: Official Software
+        details: Studio 5000, TIA Portal, AB communication software.
+
+      - label: Tools of the Trade
+        details: Multimeter, Hand tools, Soldering Irons, Socket wrench.
+
+      - label: Schematic Comprehension
+        details: Repair Manuals, CAD Drawings, circuit diagrams.
+
+        

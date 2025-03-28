@@ -1,0 +1,114 @@
+cv:
+  name: Karl Poulson
+  location: UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+  website: https://portfolio-608ee.web.app
+  social_networks:
+    - network: GitHub
+      username: Karls-Lab
+
+  sections:
+    summary:
+      - Hello, my Name is Karl, I enjoy tinkering on cars, hiking, and Lego.
+      - In the field of Computer Science, Adaptability is the key, 
+        I'm flexible and always looking for ways to improve.
+      - Programming isn't an individual sport, but a team effort. Great things are accomplished 
+        through collaboration and corporation. 
+        I’m committed to never letting my friends down and always giving my best effort.
+        
+    education:
+      - institution: Utah State University
+        area: Computer Science
+        degree: BS
+        start_date: 2018-09
+        end_date: 2024-05
+        highlights:
+          - '**Coursework:** Modern Web Dev, Networking, Database Management (SQL and AWS),
+            Data Science In Practice, Software Development, Machine Learning, Advanced Python'
+
+    experience:
+      - company: Atomic Jolt
+        position: Web Development Intern
+        start_date: '2023-05'
+        end_date: '2024-03'
+        location: Logan, UT
+        highlights: 
+          - Helped maintain and expand the company's website.
+          - Worked with a small team using Agile/Scrum frameworks.
+
+    projects:
+      - name: E-commence Store
+        date: '2024-06'
+        highlights:
+          - Developed a sleek and modern e-commerce website built with firebase.
+          - Custom Built Appointment Scheduling with google Calendar API.
+
+      - name: Pet Tracker 
+        date: '2024-04'
+        highlights:
+          - Developed a web application that stores and tracks information about your pets.
+          - Created a database and RESTful API using Prisma and Express.
+
+      - name: Portfolio Website
+        date: '2024-03'
+        highlights:
+          - Created a portfolio website to showcase my projects and skills.
+          - Designed with Figma and built with React and Tailwind CSS.
+
+    WebDevelopment Skills:
+      - label: Full Stack Development
+        details: I have a solid understanding of the core web concepts and technologies to create 
+                modern web sites and applications. I have experience with Figma to design beautiful designs, and 
+                the knowledge of React, Express, and Prisma to build full-stack applications.
+
+    technologies:
+      - label: Languages
+        details: Python, JavaScript, C++, TypeScript, Kotlin, HTML, CSS, SQL, PHP
+
+      - label: Software Expertise
+        details: Windows, Linux, BASH, GIT, WordPress, Blender. 
+
+      - label: Services and Tools
+        details: AWS cloud, docker containers, and wordpress.
+
+      - label: Frameworks and Libraries
+        details: React, React Native, Redux, Tailwind, Material-UI, Shadcn/ui, 
+          Django, Flask, Keras, Node.js
+
+design:
+  theme: classic
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in:
+    - Experience

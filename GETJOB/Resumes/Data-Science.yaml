@@ -1,0 +1,106 @@
+cv:
+  name: Karl Poulson
+  location: Tooele UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+  website: https://github.com/Karls-lab?tab=repositories
+  social_networks:
+    - network: GitHub
+      username: Karls-Lab
+
+  sections:
+    summary:
+      - Hi, I'm Karl Poulson, a recent Computer Science graduate from Utah State University 
+        eager to pursue a career in data science. I'm passionate about all aspects of 
+        data and have practical experience in classical and deep learning, data visualization,
+        and image analysis.
+      - I believe in teamwork and collaboration to drive progress.
+        I am adept at quickly adapting to new languages, 
+        frameworks, and technologies. 
+        Feel free to explore my GitHub for examples of my projects.
+        
+    education:
+      - institution: Utah State University
+        area: Computer Science
+        degree: BS
+        start_date: 2018-09
+        end_date: 2024-05
+        highlights:
+          - '**Coursework:** Data Science In Practice, Advanced Machine Learning, 
+            Software Development, Advanced Python, Data Structures and Algorithms.'
+
+    projects:
+      - name: Weather Predictor 
+        date: '2024-04'
+        highlights:
+          - Used a transformer based model to predict the weather in Utah.
+          - Extensive data cleansing and preprocessing.
+          - Built with Python, PyTorch and Selium web-scraper.
+
+      - name: Credit Rating
+        date: '2024-03'
+        highlights:
+            - Real world data, built a model that predicts if a person will default on a loan.
+            - Demonstrates ability to combine multiple convoluted datasets.
+            - Used Python, Pandas, and Scikit-learn.
+
+      - name: Fish Classifier
+        date: '2023-12-01'
+        highlights:
+            - YOLOV5 model to identify fish in an image. 
+            - Built a custom Deep CNN to classify fish species. 
+            - Custom data augmentation and preprocessing.
+
+    technologies:
+      - label: Languages
+        details: Python, SQL, R,  
+      - label: Software
+        details: Visual Studio, Linux, BASH, GIT, Jira, SSH, Tableau.
+      - label: Tools
+        details: Pytorch, Pandas, Scikit-learn, Matplotlib, Seaborn.
+
+    additional_skills_and_interests:
+      - label: Cloud Computing 
+        details: Experience with Amazon AWS and Google Cloud
+      - label: A+ Certified 
+        details: In-depth knowledge of computer hardware and troubleshooting
+      - label: Operating Systems
+        details: Proficient in Windows and Linux for problem-solving and data migration
+
+        
+design:
+  theme: classic
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in:
+    - Experience

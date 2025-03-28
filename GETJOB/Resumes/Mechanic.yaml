@@ -1,0 +1,107 @@
+cv:
+  name: Karl Poulson
+  location: Tooele UT, USA
+  email: programmingnpc@gmail.com
+  phone: tel:+1435-261-2293
+
+  sections:
+    summary:
+      - I love working on vehicles!
+      - I have hands-on experience with full suspension rebuilds, lube changes, and repairs.
+      - I have experience working with American, Japanese, and European vehicles.
+      - Physically fit, no problem lifting heavy parts or tools.
+
+
+    experience:
+      - position: Automotive Technician Assistant
+        company: Honda Independent Garage
+        location: Salt Lake City, UT
+        date: '2023-8 - 2024-11'
+        highlights:
+          - Oil changes and fluid level checks.
+          - Assisted in the disassembly and reassembly of vehicle suspension systems.
+          - Replaced engine components and electrical parts.
+
+
+      - position: Retail Sales Associate
+        company: Autozone
+        location: Logan, UT
+        date: '2021-02 - 2023-04'
+        highlights:
+          - Learned how to correctly identify and diagnose vehicle issues.
+          - Worked with customers in a friendly and professional manner.
+          - Assisted with inventory management.
+
+
+    projects:
+      - name: Full Suspension Rebuild 
+        date: '2024-04'
+        highlights:
+          - Successfully completed a comprehensive suspension rebuild on a 2001 Honda Civic.
+          - Utilized technical manuals to correctly disassemble and reassemble with proper torque specs.
+
+      - name: Routine Maintenance Procedures
+        date: 'Ongoing'
+        highlights:
+          - Executed lube changes and oil filter replacements for a variety of vehicles.
+
+      - name: Component Replacement and Repair
+        date: 'Ongoing'
+        highlights:
+          - Replaced alternators, starters, and power steering racks on various vehicles.
+          - Diagnosed and resolved issues related to electrical and mechanical parts.
+
+    technologies:
+      - label: Tools
+        details: Diagnostic Scanners, Hydraulic Jacks, Impact Wrenches, Hand Tools
+      - label: Software
+        details: Repair Manuals, Maintenance Management Software
+      - label: Skills
+        details: Vehicle Diagnosis, Suspension Systems, Lube and Oil Changes, Component Repair and Replacement
+
+    additional_skills_and_interests:
+      - label: Automotive Repair
+        details: Proficient in diagnosing and repairing automotive systems, with a focus on 
+          suspension engine components, and electrical issues.
+      - label: Customer Service
+        details: Strong communication skills with experience in interacting with clients 
+          and providing high-quality service.
+      - label: Safety Compliance
+        details: Knowledgeable about safety standards and procedures to ensure a safe working environment
+
+design:
+  theme: classic
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#004f90'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: false
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 4.5 cm
+      education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  show_timespan_in:
+    - Experience
